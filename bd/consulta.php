@@ -11,16 +11,25 @@ class consulta{
         require "conexion.php";
         $pass=md5(strtoupper($password));
         $sql ="select rut,tipo from user WHERE rut = $rut AND password= '$pass'";
-
         $smt=$conn->prepare($sql);
         $smt->execute();
         $resultado= $smt->fetchall();
         $conn=null;
-        if(!empty($resultado)){
-            return $resultado;
-        }else{
-            return $resultado;
-        }
+
+        return $resultado;
+
+
+
+    }
+    function panelnormal($rut){
+        require "conexion.php";
+        $sql="select * from persona WHERE rut_persona = $rut";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
 
     }
 

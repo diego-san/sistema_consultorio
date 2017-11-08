@@ -1,7 +1,7 @@
 <?php
 require_once "bd/consulta.php";
 
-if (!empty($_REQUEST['rut'] && !empty($_REQUEST['password']))) {
+if (!empty($_REQUEST['rut'] && !empty($_REQUEST['password'])) && is_numeric($_REQUEST['rut'])) {
     $rut = $_REQUEST['rut'];
     $pass = $_REQUEST['password'];
 
@@ -13,7 +13,20 @@ if (!empty($_REQUEST['rut'] && !empty($_REQUEST['password']))) {
         if($valida_login[0]['tipo']== 'ADMINISTRACION'){
             session_start();
             $_SESSION['login'] = $valida_login[0]['rut'];
+            $_SESSION['tipo'] = $valida_login[0]['tipo'];
             header("Location:administracion.php");
+        }elseif ($valida_login[0]['tipo']=='NORMAL'){
+            session_start();
+            $_SESSION['login'] = $valida_login[0]['rut'];
+            $_SESSION['tipo'] = $valida_login[0]['tipo'];
+            header("Location:panelnormal.php");
+
+        }elseif ($valida_login[0]['tipo']=='MEDICO'){
+            session_start();
+            $_SESSION['login'] = $valida_login[0]['rut'];
+            $_SESSION['tipo'] = $valida_login[0]['tipo'];
+            header("Location:medico.php");
+
         }
 
 
@@ -23,7 +36,7 @@ if (!empty($_REQUEST['rut'] && !empty($_REQUEST['password']))) {
     }
 
 }else{
-    header("Location:login.php");
+    header("Location:login.php?error=1");
 }
 
 

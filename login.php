@@ -40,11 +40,11 @@ if (isset($_GET['error']) && is_numeric($_GET['error'])) {
                             <form class="form-signin" action="validar.php" method="get">
                                 <div class="form-group">
                                     <label for="login-rut" class="sr-only">Rut</label>
-                                    <input type="text" id="login-rut" class="form-control" placeholder="Ingresar Rut" required autofocus autocomplete="off" name="rut">
+                                    <input type="text" id="login-rut" class="form-control" placeholder="Ingresar Rut" required autofocus autocomplete="off" name="rut" minlength="9" maxlength="9">
                                 </div>
                                 <div class="form-group">
                                     <label for="login-password" class="sr-only">Contraseña</label>
-                                    <input type="password" id="login-password" class="form-control" placeholder="Ingresar Contraseña" required autocomplete="off" name="password">
+                                    <input type="password" id="login-password" class="form-control" placeholder="Ingresar Contraseña" required autocomplete="off" name="password" minlength="4">
                                 </div>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
                             </form>
@@ -52,7 +52,7 @@ if (isset($_GET['error']) && is_numeric($_GET['error'])) {
                         <div class="col-md-7 login-intruc">
                             <div class="alert alert-info">
                                 <strong>instrucciones: </strong>
-                                Ingresar Rut completo sin puntos ni guio, su Contraseña son sus últimos 5 dígitos de su Rut sin contar puntos ni guion. Recuerde cambiar su contraseña para mayor seguridad.
+                                Ingresar Rut completo sin puntos ni guion, su Contraseña son sus últimos 5 dígitos de su Rut sin contar puntos ni guion. Recuerde cambiar su contraseña para mayor seguridad.
                             </div>
                         </div>
                          </div>

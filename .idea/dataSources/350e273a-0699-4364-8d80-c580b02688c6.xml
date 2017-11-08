@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sistema_consultorio@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="sistema_consultorio">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="ayudantia"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="pepe"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="phpmyadmin"/>
+    <schema id="9" parent="1" name="tabla1"/>
+    <schema id="10" parent="1" name="test"/>
+    <table id="11" parent="2" name="administracion"/>
+    <table id="12" parent="2" name="medico"/>
+    <table id="13" parent="2" name="persona"/>
+    <table id="14" parent="2" name="reserva"/>
+    <table id="15" parent="2" name="user"/>
+    <column id="16" parent="11" name="ad_rur">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="11" name="ad_nombre">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="11" name="ad_apellido">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="11" name="cargo">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="20" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ad_rur</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="21" parent="11" name="FK_user_administracion">
+      <ColNames>ad_rur</ColNames>
+      <RefSchemaName>sistema_consultorio</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>rut</RefColNames>
+    </foreign-key>
+    <column id="22" parent="12" name="rut">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="12" name="med_nombre">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="12" name="med_apellido">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="12" name="especialidad">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="12" name="tipo_medico">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="27" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rut</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="28" parent="12" name="FK_user_medico">
+      <ColNames>rut</ColNames>
+      <RefSchemaName>sistema_consultorio</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>rut</RefColNames>
+    </foreign-key>
+    <column id="29" parent="13" name="rut_persona">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="13" name="nro_ficha">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="13" name="nombre_persona">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="13" name="apellido_persona">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="13" name="fech_nac_persona">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="13" name="direcciona_persona">
+      <Position>6</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="13" name="servicio_salub">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="13" name="ciudad_nac">
+      <Position>8</Position>
+      <DataType>varchar(80)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="13" name="numero_telefono">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="38" parent="13" name="sector">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="13" name="conta_nombre_persona">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="40" parent="13" name="conta_apellido_persona">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="41" parent="13" name="conta_telefono_persona">
+      <Position>13</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="42" parent="13" name="conta_rut_persona">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="43" parent="13" name="conta_direccion_persona">
+      <Position>15</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="44" parent="13" name="Establecimiento">
+      <Position>16</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="45" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rut_persona</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="46" parent="13" name="FK_user_persona">
+      <ColNames>rut_persona</ColNames>
+      <RefSchemaName>sistema_consultorio</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>rut</RefColNames>
+    </foreign-key>
+    <column id="47" parent="14" name="rev_rut">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="14" name="nro_reserva">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="49" parent="14" name="fecha_reserva">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="14" name="tipo_reserva">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="51" parent="14" name="FK_reserva_persona">
+      <ColNames>rev_rut</ColNames>
+    </index>
+    <key id="52" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>nro_reserva</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="53" parent="14" name="FK_reserva_persona">
+      <ColNames>rev_rut</ColNames>
+      <RefSchemaName>sistema_consultorio</RefSchemaName>
+      <RefTableName>persona</RefTableName>
+      <RefColNames>rut_persona</RefColNames>
+    </foreign-key>
+    <column id="54" parent="15" name="rut">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="15" name="password">
+      <Position>2</Position>
+      <DataType>char(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="15" name="tipo">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="57" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rut</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

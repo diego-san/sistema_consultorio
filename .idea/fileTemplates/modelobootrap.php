@@ -1,13 +1,3 @@
-<?php
-session_start();
-error_reporting(0);
-$varsesion=$_SESSION['login'];
-
-if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACION') {
-    echo "acceso denegado";
-    die();
-}
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -50,7 +40,7 @@ if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACIO
                 <li><a href="#">Page 3</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
             </ul>
         </div>
     </div>

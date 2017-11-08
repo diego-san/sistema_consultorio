@@ -1,12 +1,19 @@
 <?php
+require_once "bd/consulta.php";
 session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
+$r=$varsesion;
 
-if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACION') {
+if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'NORMAL') {
     echo "acceso denegado";
     die();
 }
+echo $varsesion;
+$consulta = new consulta();
+$datos= $consulta->panelnormal($r);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -38,16 +45,9 @@ if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACIO
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Page 1-1</a></li>
-                        <li><a href="#">Page 1-2</a></li>
-                        <li><a href="#">Page 1-3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li><a href="#">Pedir Consulta</a></li>
+                <li><a href="#">Historial</a></li>
+                <li><a href="#">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
@@ -56,7 +56,15 @@ if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACIO
     </div>
 </nav>
 <main>
-    <div class="container"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 panel_fondo">
+                <h4>Nombre: <small><?php echo $datos[0]['nombre_persona']." ".$datos[0]['apellido_persona']?></small></h4>
+                <h4>Rut: <small><?php echo $datos[0]['rut_persona'];?></small></h4>
+            </div>
+            <div class="col-md-6"></div>
+
+    </div>
 </main>
 <footer>
     <div class="container">
