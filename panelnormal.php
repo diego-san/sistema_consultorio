@@ -57,13 +57,21 @@ $datos= $consulta->panelnormal($r);
 </nav>
 <main>
     <div class="container">
+        <div class="row panel_fondo">
+            <div class="col-md-12">
+                <h2 class="text-center">Informacion Personal</h2>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-md-6 panel_fondo">
-                <h4>Nombre: <small><?php echo $datos[0]['nombre_persona']." ".$datos[0]['apellido_persona']?></small></h4>
-                <h4>Rut: <small><?php echo $datos[0]['rut_persona'];?></small></h4>
+            <div class="col-md-6 panel_info">
+                <h3>Datos Personales</h3>
+                <h4>Rut:<small>Secondary text</small></h4>
+                <h4>Nombre:<small>Secondary text</small></h4>
+                <h4>Numero de Ficha:<small>Secondary text</small></h4>
+                <h4><small>Secondary text</small></h4>
             </div>
             <div class="col-md-6"></div>
-
+        </div>
     </div>
 </main>
 <footer>

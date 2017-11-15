@@ -72,9 +72,15 @@ h1{
 
 }
 
+.panel_info{
+    background:#f9f9f9;
+}
 
-
-
+/*-----------------*/
+.in_paciente_form{
+    padding: 10px;
+    background:#f9f9f9;
+}
 
 
 /*footer---*/

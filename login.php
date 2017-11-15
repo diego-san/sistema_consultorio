@@ -40,7 +40,7 @@ if (isset($_GET['error']) && is_numeric($_GET['error'])) {
                             <form class="form-signin" action="validar.php" method="get">
                                 <div class="form-group">
                                     <label for="login-rut" class="sr-only">Rut</label>
-                                    <input type="text" id="login-rut" class="form-control" placeholder="Ingresar Rut" required autofocus autocomplete="off" name="rut" minlength="9" maxlength="9">
+                                    <input type="text" id="login-rut" class="form-control" placeholder="Ingresar Rut" required autofocus autocomplete="off" name="rut" minlength="8" maxlength="8">
                                 </div>
                                 <div class="form-group">
                                     <label for="login-password" class="sr-only">Contraseña</label>
@@ -52,7 +52,7 @@ if (isset($_GET['error']) && is_numeric($_GET['error'])) {
                         <div class="col-md-7 login-intruc">
                             <div class="alert alert-info">
                                 <strong>instrucciones: </strong>
-                                Ingresar Rut completo sin puntos ni guion, su Contraseña son sus últimos 5 dígitos de su Rut sin contar puntos ni guion. Recuerde cambiar su contraseña para mayor seguridad.
+                                Ingresar Rut sin digito, puntos o guion, su Contraseña son sus últimos 5 dígitos de su Rut sin contar puntos ni guion. Recuerde cambiar su contraseña para mayor seguridad.
                             </div>
                         </div>
                          </div>

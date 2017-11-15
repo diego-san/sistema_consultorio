@@ -9,7 +9,7 @@
 class consulta{
     function login_validacion($rut,$password){
         require "conexion.php";
-        $pass=md5(strtoupper($password));
+        $pass= crypt($password,'multimedia');
         $sql ="select rut,tipo from user WHERE rut = $rut AND password= '$pass'";
         $smt=$conn->prepare($sql);
         $smt->execute();
