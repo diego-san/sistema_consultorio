@@ -40,7 +40,7 @@
                 <li><a href="#">Page 3</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
+                <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
             </ul>
         </div>
     </div>

@@ -32,5 +32,6 @@ class consulta{
         return $resultado;
 
     }
+    function compruba($rut){}
 
 }
