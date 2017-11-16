@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dddd1693-8c83-4b7d-9079-89656bf5dd95" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/moment-with-locales.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/npm.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fileTemplates/modelobootrap.php" afterPath="$PROJECT_DIR$/.idea/fileTemplates/modelobootrap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/consulta.php" afterPath="$PROJECT_DIR$/bd/consulta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/insertar.php" afterPath="$PROJECT_DIR$/bd/insertar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-datetimepicker.css" afterPath="$PROJECT_DIR$/css/bootstrap-datetimepicker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/in_paciente.php" afterPath="$PROJECT_DIR$/in_paciente.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-datetimepicker.js" afterPath="$PROJECT_DIR$/js/bootstrap-datetimepicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap.js" afterPath="$PROJECT_DIR$/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" />
     </list>
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -222,7 +213,7 @@
       <workItem from="1510239993390" duration="1448000" />
       <workItem from="1510588393811" duration="1709000" />
       <workItem from="1510769079666" duration="7733000" />
-      <workItem from="1510838340929" duration="8061000" />
+      <workItem from="1510838340929" duration="8104000" />
     </task>
     <task id="LOCAL-00001" summary="fist">
       <created>1508884699546</created>
@@ -238,11 +229,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510776218465</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ingresar persona">
+      <created>1510847785414</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1510847785414</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34609000" />
+    <option name="totallyTimeSpent" value="34652000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,7 +285,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fist" />
     <MESSAGE value="administracioj" />
-    <option name="LAST_COMMIT_MESSAGE" value="administracioj" />
+    <MESSAGE value="ingresar persona" />
+    <option name="LAST_COMMIT_MESSAGE" value="ingresar persona" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
