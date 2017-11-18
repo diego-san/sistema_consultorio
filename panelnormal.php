@@ -47,7 +47,7 @@ $datos= $consulta->panelnormal($r);
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Pedir Consulta</a></li>
                 <li><a href="#">Historial</a></li>
-                <li><a href="#">Cambiar contraseña</a></li>
+                <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>

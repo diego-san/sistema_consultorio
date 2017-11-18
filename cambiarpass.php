@@ -1,11 +1,26 @@
 <?php
+require_once "bd/update.php";
 session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
+$rut = $varsesion;
 
+$error =0;
 if ($varsesion == null || $varsesion = '' ) {
     header("Location:login.php");
     die();
+}
+
+if (!empty($_REQUEST['pass1']) && !empty($_REQUEST['pass2'])){
+    $pass1=$_REQUEST['pass1'];
+    $pass2=$_REQUEST['pass2'];
+    if ($pass1== $pass2){
+        $up= new update();
+        $up->password_update($rut,$pass1);
+        header("Location:close.php");
+    }else{
+        $error =1;    }
+
 }
 ?>
 
@@ -18,6 +33,14 @@ if ($varsesion == null || $varsesion = '' ) {
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/validar.js"></script>
+    <?php if ($error== 1):?>
+        <script language="JavaScript" type="text/javascript">
+            alert("Contraseña distintas");
+        </script>
+
+    <?php endif;?>
+
+
 </head>
 
 <body>
