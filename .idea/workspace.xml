@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dddd1693-8c83-4b7d-9079-89656bf5dd95" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fileTemplates/modelobootrap.php" afterPath="$PROJECT_DIR$/.idea/fileTemplates/modelobootrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/350e273a-0699-4364-8d80-c580b02688c6.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/350e273a-0699-4364-8d80-c580b02688c6.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administracion.php" afterPath="$PROJECT_DIR$/administracion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cambiarpass.php" afterPath="$PROJECT_DIR$/cambiarpass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/panelnormal.php" afterPath="$PROJECT_DIR$/panelnormal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/consulta.php" afterPath="$PROJECT_DIR$/bd/consulta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/insertar.php" afterPath="$PROJECT_DIR$/bd/insertar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/estilos.css" afterPath="$PROJECT_DIR$/css/estilos.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/in_paciente.php" afterPath="$PROJECT_DIR$/in_paciente.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/validar.php" afterPath="$PROJECT_DIR$/validar.php" />
     </list>
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,42 +43,45 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="sistema_consultorio@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="sistema_consultorio" type="e3449647:DbNodeDescriptor" />
-        <item name="user" type="e3449647:DbNodeDescriptor" />
+        <item name="clinica_administracion" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cambiarpass.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cambiarpass.php">
+      <file leaf-file-name="in_clinica.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/in_clinica.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="266">
+              <caret line="85" column="44" lean-forward="false" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panelnormal.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/panelnormal.php">
+      <file leaf-file-name="in_administracion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/in_administracion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+            <state relative-caret-position="425">
+              <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bd/update.php">
+      <file leaf-file-name="insertar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bd/insertar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            <state relative-caret-position="295">
+              <caret line="93" column="35" lean-forward="false" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
               <folding>
-                <marker date="1511037237513" expanded="true" signature="258:285" ph="UPDATE user " />
-                <marker date="1511037237513" expanded="true" signature="258:307" ph="UPDATE user " />
-                <marker date="1511037237513" expanded="true" signature="258:311" ph="UPDATE user " />
+                <marker date="1511045438988" expanded="true" signature="356:617" ph="INSERT INTO persona... " />
+                <marker date="1511045438988" expanded="true" signature="1563:1613" ph="insert into user... " />
+                <marker date="1511045438988" expanded="true" signature="2081:2107" ph="insert into administracion... " />
+                <marker date="1511045438988" expanded="true" signature="2081:2275" ph="insert into administracion... " />
+                <marker date="1511045438988" expanded="true" signature="2081:2303" ph="insert into administracion... " />
+                <marker date="1511045438988" expanded="true" signature="3029:3250" ph="insert into clinica_administracion... " />
               </folding>
             </state>
           </provider>
@@ -99,17 +104,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/validar.php" />
         <option value="$PROJECT_DIR$/prueba.php" />
-        <option value="$PROJECT_DIR$/bd/consulta.php" />
-        <option value="$PROJECT_DIR$/css/estilos.css" />
-        <option value="$PROJECT_DIR$/in_paciente.php" />
         <option value="$PROJECT_DIR$/medico.php" />
         <option value="$PROJECT_DIR$/administracion.php" />
-        <option value="$PROJECT_DIR$/bd/insertar.php" />
         <option value="$PROJECT_DIR$/bd/update.php" />
         <option value="$PROJECT_DIR$/cambiarpass.php" />
         <option value="$PROJECT_DIR$/panelnormal.php" />
+        <option value="$PROJECT_DIR$/validar.php" />
+        <option value="$PROJECT_DIR$/css/estilos.css" />
+        <option value="$PROJECT_DIR$/bd/consulta.php" />
+        <option value="$PROJECT_DIR$/in_paciente.php" />
+        <option value="$PROJECT_DIR$/root.php" />
+        <option value="$PROJECT_DIR$/bd/insertar.php" />
+        <option value="$PROJECT_DIR$/in_administracion.php" />
+        <option value="$PROJECT_DIR$/in_clinica.php" />
       </list>
     </option>
   </component>
@@ -221,7 +229,7 @@
       <workItem from="1510588393811" duration="1709000" />
       <workItem from="1510769079666" duration="7733000" />
       <workItem from="1510838340929" duration="8144000" />
-      <workItem from="1511027024889" duration="9387000" />
+      <workItem from="1511027024889" duration="18579000" />
     </task>
     <task id="LOCAL-00001" summary="fist">
       <created>1508884699546</created>
@@ -258,11 +266,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511033623031</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cambio de password">
+      <created>1511037412191</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1511037412191</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44079000" />
+    <option name="totallyTimeSpent" value="53271000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -279,18 +294,18 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1603631" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -309,41 +324,23 @@
     <MESSAGE value="administracioj" />
     <MESSAGE value="ingresar persona" />
     <MESSAGE value="ingresar persona terminado" />
-    <option name="LAST_COMMIT_MESSAGE" value="ingresar persona terminado" />
+    <MESSAGE value="Cambio de password" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio de password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/in_paciente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bd/insertar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding>
-            <marker date="1511030340558" expanded="true" signature="356:617" ph="INSERT INTO persona... " />
-            <marker date="1511030340558" expanded="true" signature="1563:1613" ph="insert into user... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bd/consulta.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
-            <marker date="1511027581654" expanded="true" signature="242:306" ph="select rut,t... user" />
-            <marker date="1511027581654" expanded="true" signature="542:584" ph="select * fro... persona" />
-            <marker date="1511027581654" expanded="true" signature="542:588" ph="select * fro... persona" />
-            <marker date="1511027581654" expanded="true" signature="820:851" ph="select * fro... user" />
+            <marker date="1511043418704" expanded="true" signature="242:306" ph="select rut,t... user" />
+            <marker date="1511043418704" expanded="true" signature="542:584" ph="select * fro... persona" />
+            <marker date="1511043418704" expanded="true" signature="542:588" ph="select * fro... persona" />
+            <marker date="1511043418704" expanded="true" signature="820:851" ph="select * fro... user" />
           </folding>
         </state>
       </provider>
@@ -369,8 +366,12 @@
         <state relative-caret-position="68">
           <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding>
-            <marker date="1511030340558" expanded="true" signature="356:617" ph="INSERT INTO persona... " />
-            <marker date="1511030340558" expanded="true" signature="1563:1613" ph="insert into user... " />
+            <marker date="1511045438988" expanded="true" signature="356:617" ph="INSERT INTO persona... " />
+            <marker date="1511045438988" expanded="true" signature="1563:1613" ph="insert into user... " />
+            <marker date="1511045438988" expanded="true" signature="2081:2107" ph="insert into administracion... " />
+            <marker date="1511045438988" expanded="true" signature="2081:2275" ph="insert into administracion... " />
+            <marker date="1511045438988" expanded="true" signature="2081:2303" ph="insert into administracion... " />
+            <marker date="1511045438988" expanded="true" signature="3029:3250" ph="insert into clinica_administracion... " />
           </folding>
         </state>
       </provider>
@@ -428,10 +429,10 @@
         <state relative-caret-position="102">
           <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
           <folding>
-            <marker date="1511027581654" expanded="true" signature="242:306" ph="select rut,t... user" />
-            <marker date="1511027581654" expanded="true" signature="542:584" ph="select * fro... persona" />
-            <marker date="1511027581654" expanded="true" signature="542:588" ph="select * fro... persona" />
-            <marker date="1511027581654" expanded="true" signature="820:851" ph="select * fro... user" />
+            <marker date="1511043418704" expanded="true" signature="242:306" ph="select rut,t... user" />
+            <marker date="1511043418704" expanded="true" signature="542:584" ph="select * fro... persona" />
+            <marker date="1511043418704" expanded="true" signature="542:588" ph="select * fro... persona" />
+            <marker date="1511043418704" expanded="true" signature="820:851" ph="select * fro... user" />
           </folding>
         </state>
       </provider>
@@ -609,42 +610,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/estilos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="111" column="36" lean-forward="false" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/medico.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administracion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/in_paciente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="155" column="16" lean-forward="false" selection-start-line="155" selection-start-column="16" selection-end-line="163" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -654,30 +623,6 @@
         <state relative-caret-position="119">
           <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bd/consulta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <marker date="1511027581654" expanded="true" signature="242:306" ph="select rut,t... user" />
-            <marker date="1511027581654" expanded="true" signature="542:584" ph="select * fro... persona" />
-            <marker date="1511027581654" expanded="true" signature="542:588" ph="select * fro... persona" />
-            <marker date="1511027581654" expanded="true" signature="820:851" ph="select * fro... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bd/insertar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="19" />
-          <folding>
-            <marker date="1511030340558" expanded="true" signature="356:617" ph="INSERT INTO persona... " />
-            <marker date="1511030340558" expanded="true" signature="1563:1613" ph="insert into user... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,6 +638,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/panelnormal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cambiarpass.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -701,10 +654,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/panelnormal.php">
+    <entry file="file://$PROJECT_DIR$/administracion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/estilos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1803">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bd/consulta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511043418704" expanded="true" signature="242:306" ph="select rut,t... user" />
+            <marker date="1511043418704" expanded="true" signature="542:584" ph="select * fro... persona" />
+            <marker date="1511043418704" expanded="true" signature="542:588" ph="select * fro... persona" />
+            <marker date="1511043418704" expanded="true" signature="820:851" ph="select * fro... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/in_paciente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="164" column="51" lean-forward="false" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/root.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="43" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bd/insertar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="93" column="35" lean-forward="false" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
+          <folding>
+            <marker date="1511045438988" expanded="true" signature="356:617" ph="INSERT INTO persona... " />
+            <marker date="1511045438988" expanded="true" signature="1563:1613" ph="insert into user... " />
+            <marker date="1511045438988" expanded="true" signature="2081:2107" ph="insert into administracion... " />
+            <marker date="1511045438988" expanded="true" signature="2081:2275" ph="insert into administracion... " />
+            <marker date="1511045438988" expanded="true" signature="2081:2303" ph="insert into administracion... " />
+            <marker date="1511045438988" expanded="true" signature="3029:3250" ph="insert into clinica_administracion... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/in_administracion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/in_clinica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="85" column="44" lean-forward="false" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
           <folding />
         </state>
       </provider>

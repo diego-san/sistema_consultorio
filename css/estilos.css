@@ -6,7 +6,7 @@ header{
 main{
     background: #e9e9e9;
     min-height: 200px;
-
+    border-top: solid 2px #cccccc;
 }
 footer{
     background: #222831;
@@ -111,3 +111,24 @@ h1{
     border-left: solid 2px #cccccc;
     border-right: solid 2px #cccccc;
  }
+/*---------administracion--*/
+
+.admin-fondo{
+    background: #f9f9f9 ;
+    min-height: 500px;
+
+}
+
+.admin_tirulo{
+    padding: 10px;
+
+
+}
+.admin_dato{
+    padding: 5px;
+}
+.text_admin{
+    font-size: 15pt;
+    font-family: arial,helvetica,sans-serif;
+    color: #3c3c3c;
+}

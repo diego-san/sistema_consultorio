@@ -57,9 +57,51 @@ class insertar {
         $conn=null;
 
     }
+    function in_admin($rut,$nombre,$apellido,$cargo,$fecha,$titulo,$telefono,$correo,$direc){
+        require "conexion.php";
+        $r=$rut;
+        $s=1;
+        for($m=0;$r!=0;$r/=10)
+            $s=($s+$r%10*(9-$m++%6))%11;
+        $digito=chr($s?$s+47:75);
+        $sql="insert into administracion (rut_administracion, digito_admin, nombre_administracion, cargo_admin, apellido_administracion, titulo_admin, numero_admin, correo_admin, direcc_admin, fech_nac_admin)VALUES (?,?,?,?,?,?,?,?,?,?)";
+        $smt=$conn->prepare($sql);
+        $smt->bindparam(1,$rut);
+        $smt->bindparam(2,$digito);
+        $smt->bindparam(3,$nombre);
+        $smt->bindparam(4,$cargo);
+        $smt->bindparam(5,$apellido);
+        $smt->bindparam(6,$titulo);
+        $smt->bindparam(7,$telefono);
+        $smt->bindparam(8,$correo);
+        $smt->bindparam(9,$direc);
+        $smt->bindparam(10,$fecha);
+        $smt->execute();
+        $conn=null;
+    }
 
-
-
+    function in_clini($rut,$nombre,$apellido,$cargo,$fecha,$titulo,$telefono,$correo,$direc){
+        require "conexion.php";
+        $r=$rut;
+        $s=1;
+        for($m=0;$r!=0;$r/=10)
+            $s=($s+$r%10*(9-$m++%6))%11;
+        $digito=chr($s?$s+47:75);
+        $sql="insert into clinica_administracion (rut_clinica, digito_clin, nombre_clinica, apellido_clinica, titulo_clinica, cargo_clinica, numero_clinica, correo_clinica, direcc_clinica, fech_nac_clinica) VALUES (?,?,?,?,?,?,?,?,?,?)";
+        $smt=$conn->prepare($sql);
+        $smt->bindparam(1,$rut);
+        $smt->bindparam(2,$digito);
+        $smt->bindparam(3,$nombre);
+        $smt->bindparam(4,$cargo);
+        $smt->bindparam(5,$apellido);
+        $smt->bindparam(6,$titulo);
+        $smt->bindparam(7,$telefono);
+        $smt->bindparam(8,$correo);
+        $smt->bindparam(9,$direc);
+        $smt->bindparam(10,$fecha);
+        $smt->execute();
+        $conn=null;
+    }
 
 
 }

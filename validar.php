@@ -21,11 +21,17 @@ if (!empty($_REQUEST['rut'] && !empty($_REQUEST['password'])) && is_numeric($_RE
             $_SESSION['tipo'] = $valida_login[0]['tipo'];
             header("Location:panelnormal.php");
 
-        }elseif ($valida_login[0]['tipo']=='MEDICO'){
+        }elseif ($valida_login[0]['tipo']=='CLINICA'){
             session_start();
             $_SESSION['login'] = $valida_login[0]['rut'];
             $_SESSION['tipo'] = $valida_login[0]['tipo'];
             header("Location:medico.php");
+
+        }elseif ($valida_login[0]['tipo']=='ROOT'){
+            session_start();
+            $_SESSION['login'] = $valida_login[0]['rut'];
+            $_SESSION['tipo'] = $valida_login[0]['tipo'];
+            header("Location:root.php");
 
         }
 
