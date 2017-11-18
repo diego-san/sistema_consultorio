@@ -6,7 +6,7 @@ $varsesion=$_SESSION['login'];
 $r=$varsesion;
 
 if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'NORMAL') {
-    echo "acceso denegado";
+    header("Location:login.php");
     die();
 }
 echo $varsesion;

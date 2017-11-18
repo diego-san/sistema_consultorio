@@ -38,6 +38,26 @@ class insertar {
 
     }
 
+    function ingresaruser($rut,$tipo){
+        require "conexion.php";
+        $r=$rut;
+        $s=1;
+        for($m=0;$r!=0;$r/=10)
+            $s=($s+$r%10*(9-$m++%6))%11;
+        $digito=chr($s?$s+47:75);
+        $rest = substr($rut, -4);
+        $password=$rest.$digito;
+        $pass= crypt($password,'multimedia');
+        $sql="insert into user(rut,password,tipo) VALUES (?,?,?)";
+        $smt=$conn->prepare($sql);
+        $smt->bindparam(1,$rut);
+        $smt->bindparam(2,$pass);
+        $smt->bindparam(3,$tipo);
+        $smt->execute();
+        $conn=null;
+
+    }
+
 
 
 

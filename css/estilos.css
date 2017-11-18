@@ -10,7 +10,7 @@ main{
 }
 footer{
     background: #222831;
-    min-height: 55px;
+    min-height: 75px;
     max-height: 200px;
 
 }
@@ -76,10 +76,17 @@ h1{
     background:#f9f9f9;
 }
 
-/*-----------------*/
+/*-----------------in_panciente*/
+.in_fondo{
+    background:#f9f9f9;
+}
 .in_paciente_form{
     padding: 10px;
-    background:#f9f9f9;
+
+}
+.in_mensaje{
+    background: #f9f9f9 ;
+    min-height: 50px;
 }
 
 
@@ -94,3 +101,13 @@ h1{
     padding: 10px;
     color: #ffffff;
 }
+
+/*camvia pass-------------*/
+.pass_fondo{
+     background: #f9f9f9 ;
+    padding: 5px;
+    margin-top: 55px;
+    margin-bottom: 200px;
+    border-left: solid 2px #cccccc;
+    border-right: solid 2px #cccccc;
+ }

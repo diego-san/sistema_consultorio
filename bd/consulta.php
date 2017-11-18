@@ -32,6 +32,17 @@ class consulta{
         return $resultado;
 
     }
-    function compruba($rut){}
+    function compruba($rut){
+        require "conexion.php";
+        $sql ="select * from user WHERE rut = $rut";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
+
+
+    }
 
 }

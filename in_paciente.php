@@ -4,32 +4,37 @@ require_once "bd/consulta.php";
 session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
-
+$mensaje = 0;
 if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACION') {
-    echo "acceso denegado";
+    header("Location:login.php");
     die();
 }
 if(isset($_REQUEST['rut'])){
     $rut=$_REQUEST['rut'];
 
     $busca= new consulta();
-    
 
-    $nombre= $_REQUEST['nombre'];
-    $apellido= $_REQUEST['apellido'];
-    $nroficha=$_REQUEST['ficha'];
-    $fecha_nac=$_REQUEST['fecha_nac'];
-    $genero=$_REQUEST['genero'];
-    $direcc=$_REQUEST['direc'];
-    $servicio=$_REQUEST['servicio'];
-    $ciudadnac=$_REQUEST['ciudadnac'];
-    $telefono=$_REQUEST['telefono'];
-    $sector=$_REQUEST['sector'];
-    $esta=$_REQUEST['estable'];
-    $movi=$_REQUEST['movi'];
-    $ingreso= new insertar();
-    $ingreso->insertar_persona($nombre,$apellido,$rut,$nroficha,$fecha_nac,$genero,$direcc,$servicio,$ciudadnac,$telefono,$sector,$esta,$movi);
+   if (empty($busca->compruba($rut))) {
+       $nombre = $_REQUEST['nombre'];
+       $apellido = $_REQUEST['apellido'];
+       $nroficha = $_REQUEST['ficha'];
+       $fecha_nac = $_REQUEST['fecha_nac'];
+       $genero = $_REQUEST['genero'];
+       $direcc = $_REQUEST['direc'];
+       $servicio = $_REQUEST['servicio'];
+       $ciudadnac = $_REQUEST['ciudadnac'];
+       $telefono = $_REQUEST['telefono'];
+       $sector = $_REQUEST['sector'];
+       $esta = $_REQUEST['estable'];
+       $movi = $_REQUEST['movi'];
 
+       $ingreso = new insertar();
+       $ingreso->ingresaruser($rut,'NORMAL');
+       $ingreso->insertar_persona($nombre, $apellido, $rut, $nroficha, $fecha_nac, $genero, $direcc, $servicio, $ciudadnac, $telefono, $sector, $esta, $movi);
+       $mensaje = 1;
+   }else{
+        $mensaje = 2;
+   }
 }
 
 
@@ -38,7 +43,7 @@ if(isset($_REQUEST['rut'])){
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Bootstrap Example</title>
+    <title>CESFAM</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -74,7 +79,7 @@ if(isset($_REQUEST['rut'])){
                 <li><a href="#">Page 3</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
+                <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
             </ul>
         </div>
     </div>
@@ -86,7 +91,7 @@ if(isset($_REQUEST['rut'])){
                 <h2 class="text-center">Registrar Persona</h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row in_fondo">
             <form action="in_paciente.php" method="get" >
                 <div class="col-md-6 in_paciente_form">
                     <div class="form-group">
@@ -97,7 +102,7 @@ if(isset($_REQUEST['rut'])){
                     <label for="ru">Rut: </label>
                     <input type="text" name="rut" required id="ru" minlength="7" maxlength="8" class="form-control" pattern="[0-9]{7,8}">
                     <label for="nro">Numero ficha: </label>
-                    <input type="text" name="ficha" required id="nro" minlength="1" class="form-control" pattern="[0-9]1,8}">
+                    <input type="text" name="ficha" required id="nro" minlength="1" class="form-control" pattern="[0-9]{1,11}"title="Solo numeros">
 
                             <label for="fechanac" class=" control-label">Fehca de Nacimiento:</label>
                             <div class="input-group date form_date " data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
@@ -145,7 +150,21 @@ if(isset($_REQUEST['rut'])){
             </form>
         </div>
     </div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 in_mensaje">
+                <?php if ($mensaje== 1):?>
+                    <div class="alert alert-primary" role="alert">
+                        Persona ingresada correctamente.
+                    </div>
+                <?php elseif ($mensaje== 2):?>
+                    <div class="alert alert-danger" role="alert">
+                        Persona ya esta ingresada.
+                    </div>
+                <?php endif;?>
+            </div>
+        </div>
+    </div>
 
 </main>
 <footer>

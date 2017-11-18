@@ -4,7 +4,7 @@ error_reporting(0);
 $varsesion=$_SESSION['login'];
 
 if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'MEDICO') {
-    echo "acceso denegado";
+    header("Location:login.php");
     die();
 }
 ?>
