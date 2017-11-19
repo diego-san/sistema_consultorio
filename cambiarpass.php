@@ -4,6 +4,7 @@ session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
 $rut = $varsesion;
+$tipo = $_SESSION['tipo'];
 
 $error =0;
 if ($varsesion == null || $varsesion = '' ) {
@@ -62,8 +63,15 @@ if (!empty($_REQUEST['pass1']) && !empty($_REQUEST['pass2'])){
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-
+                <?php if ($tipo== 'ADMINISTRACION'):?>
+                    <li class="active"><a href="administracion.php">Home</a></li>
+                <?php elseif ($tipo== 'ROOT'):?>
+                    <li class="active"><a href="root.php">Home</a></li>
+                <?php elseif ($tipo== 'NORMAL'):?>
+                    <li class="active"><a href="panelnormal.php">Home</a></li>
+                <?php elseif ($error== 'CLINICA'):?>
+                    <li class="active"><a href="medico.php">Home</a></li>
+                <?php endif;?>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>

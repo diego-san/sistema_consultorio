@@ -56,21 +56,38 @@ $datos= $consulta->panelnormal($r);
     </div>
 </nav>
 <main>
-    <div class="container">
-        <div class="row panel_fondo">
-            <div class="col-md-12">
-                <h2 class="text-center">Informacion Personal</h2>
+    <div class="container-fluid admin-fondo">
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1 admin_tirulo">
+                <h2 class="text-center">Informacion</h2>
             </div>
+            <div class="col-md-1"></div>
+
+
         </div>
         <div class="row">
-            <div class="col-md-6 panel_info">
-                <h3>Datos Personales</h3>
-                <h4>Rut:<small>Secondary text</small></h4>
-                <h4>Nombre:<small>Secondary text</small></h4>
-                <h4>Numero de Ficha:<small>Secondary text</small></h4>
-                <h4><small>Secondary text</small></h4>
+            <div class="col-md-10 col-md-offset-1 datos_fondo">
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos">Informacion personal</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Nombre:</strong>pedro jorquera</p>
+                        <p class="lead"> <strong>Rut:</strong>18.915.384-8</p>
+                        <p class="lead"> <strong>Correo:</strong>asdfas@gmail.com</p>
+                        <p class="lead"> <strong>Fecha de nacimiento:</strong>asdfas@gmail.com</p>
+                    </div>
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Cargo:</strong>pedro jorquera</p>
+                        <p class="lead"> <strong>Titulo:</strong>18.915.384-8</p>
+                        <p class="lead"> <strong>Telefono:</strong>asdfas@gmail.com</p>
+                        <p class="lead"> <strong>Direccion:</strong>asdfas@gmail.com adasfasasfaf</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6"></div>
+            <div class="col-md-1"></div>
         </div>
     </div>
 </main>

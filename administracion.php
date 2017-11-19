@@ -1,12 +1,16 @@
 <?php
+require "bd/consulta.php";
 session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
+$rut=$varsesion;
 
 if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACION') {
     header("Location:login.php");
     die();
 }
+$get = new consulta();
+$datos=$get->info_root($rut);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -39,7 +43,8 @@ if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACIO
             <ul class="nav navbar-nav">
                 <li class="active"><a href="administracion.php">Home</a></li>
                 <li><a href="in_paciente.php">Ingresar Pasiente</a></li>
-                <li><a href="#">Page 2</a></li>
+                <li><a href="#">busqueda Paciente</a></li>
+                <li><a href="#">Grafica</a></li>
                 <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -49,7 +54,40 @@ if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACIO
     </div>
 </nav>
 <main>
-    <div class="container"></div>
+    <div class="container-fluid admin-fondo">
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1 admin_tirulo">
+                <h2 class="text-center">Informacion</h2>
+            </div>
+            <div class="col-md-1"></div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo">
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos">Informacion personal</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0]['2']." ".$datos[0]['4'];?></p>
+                        <p class="lead"> <strong>Rut: </strong><?php echo $datos[0]['0']."-".$datos[0]['1'];?></p>
+                        <p class="lead"> <strong>Correo: </strong><?php echo $datos[0]['7']?></p>
+                        <p class="lead"> <strong>Fecha de nacimiento:</strong><?php echo $datos[0]['9'];?></p>
+                    </div>
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Cargo:</strong><?php echo $datos[0]['3'];?></p>
+                        <p class="lead"> <strong>Titulo:</strong><?php echo $datos[0]['5'];?></p>
+                        <p class="lead"> <strong>Telefono:</strong><?php echo $datos[0]['6'];?></p>
+                        <p class="lead"> <strong>Direccion:</strong><?php echo $datos[0]['8'];?> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
 </main>
 <footer>
     <div class="container">

@@ -46,7 +46,7 @@
     </div>
 </nav>
 <main>
-    <div class="container"></div>
+    <div class="container-fluid"></div>
 </main>
 <footer>
     <div class="container">

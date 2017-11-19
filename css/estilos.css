@@ -132,3 +132,20 @@ h1{
     font-family: arial,helvetica,sans-serif;
     color: #3c3c3c;
 }
+
+/*---datos---*/
+
+.datos_fondo{
+    border: solid 2px #bce8f1;
+}
+.datos_header{
+    background: #d9edf7;
+    border-bottom: solid 2px #bce8f1;
+
+}
+.text_datos{
+    font-size: 15pt;
+    font-family: arial,helvetica,sans-serif;
+    color: #31708f;
+    padding: 5px;
+}

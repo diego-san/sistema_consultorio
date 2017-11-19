@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
 
-if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'MEDICO') {
+if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'CLINICA') {
     header("Location:login.php");
     die();
 }

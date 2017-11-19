@@ -10,6 +10,7 @@ class consulta{
     function login_validacion($rut,$password){
         require "conexion.php";
         $pass= crypt($password,'multimedia');
+
         $sql ="select rut,tipo from user WHERE rut = $rut AND password= '$pass'";
         $smt=$conn->prepare($sql);
         $smt->execute();
@@ -42,6 +43,17 @@ class consulta{
 
         return $resultado;
 
+
+    }
+    function info_root($rut){
+        require "conexion.php";
+        $sql="select * from administracion WHERE rut_administracion = $rut";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
 
     }
 

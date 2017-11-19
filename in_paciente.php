@@ -74,9 +74,10 @@ if(isset($_REQUEST['rut'])){
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="administracion.php">Home</a></li>
-
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li><a href="in_paciente.php">Ingresar Pasiente</a></li>
+                <li><a href="#">busqueda Paciente</a></li>
+                <li><a href="#">Grafica</a></li>
+                <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
