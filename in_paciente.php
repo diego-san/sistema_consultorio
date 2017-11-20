@@ -9,6 +9,21 @@ if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACIO
     header("Location:login.php");
     die();
 }
+//tiempo de sesion
+if(isset($_SESSION['tiempo']) ) {
+    $inactivo = 1200;
+    $vida_session = time() - $_SESSION['tiempo'];
+    if($vida_session > $inactivo)
+    {
+        session_unset();
+        session_destroy();
+        header("Location:login.php");
+        exit();
+    }
+
+}
+$_SESSION['tiempo'] = time();
+
 if(isset($_REQUEST['rut'])){
     $rut=$_REQUEST['rut'];
 

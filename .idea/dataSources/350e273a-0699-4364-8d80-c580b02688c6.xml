@@ -184,171 +184,192 @@
       <RefTableName>persona</RefTableName>
       <RefColNames>rut_contac</RefColNames>
     </foreign-key>
-    <column id="52" parent="16" name="rut_histo">
+    <column id="52" parent="16" name="in_histo">
       <Position>1</Position>
-      <DataType>char(8)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="16" name="rut_especialista">
+    <column id="53" parent="16" name="rut_histo">
       <Position>2</Position>
       <DataType>char(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="54" parent="16" name="informe_ante">
+    <column id="54" parent="16" name="rut_especialista">
       <Position>3</Position>
+      <DataType>char(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="16" name="informe_ante">
+      <Position>4</Position>
       <DataType>varchar(300)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="55" parent="16" name="tipo_atencion">
-      <Position>4</Position>
+    <column id="56" parent="16" name="tipo_atencion">
+      <Position>5</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="56" parent="16" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
+    <index id="57" parent="16" name="historial_clinica_administracion_rut_clinica_fk">
+      <ColNames>rut_especialista</ColNames>
+    </index>
+    <index id="58" parent="16" name="historial_persona_rut_persona_fk">
       <ColNames>rut_histo</ColNames>
+    </index>
+    <key id="59" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>in_histo</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="57" parent="16" name="fk_clinica_historial">
-      <ColNames>rut_histo</ColNames>
-      <RefSchemaName>sistema_consultorio</RefSchemaName>
-      <RefTableName>clinica_administracion</RefTableName>
-      <RefColNames>rut_clinica</RefColNames>
-    </foreign-key>
-    <foreign-key id="58" parent="16" name="fk_persona_historial">
+    <foreign-key id="60" parent="16" name="historial_persona_rut_persona_fk">
       <ColNames>rut_histo</ColNames>
       <RefSchemaName>sistema_consultorio</RefSchemaName>
       <RefTableName>persona</RefTableName>
       <RefColNames>rut_persona</RefColNames>
     </foreign-key>
-    <column id="59" parent="17" name="rut_persona">
+    <foreign-key id="61" parent="16" name="historial_clinica_administracion_rut_clinica_fk">
+      <ColNames>rut_especialista</ColNames>
+      <RefSchemaName>sistema_consultorio</RefSchemaName>
+      <RefTableName>clinica_administracion</RefTableName>
+      <RefColNames>rut_clinica</RefColNames>
+    </foreign-key>
+    <column id="62" parent="17" name="rut_persona">
       <Position>1</Position>
       <DataType>char(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="17" name="digito_persona">
+    <column id="63" parent="17" name="digito_persona">
       <Position>2</Position>
       <DataType>char(1)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="61" parent="17" name="nro_ficha">
+    <column id="64" parent="17" name="nro_ficha">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="62" parent="17" name="nombre_persona">
+    <column id="65" parent="17" name="nombre_persona">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="63" parent="17" name="apellido_persona">
+    <column id="66" parent="17" name="apellido_persona">
       <Position>5</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="64" parent="17" name="fech_nac_persona">
+    <column id="67" parent="17" name="fech_nac_persona">
       <Position>6</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="65" parent="17" name="genero_persona">
+    <column id="68" parent="17" name="genero_persona">
       <Position>7</Position>
       <DataType>char(1)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="66" parent="17" name="direccion_persona">
+    <column id="69" parent="17" name="direccion_persona">
       <Position>8</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="67" parent="17" name="servicio_salub">
+    <column id="70" parent="17" name="servicio_salub">
       <Position>9</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="68" parent="17" name="ciudad_nacimiento">
+    <column id="71" parent="17" name="ciudad_nacimiento">
       <Position>10</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="69" parent="17" name="numero_telefono">
+    <column id="72" parent="17" name="numero_telefono">
       <Position>11</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="70" parent="17" name="sector">
+    <column id="73" parent="17" name="sector">
       <Position>12</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="71" parent="17" name="establecimiento">
+    <column id="74" parent="17" name="establecimiento">
       <Position>13</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="72" parent="17" name="tipo_persona">
+    <column id="75" parent="17" name="tipo_persona">
       <Position>14</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="73" parent="17" name="rut_contac">
+    <column id="76" parent="17" name="rut_contac">
       <Position>15</Position>
       <DataType>char(8)|0</DataType>
     </column>
-    <index id="74" parent="17" name="persona_contacto_rut_contacto_fk">
+    <index id="77" parent="17" name="persona_contacto_rut_contacto_fk">
       <ColNames>rut_contac</ColNames>
     </index>
-    <key id="75" parent="17" name="PRIMARY">
+    <key id="78" parent="17" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>rut_persona</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="76" parent="17" name="fk_user_persona">
+    <foreign-key id="79" parent="17" name="fk_user_persona">
       <ColNames>rut_persona</ColNames>
       <RefSchemaName>sistema_consultorio</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>rut</RefColNames>
     </foreign-key>
-    <column id="77" parent="18" name="rut">
+    <column id="80" parent="18" name="rut">
       <Position>1</Position>
       <DataType>char(8)|0</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="78" parent="18" name="fecha">
+    <column id="81" parent="18" name="fecha">
       <Position>2</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="79" parent="18" name="tipo_reveva">
+    <column id="82" parent="18" name="tipo_reveva">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="80" parent="18" name="fk_persona_reserva">
+    <column id="83" parent="18" name="id_reserva">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <index id="84" parent="18" name="reserva_persona_rut_persona_fk">
       <ColNames>rut</ColNames>
     </index>
-    <foreign-key id="81" parent="18" name="fk_persona_reserva">
+    <key id="85" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_reserva</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="86" parent="18" name="reserva_persona_rut_persona_fk">
       <ColNames>rut</ColNames>
       <RefSchemaName>sistema_consultorio</RefSchemaName>
       <RefTableName>persona</RefTableName>
       <RefColNames>rut_persona</RefColNames>
     </foreign-key>
-    <column id="82" parent="19" name="rut">
+    <column id="87" parent="19" name="rut">
       <Position>1</Position>
       <DataType>char(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="83" parent="19" name="password">
+    <column id="88" parent="19" name="password">
       <Position>2</Position>
       <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="84" parent="19" name="tipo">
+    <column id="89" parent="19" name="tipo">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="85" parent="19" name="PRIMARY">
+    <key id="90" parent="19" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>rut</ColNames>
       <Primary>1</Primary>

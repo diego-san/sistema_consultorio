@@ -9,6 +9,26 @@ if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'NORMAL') {
     header("Location:login.php");
     die();
 }
+
+//tiempo de sesion
+if(isset($_SESSION['tiempo']) ) {
+    $inactivo = 1200;
+    $vida_session = time() - $_SESSION['tiempo'];
+    if($vida_session > $inactivo)
+    {
+        session_unset();
+        session_destroy();
+        header("Location:login.php");
+        exit();
+    }
+
+}
+$_SESSION['tiempo'] = time();
+
+
+
+
+//consultas
 echo $varsesion;
 $consulta = new consulta();
 $datos= $consulta->panelnormal($r);
@@ -117,7 +137,7 @@ $rese=$consulta->reserva($r);
 
                            </div>
                            <div class="col-md-5 reserva  ">
-                               <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[3];?>)">Eliminar</button>
+                               <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[3];?>,<?php echo $value[0];?>)">Eliminar</button>
                            </div>
 
                            <?php endforeach;?>

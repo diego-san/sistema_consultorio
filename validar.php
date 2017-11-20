@@ -14,23 +14,27 @@ if (!empty($_REQUEST['rut'] && !empty($_REQUEST['password'])) && is_numeric($_RE
             session_start();
             $_SESSION['login'] = $valida_login[0]['rut'];
             $_SESSION['tipo'] = $valida_login[0]['tipo'];
+            $_SESSION['tiempo'] = time();
             header("Location:administracion.php");
         }elseif ($valida_login[0]['tipo']=='NORMAL'){
             session_start();
             $_SESSION['login'] = $valida_login[0]['rut'];
             $_SESSION['tipo'] = $valida_login[0]['tipo'];
+            $_SESSION['tiempo'] = time();
             header("Location:panelnormal.php");
 
         }elseif ($valida_login[0]['tipo']=='CLINICA'){
             session_start();
             $_SESSION['login'] = $valida_login[0]['rut'];
             $_SESSION['tipo'] = $valida_login[0]['tipo'];
+            $_SESSION['tiempo'] = time();
             header("Location:medico.php");
 
         }elseif ($valida_login[0]['tipo']=='ROOT'){
             session_start();
             $_SESSION['login'] = $valida_login[0]['rut'];
             $_SESSION['tipo'] = $valida_login[0]['tipo'];
+            $_SESSION['tiempo'] = time();
             header("Location:root.php");
 
         }

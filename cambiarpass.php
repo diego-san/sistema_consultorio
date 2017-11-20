@@ -11,6 +11,20 @@ if ($varsesion == null || $varsesion = '' ) {
     header("Location:login.php");
     die();
 }
+//tiempo de sesion
+if(isset($_SESSION['tiempo']) ) {
+    $inactivo = 1200;
+    $vida_session = time() - $_SESSION['tiempo'];
+    if($vida_session > $inactivo)
+    {
+        session_unset();
+        session_destroy();
+        header("Location:login.php");
+        exit();
+    }
+
+}
+$_SESSION['tiempo'] = time();
 
 if (!empty($_REQUEST['pass1']) && !empty($_REQUEST['pass2'])){
     $pass1=$_REQUEST['pass1'];

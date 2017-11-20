@@ -9,10 +9,25 @@ function validar(){
 	}
 }
 
-function seguro(id) {
+function seguro(id,rut) {
 
     if (confirm("Seguro de Eliminar") == true) {
-		return alert(id);
+
+        $.ajax({
+            url: 'procesar.php',
+            method: "GET",
+            data: {nro: id,r:rut},
+        })
+            .done(function(data) {
+                console.log("success");
+                location.reload(true);
+            })
+            .fail(function() {
+                console.log("error");
+            })
+            .always(function() {
+                console.log("complete");
+            });
 
     } else {
         return false;
