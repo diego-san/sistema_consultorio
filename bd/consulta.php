@@ -56,6 +56,16 @@ class consulta{
         return $resultado;
 
     }
+    function reserva($rut){
+        require "conexion.php";
+        $sql="select * from reserva WHERe rut= $rut";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
 
+        return $resultado;
+
+    }
 
 }

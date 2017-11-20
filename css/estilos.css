@@ -149,3 +149,12 @@ h1{
     color: #31708f;
     padding: 5px;
 }
+
+.persona_espacio{
+    height: 20px;
+    background: #f9f9f9 ;
+}
+
+.reserva{
+   margin-top: 10px;
+}

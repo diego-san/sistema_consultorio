@@ -12,17 +12,19 @@ if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'NORMAL') {
 echo $varsesion;
 $consulta = new consulta();
 $datos= $consulta->panelnormal($r);
+$rese=$consulta->reserva($r);
 
 
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Bootstrap Example</title>
+    <title>CESFAM</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/validar.js"></script>
 </head>
 
 <body>
@@ -44,9 +46,9 @@ $datos= $consulta->panelnormal($r);
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="panelnormal.php">Home</a></li>
                 <li><a href="#">Pedir Consulta</a></li>
-                <li><a href="#">Historial</a></li>
+                <li><a href="hisotial.php">Historial</a></li>
                 <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -66,30 +68,76 @@ $datos= $consulta->panelnormal($r);
 
         </div>
         <div class="row">
+        <div class="col-md-10 col-md-offset-1 datos_fondo">
+            <div class="row">
+                <div class="col-md-12 datos_header">
+                    <p class="text_datos text-center">Informacion personal</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 admin_dato">
+                    <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0][3]." ".$datos[0][4];?></p>
+                    <p class="lead"> <strong>Rut: </strong><?php echo $datos[0][0]."-".$datos[0][1];?></p>
+                    <p class="lead"> <strong>Numero de Ficha: </strong><?php echo $datos[0][2];?></p>
+                    <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0][5];?></p>
+                    <p class="lead"> <strong>Numero de telefono: </strong><?php echo $datos[0][10];?></p>
+                </div>
+                <div class="col-md-6 admin_dato">
+                    <?php if ($datos[0][6]=='M'):?>
+                    <p class="lead"> <strong>Genero: </strong>Masculino</p>
+                    <?php else:?>
+                    <p class="lead"> <strong>Genero: </strong>Femenino</p>
+                    <?php endif;?>
+                    <p class="lead"> <strong>Servicio de Salud: </strong><?php echo $datos[0][8];?></p>
+                    <p class="lead"> <strong>Ciudad de nacimiento: </strong><?php echo $datos[0][9];?></p>
+                    <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0][7];?></p>
+                    <p class="lead"> <strong>Movilizacion: </strong><?php echo $datos[0][13];?></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
             <div class="col-md-10 col-md-offset-1 datos_fondo">
                 <div class="row">
                     <div class="col-md-12 datos_header">
-                        <p class="text_datos">Informacion personal</p>
+                        <p class="text_datos text-center">Reserva</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 admin_dato">
-                        <p class="lead"> <strong>Nombre:</strong>pedro jorquera</p>
-                        <p class="lead"> <strong>Rut:</strong>18.915.384-8</p>
-                        <p class="lead"> <strong>Correo:</strong>asdfas@gmail.com</p>
-                        <p class="lead"> <strong>Fecha de nacimiento:</strong>asdfas@gmail.com</p>
-                    </div>
-                    <div class="col-md-6 admin_dato">
-                        <p class="lead"> <strong>Cargo:</strong>pedro jorquera</p>
-                        <p class="lead"> <strong>Titulo:</strong>18.915.384-8</p>
-                        <p class="lead"> <strong>Telefono:</strong>asdfas@gmail.com</p>
-                        <p class="lead"> <strong>Direccion:</strong>asdfas@gmail.com adasfasasfaf</p>
-                    </div>
+
+                       <?php if (!empty($rese)):?>
+                           <?php foreach ( $rese as $key => $value):?>
+                           <div class="col-md-7 reserva ">
+                               <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?></p>
+
+                           </div>
+                           <div class="col-md-5 reserva  ">
+                               <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[3];?>)">Eliminar</button>
+                           </div>
+
+                           <?php endforeach;?>
+                       <?php else:?>
+                           <div class="col-md-12 reserva  ">
+                           <h2 class="text-cente reserva ">No hay Reserva</h2>
+                           </div>
+                       <?php endif;?>
+
+                   </div>
                 </div>
-            </div>
             <div class="col-md-1"></div>
-        </div>
+            </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12 persona_espacio"></div>
     </div>
+
 </main>
 <footer>
     <div class="container">

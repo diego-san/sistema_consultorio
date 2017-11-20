@@ -8,3 +8,14 @@ function validar(){
 		return false;
 	}
 }
+
+function seguro(id) {
+
+    if (confirm("Seguro de Eliminar") == true) {
+		return alert(id);
+
+    } else {
+        return false;
+    }
+
+}
