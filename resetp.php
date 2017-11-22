@@ -72,15 +72,15 @@ $_SESSION['tiempo'] = time();
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4 .col-md-offset-4 pass_fondo">
-                <form action="resetp.php" onsubmit="return confimar()">
+
                     <div class="form-group">
                         <label for="ru">Ingresar Rut: </label>
                         <input type="text" name="rut" required id="ru" minlength="7" maxlength="8" class="form-control" pattern="[0-9]{7,8}">
                         <br>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Cambiar</button>
-                        <div class="mostrar"></div>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return confimar()">Cambiar</button>
+                        <div id="mostrar"></div>
                     </div>
-                </form>
+
             </div>
         </div>
     </div>

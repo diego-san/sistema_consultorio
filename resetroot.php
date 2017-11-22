@@ -1,13 +1,10 @@
 <?php
-require_once "bd/update.php";
 session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
-$rut = $varsesion;
-$tipo = $_SESSION['tipo'];
+$rut=$varsesion;
 
-$error =0;
-if ($varsesion == null || $varsesion = '' ) {
+if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ROOT') {
     header("Location:login.php");
     die();
 }
@@ -26,19 +23,7 @@ if(isset($_SESSION['tiempo']) ) {
 }
 $_SESSION['tiempo'] = time();
 
-if (!empty($_REQUEST['pass1']) && !empty($_REQUEST['pass2'])){
-    $pass1=$_REQUEST['pass1'];
-    $pass2=$_REQUEST['pass2'];
-    if ($pass1== $pass2){
-        $up= new update();
-        $up->password_update($rut,$pass1);
-        header("Location:close.php");
-    }else{
-        $error =1;    }
-
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,14 +33,6 @@ if (!empty($_REQUEST['pass1']) && !empty($_REQUEST['pass2'])){
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/validar.js"></script>
-    <?php if ($error== 1):?>
-        <script language="JavaScript" type="text/javascript">
-            alert("Contraseña distintas");
-        </script>
-
-    <?php endif;?>
-
-
 </head>
 
 <body>
@@ -77,15 +54,11 @@ if (!empty($_REQUEST['pass1']) && !empty($_REQUEST['pass2'])){
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <?php if ($tipo== 'ADMINISTRACION'):?>
-                    <li class="active"><a href="administracion.php">Home</a></li>
-                <?php elseif ($tipo== 'ROOT'):?>
-                    <li class="active"><a href="root.php">Home</a></li>
-                <?php elseif ($tipo== 'NORMAL'):?>
-                    <li class="active"><a href="panelnormal.php">Home</a></li>
-                <?php elseif ($error== 'CLINICA'):?>
-                    <li class="active"><a href="medico.php">Home</a></li>
-                <?php endif;?>
+                <li class="active"><a href="root.php">Home</a></li>
+                <li><a href="in_administracion.php">Ingresar administracion</a></li>
+                <li><a href="in_clinica.php">Ingresar Clinica</a></li>
+                <li><a href="resetroot.php">Restablecer  Contraseña</a></li>
+                <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
@@ -98,15 +71,15 @@ if (!empty($_REQUEST['pass1']) && !empty($_REQUEST['pass2'])){
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4 .col-md-offset-4 pass_fondo">
-                <form action="cambiarpass.php" onsubmit="return validar()">
-                    <div class="form-group">
-                    <label for="pass1">Contraseña:</label>
-                    <input type="password" name="pass1" id="pass1" required minlength="4" class="form-control">
-                    <label for="pass2">Repita Contraseña:</label>
-                    <input type="password" name="pass2" id="pass2" required minlength="4" class="form-control"><br>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Cambiar</button>
-                    </div>
-                </form>
+
+                <div class="form-group">
+                    <label for="ru">Ingresar Rut: </label>
+                    <input type="text" name="rut" required id="ru" minlength="7" maxlength="8" class="form-control" pattern="[0-9]{7,8}">
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return confimarROOT()">Cambiar</button>
+                    <div id="mostrar"></div>
+                </div>
+
             </div>
         </div>
     </div>

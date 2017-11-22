@@ -45,6 +45,18 @@ class consulta{
 
 
     }
+    function comprubaPERSONA($rut){
+        require "conexion.php";
+        $sql ="select * from user WHERE rut =$rut AND tipo = 'NORMAL'";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
+
+
+    }
     function info_root($rut){
         require "conexion.php";
         $sql="select * from administracion WHERE rut_administracion = $rut";

@@ -82,7 +82,7 @@ $datos=$get->info_root($rut);
             <div class="col-md-10 col-md-offset-1 datos_fondo">
                 <div class="row">
                     <div class="col-md-12 datos_header">
-                        <p class="text_datos">Informacion personal</p>
+                        <p class="text_datos text-center">Informacion personal</p>
                     </div>
                 </div>
                 <div class="row">

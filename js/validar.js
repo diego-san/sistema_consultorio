@@ -10,8 +10,9 @@ function validar(){
 }
 
 function confimar() {
-    var pass1;
+    var rut;
     rut = document.getElementById("ru").value;
+    if(rut != null && rut !=''){
     if (confirm("Seguro de Restablecer Contraceña") == true) {
         $.ajax({
             url: 'procesar.php',
@@ -20,8 +21,9 @@ function confimar() {
         })
             .done(function(data) {
                 console.log("success");
-                $(".mostrar").html('');
-                $(".mostrar").append(data);
+                $("#mostrar").html('');
+                $("#mostrar").append(data);
+
             })
             .fail(function() {
                 console.log("error");
@@ -32,7 +34,41 @@ function confimar() {
     }else{
         return false;
     }
+    }else{
+        alert("Ingresar rut");
+    }
     
+}
+
+function confimarROOT() {
+    var rut;
+    rut = document.getElementById("ru").value;
+    if(rut != null && rut !=''){
+        if (confirm("Seguro de Restablecer Contraceña") == true) {
+            $.ajax({
+                url: 'procesar.php',
+                method: "GET",
+                data: {nro: rut,tipo:3},
+            })
+                .done(function(data) {
+                    console.log("success");
+                    $("#mostrar").html('');
+                    $("#mostrar").append(data);
+
+                })
+                .fail(function() {
+                    console.log("error");
+                })
+                .always(function() {
+                    console.log("complete");
+                });
+        }else{
+            return false;
+        }
+    }else{
+        alert("Ingresar rut");
+    }
+
 }
 
 function seguro(id,rut) {
