@@ -136,7 +136,7 @@ $rese=$consulta->reserva($r);
                                <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?></p>
 
                            </div>
-                           <div class="col-md-5 reserva  ">
+                           <div class="col-md-5 reserva bot ">
                                <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[3];?>,<?php echo $value[0];?>)">Eliminar</button>
                            </div>
 

@@ -9,6 +9,32 @@ function validar(){
 	}
 }
 
+function confimar() {
+    var pass1;
+    rut = document.getElementById("ru").value;
+    if (confirm("Seguro de Restablecer Contraceña") == true) {
+        $.ajax({
+            url: 'procesar.php',
+            method: "GET",
+            data: {nro: rut,tipo:2},
+        })
+            .done(function(data) {
+                console.log("success");
+                $(".mostrar").html('');
+                $(".mostrar").append(data);
+            })
+            .fail(function() {
+                console.log("error");
+            })
+            .always(function() {
+                console.log("complete");
+            });
+    }else{
+        return false;
+    }
+    
+}
+
 function seguro(id,rut) {
 
     if (confirm("Seguro de Eliminar") == true) {
@@ -16,7 +42,7 @@ function seguro(id,rut) {
         $.ajax({
             url: 'procesar.php',
             method: "GET",
-            data: {nro: id,r:rut},
+            data: {nro: id,r:rut,tipo: 1},
         })
             .done(function(data) {
                 console.log("success");

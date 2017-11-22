@@ -67,5 +67,16 @@ class consulta{
         return $resultado;
 
     }
+    function info_clinia($rut){
+        require "conexion.php";
+        $sql="select * from clinica_administracion WHERE rut_clinica = $rut";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
+
+    }
 
 }

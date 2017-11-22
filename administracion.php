@@ -59,7 +59,7 @@ $datos=$get->info_root($rut);
                 <li class="active"><a href="administracion.php">Home</a></li>
                 <li><a href="in_paciente.php">Ingresar Pasiente</a></li>
                 <li><a href="#">busqueda Paciente</a></li>
-                <li><a href="#">Grafica</a></li>
+                <li><a href="resetp.php">restablecer Contraceña Persona</a></li>
                 <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -90,13 +90,13 @@ $datos=$get->info_root($rut);
                         <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0]['2']." ".$datos[0]['4'];?></p>
                         <p class="lead"> <strong>Rut: </strong><?php echo $datos[0]['0']."-".$datos[0]['1'];?></p>
                         <p class="lead"> <strong>Correo: </strong><?php echo $datos[0]['7']?></p>
-                        <p class="lead"> <strong>Fecha de nacimiento:</strong><?php echo $datos[0]['9'];?></p>
+                        <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0]['9'];?></p>
                     </div>
                     <div class="col-md-6 admin_dato">
-                        <p class="lead"> <strong>Cargo:</strong><?php echo $datos[0]['3'];?></p>
-                        <p class="lead"> <strong>Titulo:</strong><?php echo $datos[0]['5'];?></p>
-                        <p class="lead"> <strong>Telefono:</strong><?php echo $datos[0]['6'];?></p>
-                        <p class="lead"> <strong>Direccion:</strong><?php echo $datos[0]['8'];?> </p>
+                        <p class="lead"> <strong>Cargo: </strong><?php echo $datos[0]['3'];?></p>
+                        <p class="lead"> <strong>Titulo: </strong><?php echo $datos[0]['5'];?></p>
+                        <p class="lead"> <strong>Telefono: </strong><?php echo $datos[0]['6'];?></p>
+                        <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0]['8'];?> </p>
                     </div>
                 </div>
             </div>

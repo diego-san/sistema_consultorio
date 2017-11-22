@@ -1,7 +1,9 @@
 <?php
+require_once "bd/consulta.php";
 session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
+$rut=$varsesion;
 
 if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'CLINICA') {
     header("Location:login.php");
@@ -21,11 +23,14 @@ if(isset($_SESSION['tiempo']) ) {
 
 }
 $_SESSION['tiempo'] = time();
+
+$get = new consulta();
+$datos=$get->info_clinia($rut);
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Bootstrap Example</title>
+    <title>CESFAM</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -51,17 +56,9 @@ $_SESSION['tiempo'] = time();
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Page 1-1</a></li>
-                        <li><a href="#">Page 1-2</a></li>
-                        <li><a href="#">Page 1-3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li class="active"><a href="medico.php">Home</a></li>
+                <li><a href="Ingresar Historial">Page 2</a></li>
+                <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
@@ -70,7 +67,40 @@ $_SESSION['tiempo'] = time();
     </div>
 </nav>
 <main>
-    <div class="container"></div>
+    <div class="container-fluid admin-fondo">
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1 admin_tirulo">
+                <h2 class="text-center">Informacion</h2>
+            </div>
+            <div class="col-md-1"></div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo">
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos">Informacion personal</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0]['2']." ".$datos[0]['4'];?></p>
+                        <p class="lead"> <strong>Rut: </strong><?php echo $datos[0]['0']."-".$datos[0]['1'];?></p>
+                        <p class="lead"> <strong>Correo: </strong><?php echo $datos[0]['7']?></p>
+                        <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0]['9'];?></p>
+                    </div>
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Cargo: </strong><?php echo $datos[0]['3'];?></p>
+                        <p class="lead"> <strong>Titulo: </strong><?php echo $datos[0]['5'];?></p>
+                        <p class="lead"> <strong>Telefono: </strong><?php echo $datos[0]['6'];?></p>
+                        <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0]['8'];?> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
 </main>
 <footer>
     <div class="container">
