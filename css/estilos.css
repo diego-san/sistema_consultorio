@@ -166,6 +166,10 @@ h1{
 
 }
 
+.reserva_bt{
+    padding:10px;
+}
+
 /*botones-----------------------*/
 .boton_tabla{
     text-decoration: none;

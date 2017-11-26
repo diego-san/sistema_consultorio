@@ -103,6 +103,18 @@ class insertar {
         $conn=null;
     }
 
+    function in_reserva($rut,$fecha,$tipo){
+        require "conexion.php";
+        $sql= "INSERT INTO reserva(rut, fecha, tipo_reveva) VALUES (?,?,?)";
+        $smt=$conn->prepare($sql);
+        $smt->bindparam(1,$rut);
+        $smt->bindparam(2,$fecha);
+        $smt->bindparam(3,$tipo);
+        $smt->execute();
+        $conn=null;
+
+
+    }
 
 }
 

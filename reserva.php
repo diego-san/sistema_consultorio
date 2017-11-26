@@ -86,6 +86,7 @@ $_SESSION['tiempo'] = time();
                         <button type="button" class="btn btn-primary btn-lg btn-block">Kinesiologia</button>
                         <button type="button" class="btn btn-primary btn-lg btn-block">Medicina General</button>
                         <button type="button" class="btn btn-primary btn-lg btn-block">Maternal</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Ginecología</button>
                     </div>
                 </div>
             </div>

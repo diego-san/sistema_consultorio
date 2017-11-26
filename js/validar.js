@@ -81,7 +81,36 @@ function seguro(id,rut) {
             data: {nro: id,r:rut,tipo: 1},
         })
             .done(function(data) {
-                console.log("success");
+                console.log("su");
+                location.reload(true);
+            })
+            .fail(function() {
+                console.log("error");
+            })
+            .always(function() {
+                console.log("complete");
+            });
+
+    } else {
+        return false;
+    }
+
+
+
+}
+
+
+function reserva(dia,hora,rut,tipo) {
+
+    if (confirm("Seguro de Reservar") == true) {
+
+        $.ajax({
+            url: 'procesarreserva.php',
+            method: "GET",
+            data: {day: dia,rt:rut,hor:hora,ti:tipo},
+        })
+            .done(function(data) {
+                console.log(data);
                 location.reload(true);
             })
             .fail(function() {
