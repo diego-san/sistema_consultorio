@@ -3,12 +3,17 @@ require_once "bd/consulta.php";
 session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
+$genero=$_SESSION['GE'];
 $r=$varsesion;
 
 if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'NORMAL') {
     header("Location:login.php");
     die();
 }
+
+
+
+
 
 //tiempo de sesion
 if(isset($_SESSION['tiempo']) ) {
@@ -41,7 +46,6 @@ $_SESSION['tiempo'] = time();
         <h1 class="text-center">| Sistema Consultorio |</h1>
     </div>
 </header>
-
 <nav class="navbar navbar-default" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -55,8 +59,9 @@ $_SESSION['tiempo'] = time();
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="panelnormal.php">Home</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li><a href="reserva.php">Pedir Consulta</a></li>
+                <li><a href="hisotial.php">Historial</a></li>
+                <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
@@ -76,18 +81,32 @@ $_SESSION['tiempo'] = time();
 
             <div class="col-md-10 col-md-offset-1">
                 <div class="row">
+                    <?php if ($genero == "M" ):?>
                     <div class="col-md-6 bot">
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Dental</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Oftalmología</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Salud Mental</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Pediatria</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,20)">Dental</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,30)">Oftalmología</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,40)">Salud Mental</button>
+
                     </div>
                     <div class="col-md-6 bot">
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Kinesiologia</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Medicina General</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Maternal</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Ginecología</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,60)">Kinesiologia</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,10)">Medicina General</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,50)">Pediatria</button>
                     </div>
+                    <?php else:?>
+                        <div class="col-md-6 bot">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,20)">Dental</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,30)">Oftalmología</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,40)">Salud Mental</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,50)">Pediatria</button>
+                        </div>
+                        <div class="col-md-6 bot">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,60)">Kinesiologia</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,10)">Medicina General</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block"onclick="return reservaingreso(<?php echo $r;?>,70)">Maternal</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return reservaingreso(<?php echo $r;?>,80)"> Ginecología</button>
+                        </div>
+                    <?php endif;?>
                 </div>
             </div>
             <div class="col-md-1"></div>
@@ -108,6 +127,7 @@ $_SESSION['tiempo'] = time();
 </footer>
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/validar.js"></script>
 
 </body>
 </html>

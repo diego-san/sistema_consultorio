@@ -28,13 +28,28 @@ $_SESSION['tiempo'] = time();
 
 //consulta de reserva-------------
 
+function validateDate($date, $format = 'Y-m-d')
+{
+    $d = DateTime::createFromFormat($format, $date);
+    return $d && $d->format($format) == $date;
+}
+
 
 if (isset($_GET['f'])) {
     $fechaini = $_GET['f'];
+    if (validateDate($fechaini)!=true){
+        $fechaini = date('Y-m-d');
+    }
 } else{
     $fechaini = date('Y-m-d');
 }
 $consulta = new consulta();
+$seguridadin = $consulta->reservatipo($r,'MATERNAL');
+if (!empty($seguridadin)){
+    header("Location:panelnormal.php");
+    die();
+
+}
 $fecha=$fechaini;
 $fechaconsulta=$fechaini;
 $datofecha = array();
@@ -47,7 +62,7 @@ $i=0;
 while ($i<5) {
     $dia=$consulta->saber_dia($fecha);
     if ( $dia != "Sabado" and $dia != "Domingo") {
-        $date = $consulta->reservacal($fecha,'GENERAL');
+
 
 
         $datofecha[]= $fecha;
@@ -111,6 +126,14 @@ while ($i<5) {
 </nav>
 <main>
     <div class="container-fluid">
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1 admin_tirulo">
+                <h2 class="text-center">Reservas</h2>
+            </div>
+            <div class="col-md-1"></div>
+
+
+        </div>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">

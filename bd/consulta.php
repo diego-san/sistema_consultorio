@@ -134,6 +134,18 @@ class consulta{
         return $fecha;
     }
 
+    function reservatipo($rut,$tipo){
+        require "conexion.php";
+        $sql="select * from reserva WHERE tipo_reveva= '$tipo' AND rut = $rut ";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+        return $resultado;
+
+
+    }
+
 
 
     }

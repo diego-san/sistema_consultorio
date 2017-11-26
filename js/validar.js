@@ -110,8 +110,9 @@ function reserva(dia,hora,rut,tipo) {
             data: {day: dia,rt:rut,hor:hora,ti:tipo},
         })
             .done(function(data) {
-                console.log(data);
+                console.log("L");
                 location.reload(true);
+
             })
             .fail(function() {
                 console.log("error");
@@ -123,5 +124,58 @@ function reserva(dia,hora,rut,tipo) {
     } else {
         return false;
     }
+
+}
+
+function reservaingreso(rut,tipo) {
+
+
+
+        $.ajax({
+            url: 'compruebareserva.php',
+            method: "GET",
+            data: {rt:rut,tp:tipo},
+        })
+            .done(function(data) {
+                if (data=="true"){
+                alert("Reserva Ya Registrada");
+                return false;
+                }else{
+                    if(tipo == 10){
+                        location.href= "reservaGE.php";
+                    }else if(tipo ==20){
+                        location.href= "reservaDEN.php";
+
+                    }else if(tipo==30){
+                        location.href= "reservaOFT.php";
+
+                    }else if(tipo==40){
+                        location.href= "reservaMEN.php";
+
+                    }else if(tipo==50){
+                        location.href= "reservaPED.php";
+
+                    }else if(tipo==60){
+                        location.href= "reservaKIN.php";
+
+                    }else if(tipo==70){
+                        location.href= "reservaMA.php";
+
+                    }else if(tipo==80){
+                        location.href= "reservaGI.php";
+
+                    }
+
+                }
+
+            })
+            .fail(function() {
+                console.log("error");
+            })
+            .always(function() {
+                console.log("complete");
+            });
+
+
 
 }

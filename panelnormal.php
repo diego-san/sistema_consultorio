@@ -33,6 +33,7 @@ echo $varsesion;
 $consulta = new consulta();
 $datos= $consulta->panelnormal($r);
 $rese=$consulta->reserva($r);
+$_SESSION['GE'] =$datos[0][6];
 
 
 ?>

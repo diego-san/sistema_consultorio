@@ -19,8 +19,8 @@ if($_GET['ti']==10) {
     $fechanew= $ano."-".$mes."-".$dias;
 
     $fecha= $fechanew." ".$r;
-    $rut = 12121212;
-    echo $rut;
+    $rut = $_GET['rt'];
+
    $insertar->in_reserva($rut,$fecha,$tipo);
 
 
@@ -38,8 +38,8 @@ if($_GET['ti']==10) {
     $fechanew= $ano."-".$mes."-".$dias;
 
     $fecha= $fechanew." ".$r;
-    $rut = 12121212;
-    echo $rut;
+    $rut = $_GET['rt'];
+
     $insertar->in_reserva($rut,$fecha,$tipo);
 
 }elseif ($_GET['ti']==30){
@@ -56,8 +56,8 @@ if($_GET['ti']==10) {
     $fechanew= $ano."-".$mes."-".$dias;
 
     $fecha= $fechanew." ".$r;
-    $rut = 12121212;
-    echo $rut;
+    $rut = $_GET['rt'];
+
     $insertar->in_reserva($rut,$fecha,$tipo);
 
 }elseif ($_GET['ti']==40){
@@ -74,8 +74,8 @@ if($_GET['ti']==10) {
     $fechanew= $ano."-".$mes."-".$dias;
 
     $fecha= $fechanew." ".$r;
-    $rut = 12121212;
-    echo $rut;
+    $rut = $_GET['rt'];
+
     $insertar->in_reserva($rut,$fecha,$tipo);
 
 }elseif ($_GET['ti']==50){
@@ -92,8 +92,8 @@ if($_GET['ti']==10) {
     $fechanew= $ano."-".$mes."-".$dias;
 
     $fecha= $fechanew." ".$r;
-    $rut = 12121212;
-    echo $rut;
+    $rut = $_GET['rt'];
+
     $insertar->in_reserva($rut,$fecha,$tipo);
 
 }elseif ($_GET['ti']==60){
@@ -110,8 +110,8 @@ if($_GET['ti']==10) {
     $fechanew= $ano."-".$mes."-".$dias;
 
     $fecha= $fechanew." ".$r;
-    $rut = 12121212;
-    echo $rut;
+    $rut = $_GET['rt'];
+
     $insertar->in_reserva($rut,$fecha,$tipo);
 
 }elseif ($_GET['ti']==70){
@@ -128,8 +128,8 @@ if($_GET['ti']==10) {
     $fechanew= $ano."-".$mes."-".$dias;
 
     $fecha= $fechanew." ".$r;
-    $rut = 12121212;
-    echo $rut;
+    $rut = $_GET['rt'];
+
     $insertar->in_reserva($rut,$fecha,$tipo);
 
 
@@ -147,8 +147,8 @@ if($_GET['ti']==10) {
     $fechanew= $ano."-".$mes."-".$dias;
 
     $fecha= $fechanew." ".$r;
-    $rut = 12121212;
-    echo $rut;
+    $rut = $_GET['rt'];
+
     $insertar->in_reserva($rut,$fecha,$tipo);
 
 }
