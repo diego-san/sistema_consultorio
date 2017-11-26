@@ -45,6 +45,18 @@ class consulta{
 
 
     }
+    function comprubanro($rut,$nro){
+        require "conexion.php";
+        $sql ="select * from persona WHERE rut_persona = $rut OR nro_ficha= $nro ";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
+
+
+    }
     function comprubaPERSONA($rut){
         require "conexion.php";
         $sql ="select * from user WHERE rut =$rut AND tipo = 'NORMAL'";
@@ -90,5 +102,38 @@ class consulta{
         return $resultado;
 
     }
+    function reservacal($fech_in,$tipo){
+        require "conexion.php";
+        $sql="select * from reserva WHERE tipo_reveva= '$tipo' AND fecha BETWEEN '".$fech_in." 00:00' AND  '".$fech_in." 23:59'";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+        return $resultado;
 
-}
+    }
+
+    function verificarhora($fecha,$tipo){
+
+        require "conexion.php";
+        $sql="select * from reserva WHERE tipo_reveva= '$tipo' AND fecha='$fecha' ";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+        return $resultado;
+
+
+    }
+
+    function saber_dia($nombredia)
+    {
+        $dias = array('', 'Lunes','Martes','Miercoles','Jueves','Viernes','Sabado', 'Domingo');
+        $fecha = $dias[date('N', strtotime($nombredia))];
+
+        return $fecha;
+    }
+
+
+
+    }

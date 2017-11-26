@@ -13,7 +13,7 @@ function confimar() {
     var rut;
     rut = document.getElementById("ru").value;
     if(rut != null && rut !=''){
-    if (confirm("Seguro de Restablecer Contraceña") == true) {
+    if (confirm("Seguro de Restablecer Contraseña") == true) {
         $.ajax({
             url: 'procesar.php',
             method: "GET",

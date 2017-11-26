@@ -26,13 +26,13 @@ $_SESSION['tiempo'] = time();
 
 if(isset($_REQUEST['rut'])){
     $rut=$_REQUEST['rut'];
-
+    $nroficha = $_REQUEST['ficha'];
     $busca= new consulta();
 
-   if (empty($busca->compruba($rut))) {
+   if (empty($busca->comprubanro($rut,$nroficha))) {
        $nombre = $_REQUEST['nombre'];
        $apellido = $_REQUEST['apellido'];
-       $nroficha = $_REQUEST['ficha'];
+
        $fecha_nac = $_REQUEST['fecha_nac'];
        $genero = $_REQUEST['genero'];
        $direcc = $_REQUEST['direc'];

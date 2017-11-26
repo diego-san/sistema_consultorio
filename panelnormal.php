@@ -67,7 +67,7 @@ $rese=$consulta->reserva($r);
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="panelnormal.php">Home</a></li>
-                <li><a href="#">Pedir Consulta</a></li>
+                <li><a href="reserva.php">Pedir Consulta</a></li>
                 <li><a href="hisotial.php">Historial</a></li>
                 <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>

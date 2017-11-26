@@ -4,7 +4,7 @@ header{
 
 }
 main{
-    background: #e9e9e9;
+    background: #ffffff;
     min-height: 200px;
     border-top: solid 2px #cccccc;
 }
@@ -160,4 +160,20 @@ h1{
 }
 .bot{
     padding: 5px;
+}
+.bot2{
+
+
+}
+
+/*botones-----------------------*/
+.boton_tabla{
+    text-decoration: none;
+    color: #ffffff;
+    background: #176D81;
+
+}
+.boton_tabla:hover{
+
+    background: #1883ba;
 }
