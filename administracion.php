@@ -59,9 +59,9 @@ $datos=$get->info_root($rut);
             <ul class="nav navbar-nav">
                 <li class="active"><a href="administracion.php">Home</a></li>
                 <li><a href="in_paciente.php">Ingresar Paciente</a></li>
-                <li><a href="#">busqueda Paciente</a></li>
-                <li><a href="resetp.php">restablecer Contraceña Persona</a></li>
-                <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
+                <li><a href="#">Busqueda Paciente</a></li>
+                <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
+                <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
