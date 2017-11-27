@@ -77,7 +77,7 @@ $_SESSION['tiempo'] = time();
             </div>
             <div class="col-md-1"></div>
         </div>
-        <div class="row">
+        <div class="row reserva_menu">
 
             <div class="col-md-10 col-md-offset-1">
                 <div class="row">

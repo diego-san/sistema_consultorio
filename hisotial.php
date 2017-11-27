@@ -27,17 +27,10 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Page 1-1</a></li>
-                        <li><a href="#">Page 1-2</a></li>
-                        <li><a href="#">Page 1-3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li class="active"><a href="panelnormal.php">Home</a></li>
+                <li><a href="reserva.php">Pedir Consulta</a></li>
+                <li><a href="hisotial.php">Historial</a></li>
+                <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
@@ -46,7 +39,39 @@
     </div>
 </nav>
 <main>
-    <div class="container-fluid"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo">
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">Informacion personal</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0][3]." ".$datos[0][4];?></p>
+                        <p class="lead"> <strong>Rut: </strong><?php echo $datos[0][0]."-".$datos[0][1];?></p>
+                        <p class="lead"> <strong>Numero de Ficha: </strong><?php echo $datos[0][2];?></p>
+                        <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0][5];?></p>
+                        <p class="lead"> <strong>Numero de telefono: </strong><?php echo $datos[0][10];?></p>
+                    </div>
+                    <div class="col-md-6 admin_dato">
+                        <?php if ($datos[0][6]=='M'):?>
+                            <p class="lead"> <strong>Genero: </strong>Masculino</p>
+                        <?php else:?>
+                            <p class="lead"> <strong>Genero: </strong>Femenino</p>
+                        <?php endif;?>
+                        <p class="lead"> <strong>Servicio de Salud: </strong><?php echo $datos[0][8];?></p>
+                        <p class="lead"> <strong>Ciudad de nacimiento: </strong><?php echo $datos[0][9];?></p>
+                        <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0][7];?></p>
+                        <p class="lead"> <strong>Movilizacion: </strong><?php echo $datos[0][13];?></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
 </main>
 <footer>
     <div class="container">

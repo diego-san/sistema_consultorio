@@ -146,6 +146,17 @@ class consulta{
 
     }
 
+    function pacientedia($tipo){
+        require "conexion.php";
+        $fechaini = date('Y-m-d');
+        $sql="select * from reserva WHERE tipo_reveva= '$tipo' AND fecha BETWEEN '".$fechaini." 08:00:00' AND '".$fechaini." 23:59:00'";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+        return $resultado;
+    }
+
 
 
     }

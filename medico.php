@@ -26,6 +26,13 @@ $_SESSION['tiempo'] = time();
 
 $get = new consulta();
 $datos=$get->info_clinia($rut);
+$tipo=$datos[0]['5'];
+$pacientedia=$get->pacientedia($tipo);
+$nrop = count($pacientedia);
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -80,7 +87,7 @@ $datos=$get->info_clinia($rut);
             <div class="col-md-10 col-md-offset-1 datos_fondo">
                 <div class="row">
                     <div class="col-md-12 datos_header">
-                        <p class="text_datos">Informacion personal</p>
+                        <p class="text_datos text-center">Informacion personal</p>
                     </div>
                 </div>
                 <div class="row">
@@ -91,8 +98,8 @@ $datos=$get->info_clinia($rut);
                         <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0]['9'];?></p>
                     </div>
                     <div class="col-md-6 admin_dato">
-                        <p class="lead"> <strong>Cargo: </strong><?php echo $datos[0]['3'];?></p>
-                        <p class="lead"> <strong>Titulo: </strong><?php echo $datos[0]['5'];?></p>
+                        <p class="lead"> <strong>Tipo: </strong><?php echo $datos[0]['5'];?></p>
+                        <p class="lead"> <strong>Titulo: </strong><?php echo $datos[0]['3'];?></p>
                         <p class="lead"> <strong>Telefono: </strong><?php echo $datos[0]['6'];?></p>
                         <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0]['8'];?> </p>
                     </div>
@@ -100,7 +107,42 @@ $datos=$get->info_clinia($rut);
             </div>
             <div class="col-md-1"></div>
         </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo">
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">Pacientes del Dia</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <?php
+                    for ($i=0;$i < $nrop ; $i++){
+                        $datospacientedia = $get->panelnormal($pacientedia[$i][0]);
+                        echo $datospacientedia[0][0];
+                    }
+                    ?>
+
+
+
+                    <div class="col-md-6 admin_dato">
+
+
+                    </div>
+                    <div class="col-md-6 admin_dato">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
     </div>
+
 </main>
 <footer>
     <div class="container">
