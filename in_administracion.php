@@ -108,7 +108,7 @@ if (isset($_REQUEST['rut'])){
                             <input type="text" name="rut" required id="ru" minlength="7" maxlength="8" class="form-control" pattern="[0-9]{7,8}">
                             <label for="ca">Cargo: </label>
                             <input type="text" name="cargo" required id="ca" minlength="1" class="form-control">
-                            <label for="fechanac" class=" control-label">Fehca de Nacimiento:</label>
+                            <label for="fechanac" class=" control-label">Fecha de Nacimiento:</label>
                             <div class="input-group date form_date " data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                                 <input class="form-control" size="16" type="text" value="" readonly name="fecha_nac">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
