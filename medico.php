@@ -117,24 +117,26 @@ $nrop = count($pacientedia);
                         <p class="text_datos text-center">Pacientes del Dia</p>
                     </div>
                 </div>
-                <div class="row">
+
                     <?php
                     for ($i=0;$i < $nrop ; $i++){
                         $datospacientedia = $get->panelnormal($pacientedia[$i][0]);
-                        echo $datospacientedia[0][0];
+                        echo "<div class='row'>";
+                        echo "<div class='col-md-8 admin_dato'>";
+                       echo " <p class='lead text'> <strong>Nombre: </strong>".$datospacientedia[0]['nombre_persona']." "
+                           .$datospacientedia[0]['apellido_persona']."<strong> Rut: </strong>".$datospacientedia[0]['0']."-".$datospacientedia[0]['1']
+                          ."<strong> Fecha: </strong>".$pacientedia[$i]['fecha']."</p>";
+
+                        echo "</div>";
+
+                        echo "<div class='col-md-4 admin_dato'>";
+                        echo "<button type='button' class='btn btn-primary btn-lg btn-block'>Ingresar Consulta</button>";
+                        echo "</div>";
+                        echo "</div>";
                     }
                     ?>
 
 
-
-                    <div class="col-md-6 admin_dato">
-
-
-                    </div>
-                    <div class="col-md-6 admin_dato">
-
-                    </div>
-                </div>
             </div>
             <div class="col-md-1"></div>
         </div>

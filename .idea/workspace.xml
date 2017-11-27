@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dddd1693-8c83-4b7d-9079-89656bf5dd95" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/consulta.php" afterPath="$PROJECT_DIR$/bd/consulta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/estilos.css" afterPath="$PROJECT_DIR$/css/estilos.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hisotial.php" afterPath="$PROJECT_DIR$/hisotial.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/medico.php" afterPath="$PROJECT_DIR$/medico.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reserva.php" afterPath="$PROJECT_DIR$/reserva.php" />
     </list>
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,15 +48,15 @@
       <file leaf-file-name="medico.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/medico.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="123" column="53" lean-forward="false" selection-start-line="123" selection-start-column="53" selection-end-line="123" selection-end-column="53" />
+            <state relative-caret-position="268">
+              <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding>
-                <marker date="1511794206729" expanded="true" signature="4615:4643" ph="..." />
-                <marker date="1511794206729" expanded="true" signature="4767:4840" ph="..." />
-                <marker date="1511794206729" expanded="true" signature="4869:5245" ph="..." />
-                <marker date="1511794206729" expanded="true" signature="4897:5235" ph="..." />
-                <marker date="1511794206729" expanded="true" signature="4923:5224" ph="..." />
-                <marker date="1511794206729" expanded="true" signature="5000:5168" ph="..." />
+                <marker date="1511795717812" expanded="true" signature="5276:5349" ph="..." />
+                <marker date="1511795717812" expanded="true" signature="5378:5394" ph="..." />
+                <marker date="1511795717812" expanded="true" signature="5378:5754" ph="..." />
+                <marker date="1511795717812" expanded="true" signature="5406:5744" ph="..." />
+                <marker date="1511795717812" expanded="true" signature="5432:5733" ph="..." />
+                <marker date="1511795717812" expanded="true" signature="5509:5677" ph="..." />
               </folding>
             </state>
           </provider>
@@ -290,7 +286,7 @@
       <workItem from="1511439282955" duration="9288000" />
       <workItem from="1511633736735" duration="12820000" />
       <workItem from="1511712154659" duration="23095000" />
-      <workItem from="1511785917147" duration="4838000" />
+      <workItem from="1511785917147" duration="6425000" />
     </task>
     <task id="LOCAL-00001" summary="fist">
       <created>1508884699546</created>
@@ -390,11 +386,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511735492499</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="clinica">
+      <created>1511794287649</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1511794287649</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130062000" />
+    <option name="totallyTimeSpent" value="131649000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,7 +452,8 @@
     <MESSAGE value="reserva calendario&#10;&#10;alpha de calendario" />
     <MESSAGE value="reserva calendario&#10;&#10;alpha V0.1 de calendario" />
     <MESSAGE value="reserva calendario TERMINADO" />
-    <option name="LAST_COMMIT_MESSAGE" value="reserva calendario TERMINADO" />
+    <MESSAGE value="clinica" />
+    <option name="LAST_COMMIT_MESSAGE" value="clinica" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -856,15 +860,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/medico.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="123" column="53" lean-forward="false" selection-start-line="123" selection-start-column="53" selection-end-line="123" selection-end-column="53" />
+        <state relative-caret-position="268">
+          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding>
-            <marker date="1511794206729" expanded="true" signature="4615:4643" ph="..." />
-            <marker date="1511794206729" expanded="true" signature="4767:4840" ph="..." />
-            <marker date="1511794206729" expanded="true" signature="4869:5245" ph="..." />
-            <marker date="1511794206729" expanded="true" signature="4897:5235" ph="..." />
-            <marker date="1511794206729" expanded="true" signature="4923:5224" ph="..." />
-            <marker date="1511794206729" expanded="true" signature="5000:5168" ph="..." />
+            <marker date="1511795717812" expanded="true" signature="5276:5349" ph="..." />
+            <marker date="1511795717812" expanded="true" signature="5378:5394" ph="..." />
+            <marker date="1511795717812" expanded="true" signature="5378:5754" ph="..." />
+            <marker date="1511795717812" expanded="true" signature="5406:5744" ph="..." />
+            <marker date="1511795717812" expanded="true" signature="5432:5733" ph="..." />
+            <marker date="1511795717812" expanded="true" signature="5509:5677" ph="..." />
           </folding>
         </state>
       </provider>
