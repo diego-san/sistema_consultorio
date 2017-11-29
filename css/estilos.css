@@ -4,7 +4,7 @@ header{
 
 }
 main{
-    background: #ffffff;
+    background: #f9f9f9;
     min-height: 200px;
     border-top: solid 2px #cccccc;
 }
@@ -183,4 +183,9 @@ h1{
 .boton_tabla:hover{
 
     background: #1883ba;
+}
+
+/*in_historial--*/
+.in_historial-espacio{
+    height: 200px;
 }

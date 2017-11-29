@@ -116,6 +116,23 @@ class insertar {
 
     }
 
+    function in_historial($rutpe,$rues,$tipo,$info,$fechaini){
+        require "conexion.php";
+
+
+        $sql ="INSERT INTO historial ( rut_histo,rut_especialista, informe_ante, tipo_atencion, fecha) VALUES (?,?,?,?,?)";
+        $smt=$conn->prepare($sql);
+        $smt->bindparam(1,$rutpe);
+        $smt->bindparam(2,$rues);
+        $smt->bindparam(3,$info);
+        $smt->bindparam(4,$tipo);
+        $smt->bindparam(5,$fechaini);
+        $smt->execute();
+        $conn=null;
+
+
+    }
+
 }
 
 

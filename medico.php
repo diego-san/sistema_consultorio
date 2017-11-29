@@ -51,6 +51,7 @@ $nrop = count($pacientedia);
     </div>
 </header>
 
+
 <nav class="navbar navbar-default" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -64,7 +65,7 @@ $nrop = count($pacientedia);
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="medico.php">Home</a></li>
-                <li><a href="Ingresar Historial">Page 2</a></li>
+                <li><a href="in_historial.php">Ingresar Historial</a></li>
                 <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -125,12 +126,12 @@ $nrop = count($pacientedia);
                         echo "<div class='col-md-8 admin_dato'>";
                        echo " <p class='lead text'> <strong>Nombre: </strong>".$datospacientedia[0]['nombre_persona']." "
                            .$datospacientedia[0]['apellido_persona']."<strong> Rut: </strong>".$datospacientedia[0]['0']."-".$datospacientedia[0]['1']
-                          ."<strong> Fecha: </strong>".$pacientedia[$i]['fecha']."</p>";
+                          ."<strong>Fecha: </strong>".$pacientedia[$i]['fecha']."</p>";
 
                         echo "</div>";
 
                         echo "<div class='col-md-4 admin_dato'>";
-                        echo "<button type='button' class='btn btn-primary btn-lg btn-block'>Ingresar Consulta</button>";
+                        echo "<a type='button' class='btn btn-primary btn-lg btn-block' href='in_historial.php?r=".$datospacientedia[0]['0']."'>Ingresar Consulta</a>";
                         echo "</div>";
                         echo "</div>";
                     }

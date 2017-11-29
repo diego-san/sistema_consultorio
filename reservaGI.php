@@ -154,12 +154,12 @@ while ($i<5) {
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <tr>
-                            <td>Hora</td>
-                            <td><?php echo $datofecha[0];?></td>
-                            <td><?php echo $datofecha[1];?></td>
-                            <td><?php echo $datofecha[2];?></td>
-                            <td><?php echo $datofecha[3];?></td>
-                            <td><?php echo $datofecha[4];?></td>
+                            <td class="text-center">Hora</td>
+                            <td class="text-center"><?php echo $consulta->saber_dia_fecha($datofecha[0]);?></td>
+                            <td class="text-center"><?php echo $consulta->saber_dia_fecha($datofecha[1]);?></td>
+                            <td class="text-center"><?php echo $consulta->saber_dia_fecha($datofecha[2]);?></td>
+                            <td class="text-center"><?php echo $consulta->saber_dia_fecha($datofecha[3]);?></td>
+                            <td class="text-center"><?php echo $consulta->saber_dia_fecha($datofecha[4]);?></td>
 
                         </tr>
 

@@ -25,4 +25,16 @@ class delete{
         }
 
     }
+
+    function deletereservaconsulta($rut,$tipo){
+        require "conexion.php";
+
+        $sql ="DELETE FROM reserva WHERE rut =:rut AND tipo_reveva = :tipo ";
+
+        $smt=$conn->prepare($sql);
+        $smt->bindParam(':rut',$rut);
+        $smt->bindParam(':tipo',$tipo);
+        $smt->execute();
+        $conn=null;
+    }
 }
