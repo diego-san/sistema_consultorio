@@ -178,6 +178,7 @@ h1{
     text-decoration: none;
     color: #ffffff;
     background: #176D81;
+    padding: 30px;
 
 }
 .boton_tabla:hover{
@@ -188,4 +189,10 @@ h1{
 /*in_historial--*/
 .in_historial-espacio{
     height: 200px;
+}
+
+/*-----historial*/
+
+.histoespacio{
+    min-height: 500px;
 }

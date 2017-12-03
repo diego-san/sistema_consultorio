@@ -92,9 +92,9 @@ class insertar {
         $smt->bindparam(1,$rut);
         $smt->bindparam(2,$digito);
         $smt->bindparam(3,$nombre);
-        $smt->bindparam(4,$cargo);
-        $smt->bindparam(5,$apellido);
-        $smt->bindparam(6,$titulo);
+        $smt->bindparam(6,$cargo);
+        $smt->bindparam(4,$apellido);
+        $smt->bindparam(5,$titulo);
         $smt->bindparam(7,$telefono);
         $smt->bindparam(8,$correo);
         $smt->bindparam(9,$direc);

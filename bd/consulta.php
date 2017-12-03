@@ -204,6 +204,18 @@ class consulta{
         return $resultado;
     }
 
+    function historial($rut){
+        require "conexion.php";
+        $sql="select * from historial WHERE rut_histo = $rut";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+        return $resultado;
+
+
+    }
+
 
 
     }

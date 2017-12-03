@@ -4,22 +4,252 @@
     <bookmark url="file://$PROJECT_DIR$/in_paciente.php" line="15" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dddd1693-8c83-4b7d-9079-89656bf5dd95" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/350e273a-0699-4364-8d80-c580b02688c6.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/350e273a-0699-4364-8d80-c580b02688c6.xml" />
+    <list default="true" id="dddd1693-8c83-4b7d-9079-89656bf5dd95" name="Default" comment="ingresar historial">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/aealarabiya.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/aealarabiya.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/aefurat.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/aefurat.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusans.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusans.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensed.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensed.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensedb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensedb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensedbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensedbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensedi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensedi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansextralight.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansextralight.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmono.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmono.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmonob.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmonob.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmonobi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmonobi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmonoi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmonoi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserif.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserif.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensed.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensed.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensedb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensedb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensedbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensedbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensedi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensedi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemono.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemono.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemonob.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemonob.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemonobi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemonobi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemonoi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemonoi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesans.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesans.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesansb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesansb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesansbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesansbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesansi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesansi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserif.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserif.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserifb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserifb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserifbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserifbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserifi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserifi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfacourier.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfacourierb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfacourierbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfacourieri.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfahelvetica.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfahelveticab.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfahelveticabi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfahelveticai.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfasymbol.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfatimes.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfatimesb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfatimesbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfatimesi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfazapfdingbats.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/_blank.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/image_demo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/image_with_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/img.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/logo_example.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/logo_example.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/logo_example.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/tcpdf_cell.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/tcpdf_logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/tcpdf_signature.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/include/sRGB.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/CHANGELOG.TXT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/LICENSE.TXT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/config/tcpdf_config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/example_006.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/ae_fonts_2.0/COPYING" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/ae_fonts_2.0/ChangeLog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/ae_fonts_2.0/ChangeLog.9745.BAK" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/ae_fonts_2.0/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/aealarabiya.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/aefurat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/cid0cs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/cid0ct.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/cid0jp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/cid0kr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/courier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/courierb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/courierbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/courieri.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.33/AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.33/BUGS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.33/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.33/NEWS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.33/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.33/langcover.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.33/status.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.33/unicover.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.34/AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.34/BUGS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.34/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.34/NEWS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.34/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.34/langcover.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.34/status.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavu-fonts-ttf-2.34/unicover.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusans.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensed.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensedb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensedbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusanscondensedi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansextralight.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmono.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmonob.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmonobi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavusansmonoi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserif.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensed.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensedb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensedbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifcondensedi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/dejavuserifi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20100919/AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20100919/COPYING" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20100919/CREDITS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20100919/ChangeLog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20100919/INSTALL" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20100919/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20120503/AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20120503/COPYING" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20120503/CREDITS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20120503/ChangeLog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20120503/ChangeLog.10070.BAK" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20120503/INSTALL" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20120503/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20120503/TROUBLESHOOTING" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freefont-20120503/USAGE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemono.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemonob.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemonobi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freemonoi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesans.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesansb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesansbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freesansi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserif.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserifb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserifbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/freeserifi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/helvetica.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/helveticab.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/helveticabi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/helveticai.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/hysmyeongjostdmedium.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/kozgopromedium.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/kozminproregular.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/msungstdlight.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfacourier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfacourierb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfacourierbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfacourieri.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfahelvetica.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfahelveticab.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfahelveticabi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfahelveticai.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfasymbol.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfatimes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfatimesb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfatimesbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfatimesi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/pdfazapfdingbats.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/stsongstdlight.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/symbol.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/times.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/timesb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/timesbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/timesi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/uni2cid_ac15.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/uni2cid_ag15.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/uni2cid_aj16.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/uni2cid_ak12.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fonts/zapfdingbats.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/tcpdf_box.ai" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/tcpdf_box.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/testsvg.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/images/tux.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/include/barcodes/datamatrix.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/include/barcodes/pdf417.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/include/barcodes/qrcode.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/include/tcpdf_colors.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/include/tcpdf_filters.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/include/tcpdf_font_data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/include/tcpdf_fonts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/include/tcpdf_images.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/include/tcpdf_static.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/pdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/tcpdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/tcpdf_autoconfig.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/tcpdf_barcodes_1d.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/tcpdf_barcodes_2d.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/tcpdf_import.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/tcpdf_parser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/tools/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/tools/convert_fonts_examples.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/tools/tcpdf_addfont.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/consulta.php" afterPath="$PROJECT_DIR$/bd/consulta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/delete.php" afterPath="$PROJECT_DIR$/bd/delete.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/insertar.php" afterPath="$PROJECT_DIR$/bd/insertar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/estilos.css" afterPath="$PROJECT_DIR$/css/estilos.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/medico.php" afterPath="$PROJECT_DIR$/medico.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaDEN.php" afterPath="$PROJECT_DIR$/reservaDEN.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaGE.php" afterPath="$PROJECT_DIR$/reservaGE.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaGI.php" afterPath="$PROJECT_DIR$/reservaGI.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaKIN.php" afterPath="$PROJECT_DIR$/reservaKIN.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaMA.php" afterPath="$PROJECT_DIR$/reservaMA.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaMEN.php" afterPath="$PROJECT_DIR$/reservaMEN.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaOFT.php" afterPath="$PROJECT_DIR$/reservaOFT.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaPED.php" afterPath="$PROJECT_DIR$/reservaPED.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hisotial.php" afterPath="$PROJECT_DIR$/hisotial.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/in_clinica.php" afterPath="$PROJECT_DIR$/in_clinica.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/in_historial.php" afterPath="$PROJECT_DIR$/in_historial.php" />
     </list>
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,18 +287,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="hisotial.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hisotial.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,7 +306,6 @@
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/prueba.php" />
         <option value="$PROJECT_DIR$/validar.php" />
-        <option value="$PROJECT_DIR$/in_clinica.php" />
         <option value="$PROJECT_DIR$/in_administracion.php" />
         <option value="$PROJECT_DIR$/cambiarpass.php" />
         <option value="$PROJECT_DIR$/aa.php" />
@@ -103,14 +321,11 @@
         <option value="$PROJECT_DIR$/js/validar.js" />
         <option value="$PROJECT_DIR$/compruebareserva.php" />
         <option value="$PROJECT_DIR$/reserva.php" />
-        <option value="$PROJECT_DIR$/hisotial.php" />
         <option value="$PROJECT_DIR$/in_paciente.php" />
         <option value="$PROJECT_DIR$/bd/delete.php" />
         <option value="$PROJECT_DIR$/bd/update.php" />
-        <option value="$PROJECT_DIR$/bd/insertar.php" />
         <option value="$PROJECT_DIR$/medico.php" />
         <option value="$PROJECT_DIR$/bd/test.php" />
-        <option value="$PROJECT_DIR$/bd/consulta.php" />
         <option value="$PROJECT_DIR$/reservaDEN.php" />
         <option value="$PROJECT_DIR$/reservaGE.php" />
         <option value="$PROJECT_DIR$/reservaGI.php" />
@@ -119,8 +334,15 @@
         <option value="$PROJECT_DIR$/reservaMEN.php" />
         <option value="$PROJECT_DIR$/reservaOFT.php" />
         <option value="$PROJECT_DIR$/reservaPED.php" />
-        <option value="$PROJECT_DIR$/css/estilos.css" />
+        <option value="$PROJECT_DIR$/bd/consulta.php" />
+        <option value="$PROJECT_DIR$/bd/insertar.php" />
+        <option value="$PROJECT_DIR$/in_clinica.php" />
+        <option value="$PROJECT_DIR$/pdf/config/tcpdf_config.php" />
+        <option value="$PROJECT_DIR$/pdf/index.php" />
         <option value="$PROJECT_DIR$/in_historial.php" />
+        <option value="$PROJECT_DIR$/css/estilos.css" />
+        <option value="$PROJECT_DIR$/hisotial.php" />
+        <option value="$PROJECT_DIR$/pdf/pdf.php" />
       </list>
     </option>
   </component>
@@ -152,6 +374,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -174,7 +397,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -182,13 +404,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="database.data.extractors.current.id" value="SQL-Insert-Statements.sql.groovy" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sistema_consultorio\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\sistema_consultorio\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sistema_consultorio\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -238,7 +461,8 @@
       <workItem from="1511712154659" duration="23095000" />
       <workItem from="1511785917147" duration="6659000" />
       <workItem from="1511880781159" duration="8672000" />
-      <workItem from="1511978755017" duration="4534000" />
+      <workItem from="1511978755017" duration="6508000" />
+      <workItem from="1512330619295" duration="9115000" />
     </task>
     <task id="LOCAL-00001" summary="fist">
       <created>1508884699546</created>
@@ -352,11 +576,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511795860727</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="ingresar historial">
+      <created>1511983362930</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1511983362930</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145089000" />
+    <option name="totallyTimeSpent" value="156178000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -369,17 +600,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1860817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18910742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21558245" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -433,7 +663,8 @@
     <MESSAGE value="reserva calendario&#10;&#10;alpha V0.1 de calendario" />
     <MESSAGE value="reserva calendario TERMINADO" />
     <MESSAGE value="clinica" />
-    <option name="LAST_COMMIT_MESSAGE" value="clinica" />
+    <MESSAGE value="ingresar historial" />
+    <option name="LAST_COMMIT_MESSAGE" value="ingresar historial" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -442,31 +673,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/administracion.php" />
-    <entry file="file://$PROJECT_DIR$/panelnormal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administracion.php" />
-    <entry file="file://$PROJECT_DIR$/panelnormal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6547" column="9" lean-forward="false" selection-start-line="6547" selection-start-column="9" selection-end-line="6547" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/npm.js" />
     <entry file="file://$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg">
       <provider selected="true" editor-type-id="text-editor">
@@ -501,14 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/in_clinica.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -549,22 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-914">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/in_administracion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="90" column="8" lean-forward="true" selection-start-line="90" selection-start-column="8" selection-end-line="95" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administracion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="59" column="77" lean-forward="false" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
           <folding />
         </state>
       </provider>
@@ -640,14 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/panelnormal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/in_paciente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -687,85 +861,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bd/insertar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="122" column="66" lean-forward="false" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
-          <folding>
-            <marker date="1511891088161" expanded="true" signature="356:617" ph="INSERT INTO persona... " />
-            <marker date="1511891088161" expanded="true" signature="1563:1613" ph="insert into user... " />
-            <marker date="1511891088161" expanded="true" signature="2081:2303" ph="insert into administracion... " />
-            <marker date="1511891088161" expanded="true" signature="3029:3250" ph="insert into clinica_administracion... " />
-            <marker date="1511891088161" expanded="true" signature="3790:3849" ph="INSERT INTO reserva... " />
-            <marker date="1511891088161" expanded="true" signature="4155:4261" ph="INSERT INTO historial... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bd/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="49" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bd/consulta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="181" column="5" lean-forward="false" selection-start-line="181" selection-start-column="5" selection-end-line="181" selection-end-column="5" />
-          <folding>
-            <marker date="1511982691633" expanded="true" signature="243:307" ph="select rut,t... user" />
-            <marker date="1511982691633" expanded="true" signature="543:585" ph="select * fro... persona" />
-            <marker date="1511982691633" expanded="true" signature="543:589" ph="select * fro... persona" />
-            <marker date="1511982691633" expanded="true" signature="821:852" ph="select * fro... persona" />
-            <marker date="1511982691633" expanded="true" signature="821:856" ph="select * fro... persona" />
-            <marker date="1511982691633" expanded="true" signature="1097:1139" ph="select * fro... user" />
-            <marker date="1511982691633" expanded="true" signature="1097:1158" ph="select * fro... persona" />
-            <marker date="1511982691633" expanded="true" signature="1097:1159" ph="select * fro... persona" />
-            <marker date="1511982691633" expanded="true" signature="1403:1433" ph="select * fro... user" />
-            <marker date="1511982691633" expanded="true" signature="1403:1437" ph="select * fro... user" />
-            <marker date="1511982691633" expanded="true" signature="1403:1457" ph="select * fro... user" />
-            <marker date="1511982691633" expanded="true" signature="1690:1746" ph="select * fro... administracion" />
-            <marker date="1511982691633" expanded="true" signature="1980:2013" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="2251:2308" ph="select * fro... clinica_administracion" />
-            <marker date="1511982691633" expanded="true" signature="2555:2608" ph="select * fro... clinica_administracion" />
-            <marker date="1511982691633" expanded="true" signature="2555:2642" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="2555:2646" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="2555:2668" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="2555:2704" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="2913:2972" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="2913:2980" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="2913:2981" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="4977:5030" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="4977:5036" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="4977:5037" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="5312:5364" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="5312:5379" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="5312:5380" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="5312:5403" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="5312:5407" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="5312:5432" ph="select * fro... reserva" />
-            <marker date="1511982691633" expanded="true" signature="5312:5468" ph="select * fro... reserva" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reservaDEN.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="164" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/medico.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="128" column="36" lean-forward="false" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
-          <folding>
-            <marker date="1511980507273" expanded="true" signature="5434:5450" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -825,28 +925,193 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/panelnormal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservaDEN.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2861">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5b808da0/350e273a-0699-4364-8d80-c580b02688c6/sistema_consultorio.historial">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/in_administracion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/medico.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511980507273" expanded="true" signature="5434:5450" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/in_clinica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="117" column="99" lean-forward="false" selection-start-line="117" selection-start-column="99" selection-end-line="117" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bd/insertar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="96" column="25" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+          <folding>
+            <marker date="1512334025491" expanded="true" signature="356:617" ph="INSERT INTO persona... " />
+            <marker date="1512334025491" expanded="true" signature="1563:1613" ph="insert into user... " />
+            <marker date="1512334025491" expanded="true" signature="2081:2303" ph="insert into administracion... " />
+            <marker date="1512334025491" expanded="true" signature="3029:3250" ph="insert into clinica_administracion... " />
+            <marker date="1512334025491" expanded="true" signature="3790:3849" ph="INSERT INTO reserva... " />
+            <marker date="1512334025491" expanded="true" signature="4155:4261" ph="INSERT INTO historial... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bd/consulta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3197">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511984262457" expanded="true" signature="243:307" ph="select rut,t... user" />
+            <marker date="1511984262457" expanded="true" signature="543:585" ph="select * fro... persona" />
+            <marker date="1511984262457" expanded="true" signature="543:589" ph="select * fro... persona" />
+            <marker date="1511984262457" expanded="true" signature="821:852" ph="select * fro... persona" />
+            <marker date="1511984262457" expanded="true" signature="821:856" ph="select * fro... persona" />
+            <marker date="1511984262457" expanded="true" signature="1097:1139" ph="select * fro... user" />
+            <marker date="1511984262457" expanded="true" signature="1097:1158" ph="select * fro... persona" />
+            <marker date="1511984262457" expanded="true" signature="1097:1159" ph="select * fro... persona" />
+            <marker date="1511984262457" expanded="true" signature="1403:1433" ph="select * fro... user" />
+            <marker date="1511984262457" expanded="true" signature="1403:1437" ph="select * fro... user" />
+            <marker date="1511984262457" expanded="true" signature="1403:1457" ph="select * fro... user" />
+            <marker date="1511984262457" expanded="true" signature="1690:1746" ph="select * fro... administracion" />
+            <marker date="1511984262457" expanded="true" signature="1980:2013" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="2251:2308" ph="select * fro... clinica_administracion" />
+            <marker date="1511984262457" expanded="true" signature="2555:2608" ph="select * fro... clinica_administracion" />
+            <marker date="1511984262457" expanded="true" signature="2555:2642" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="2555:2646" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="2555:2668" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="2555:2704" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="2913:2972" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="2913:2980" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="2913:2981" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="4977:5030" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="4977:5036" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="4977:5037" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="5312:5364" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="5312:5379" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="5312:5380" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="5312:5403" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="5312:5407" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="5312:5432" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="5312:5468" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="5663:5693" ph="select * fro... reserva" />
+            <marker date="1511984262457" expanded="true" signature="5663:5705" ph="select * fro... historial" />
+            <marker date="1511984262457" expanded="true" signature="5663:5706" ph="select * fro... historial" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdf/tcpdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+          <folding>
+            <marker date="1507324004678" expanded="true" signature="587410:587416" ph=" " />
+            <marker date="1507324004678" expanded="true" signature="589845:589856" ph="..." />
+            <marker date="1507324004678" expanded="true" signature="589932:589943" ph="..." />
+            <marker date="1507324004678" expanded="true" signature="590233:590244" ph="..." />
+            <marker date="1507324004678" expanded="true" signature="590496:590502" ph=" " />
+            <marker date="1507324004678" expanded="true" signature="590632:590638" ph=" " />
+            <marker date="1507324004678" expanded="true" signature="591393:591404" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdf/config/tcpdf_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="81" column="42" lean-forward="false" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administracion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdf/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="32" lean-forward="false" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/estilos.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
-          <caret line="189" column="18" lean-forward="false" selection-start-line="189" selection-start-column="18" selection-end-line="189" selection-end-column="18" />
+          <caret line="196" column="21" lean-forward="false" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/in_historial.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="143" column="14" lean-forward="false" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
+        <state relative-caret-position="-1601">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1511983213837" expanded="true" signature="1365:1410" ph="..." />
+            <marker date="1512338940032" expanded="true" signature="1365:1410" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdf/pdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="121" column="23" lean-forward="false" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+          <folding>
+            <marker date="1512339709760" expanded="true" signature="2153:3138" ph="..." />
+            <marker date="1512339709760" expanded="true" signature="2160:2462" ph="..." />
+            <marker date="1512339709760" expanded="true" signature="2469:2644" ph="..." />
+            <marker date="1512339709760" expanded="true" signature="2469:2840" ph="..." />
+            <marker date="1512339709760" expanded="true" signature="2469:2869" ph="..." />
+            <marker date="1512339709760" expanded="true" signature="2895:3003" ph="..." />
+            <marker date="1512339709760" expanded="true" signature="3020:3091" ph="..." />
+            <marker date="1512339709760" expanded="true" signature="3020:3125" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hisotial.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="355">
+          <caret line="85" column="80" lean-forward="false" selection-start-line="85" selection-start-column="80" selection-end-line="85" selection-end-column="80" />
           <folding />
         </state>
       </provider>

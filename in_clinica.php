@@ -111,11 +111,11 @@ if (isset($_REQUEST['rut'])){
                                 <input type="text" name="cargo" required id="ca" minlength="1" class="form-control">
                                 <label for="fechanac" class=" control-label">Fehca de Nacimiento:</label>
                                 <div class="input-group date form_date " data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                    <input class="form-control" size="16" type="text" value="" readonly name="fecha_nac">
+                                    <input class="form-control" size="16" type="text" value="" readonly name="fecha_nac" required minlength="1">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                 </div>
-                                <input type="hidden" id="fechanac" value="" />
+                                <input type="hidden" id="fechanac" value=""  required minlength="1"/>
                             </div>
                         </div>
                         <div class="col-md-6">

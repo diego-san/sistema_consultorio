@@ -115,7 +115,7 @@ if(isset($_REQUEST['rut'])){
                     <label for="ru">Rut: </label>
                     <input type="text" name="rut" required id="ru" minlength="7" maxlength="8" class="form-control" pattern="[0-9]{7,8}" value="<?php echo $valuesrut;?>">
                     <label for="his">Informer</label>
-                    <textarea name="histo" id="his" class="form-control" rows="3" required minlength="10" maxlength="300"></textarea>
+                    <textarea name="histo" id="his" class="form-control" rows="3" required minlength="10" maxlength="2000"></textarea>
                     </div>
                     <input type="hidden" name="rutclinica" value="<?php echo $rut;?>">
                     <input type="hidden" name="tipo" value="<?php echo $datos[0][5]; ?>">

@@ -1,3 +1,38 @@
+<?php
+require_once "bd/consulta.php";
+session_start();
+error_reporting(0);
+$varsesion=$_SESSION['login'];
+$r=$varsesion;
+
+if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'NORMAL' ) {
+    header("Location:login.php");
+    die();
+}
+
+//tiempo de sesion
+if(isset($_SESSION['tiempo']) ) {
+    $inactivo = 1200;
+    $vida_session = time() - $_SESSION['tiempo'];
+    if($vida_session > $inactivo)
+    {
+        session_unset();
+        session_destroy();
+        header("Location:login.php");
+        exit();
+    }
+
+}
+$_SESSION['tiempo'] = time();
+
+$consulta = new consulta();
+$datohito = $consulta->historial($r);
+$datoshistoorden = array_reverse($datohito);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -39,39 +74,58 @@
     </div>
 </nav>
 <main>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 datos_fondo">
-                <div class="row">
-                    <div class="col-md-12 datos_header">
-                        <p class="text_datos text-center">Informacion personal</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 admin_dato">
-                        <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0][3]." ".$datos[0][4];?></p>
-                        <p class="lead"> <strong>Rut: </strong><?php echo $datos[0][0]."-".$datos[0][1];?></p>
-                        <p class="lead"> <strong>Numero de Ficha: </strong><?php echo $datos[0][2];?></p>
-                        <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0][5];?></p>
-                        <p class="lead"> <strong>Numero de telefono: </strong><?php echo $datos[0][10];?></p>
-                    </div>
-                    <div class="col-md-6 admin_dato">
-                        <?php if ($datos[0][6]=='M'):?>
-                            <p class="lead"> <strong>Genero: </strong>Masculino</p>
-                        <?php else:?>
-                            <p class="lead"> <strong>Genero: </strong>Femenino</p>
-                        <?php endif;?>
-                        <p class="lead"> <strong>Servicio de Salud: </strong><?php echo $datos[0][8];?></p>
-                        <p class="lead"> <strong>Ciudad de nacimiento: </strong><?php echo $datos[0][9];?></p>
-                        <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0][7];?></p>
-                        <p class="lead"> <strong>Movilizacion: </strong><?php echo $datos[0][13];?></p>
-
-                    </div>
-                </div>
+    <div class="container-fluid histoespacio">
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1 admin_tirulo">
+                <h2 class="text-center">Historial</h2>
             </div>
             <div class="col-md-1"></div>
         </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <a type="button" class="btn btn-danger btn-lg" href="pdf/pdf.php">Descargar Historial</a>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+            <?php foreach ($datoshistoorden as $key => $value):?>
+                <?php $infoclinica = $consulta->info_clinia($value[1]) ;  ?>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 datos_fondo">
+                        <div class="row">
+                            <div class="col-md-12 datos_header">
+                                <p class="text_datos text-center"><?php echo $value [3];?></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 admin_dato">
+                                <p class="lead"> <strong>Atendido por: </strong><?php echo $infoclinica[0][2]." ".$infoclinica[0][3];?></p>
+                                <p class="lead"> <strong>Rut Especialista: </strong><?php echo $infoclinica[0][0]."-".$infoclinica[0][1];?></p>
+
+                            </div>
+                            <div class="col-md-6 admin_dato">
+                                <p class="lead"> <strong>TItulo: </strong><?php echo $infoclinica[0][4];?></p>
+                                <p class="lead"> <strong>Fecha de Procedimiento: </strong><?php echo $value[4];?></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 reserva_bt">
+                                <p class="lead"><strong>Infomre: </strong><?php echo $value[2];?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 persona_espacio"></div>
+                </div>
+
+
+            <?php endforeach;?>
     </div>
+
 </main>
 <footer>
     <div class="container">
