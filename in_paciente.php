@@ -89,8 +89,8 @@ if(isset($_REQUEST['rut'])){
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="administracion.php">Home</a></li>
-                <li><a href="in_paciente.php">Ingresar Pasiente</a></li>
-                <li><a href="#">busqueda Paciente</a></li>
+                <li><a href="in_paciente.php">Ingresar Paciente</a></li>
+                <li><a href="#">Busqueda Paciente</a></li>
                 <li><a href="grafica.php">Grafica</a></li>
                 <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
@@ -155,7 +155,7 @@ if(isset($_REQUEST['rut'])){
                            <div class="form-group">
                                <label for="dir">Direccion: </label>
                                <input type="text" name="direc" required id="dir" minlength="1" class="form-control">
-                               <label for="ser">Servicio salub: </label>
+                               <label for="ser">Servicio salud: </label>
                                <input type="text" name="servicio" required id="ser" minlength="1" class="form-control">
                                <label for="ciu">Ciudad de nacimiento: </label>
                                <input type="text" name="ciudadnac" required id="ciu" minlength="1" class="form-control">
