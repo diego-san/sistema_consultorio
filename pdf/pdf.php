@@ -1,20 +1,21 @@
 <?php 
 
 require_once"../bd/consulta.php";
-
-if (isset($_GET['rut']) && is_numeric($_GET['rut'])) {
-    $rut = (int) $_GET['rut'];
-} else{
-
-}
 session_start();
 error_reporting(0);
-$varsesion=$_SESSION['login'];
-$rut=$varsesion;
+if (isset($_GET['r']) && is_numeric($_GET['r'])) {
+    $rut = (int) $_GET['r'];
+}
 
-if ($_SESSION['tipo'] == 'NORMAL' || $_SESSION['tipo'] == 'ADMINISTRACION' || $_SESSION['tipo'] == 'CLINICA' ) {
 
-}else{
+
+if ($_SESSION['tipo'] == 'NORMAL'  ) {
+    $varsesion=$_SESSION['login'];
+    $rut=$varsesion;
+}elseif ( $_SESSION['tipo'] == 'ADMINISTRACION' || $_SESSION['tipo'] == 'CLINICA'){
+
+}
+else{
     header("Location:../login.php");
     die();
 }
@@ -39,7 +40,7 @@ $_SESSION['tiempo'] = time();
 
 if (empty($row)) {
 
-	echo "esctudiante no encontrado";
+    header("Location:login.php");
 
 }else{
 

@@ -131,7 +131,7 @@ $nrop = count($pacientedia);
                         echo "</div>";
 
                         echo "<div class='col-md-4 admin_dato'>";
-                        echo "<a type='button' class='btn btn-primary btn-lg btn-block' href='in_historial.php?r=".$datospacientedia[0]['0']."'>Ingresar Consulta</a>";
+                        echo "<a type='button' class='btn btn-primary btn-lg btn-block' href='personainfo.php?r=".$datospacientedia[0]['0']."'>Ver Ficha</a>";
                         echo "</div>";
                         echo "</div>";
                     }
