@@ -59,7 +59,7 @@ $datos=$get->info_root($rut);
             <ul class="nav navbar-nav">
                 <li class="active"><a href="administracion.php">Home</a></li>
                 <li><a href="in_paciente.php">Ingresar Paciente</a></li>
-                <li><a href="#">Busqueda Paciente</a></li>
+                <li><a href="buscarpe.php">Busqueda Paciente</a></li>
                 <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
                 <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>

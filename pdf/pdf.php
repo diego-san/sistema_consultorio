@@ -85,7 +85,7 @@ $pdf->SetFont('dejavusans', '', 10);
 $pdf->AddPage();
 
 foreach ($roworden as $key =>$value) {
-
+	$pdf->lastPage();
     $infoclinica = $consulta->info_clinia($value[1]);
 
     $html = '<table  cellspacing="3" cellpadding="4">
@@ -105,7 +105,7 @@ foreach ($roworden as $key =>$value) {
            <th colspan="5"  bgcolor="#968f7e" color="#ffffff" align="center">Informe</th>
             </tr>
             <tr>
-			<td bgcolor="#F2F2F2" color="#000000" align="center" colspan="5" >' . $value[2]. ' lorem</td>
+			<td bgcolor="#F2F2F2" color="#000000" align="center" colspan="5" >' . $value[2]. ' </td>
 		</tr>
 		
 	</table>

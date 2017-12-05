@@ -40,7 +40,7 @@ if (isset($_GET['error']) && is_numeric($_GET['error'])) {
                             <form class="form-signin" action="validar.php" method="get">
                                 <div class="form-group">
                                     <label for="login-rut" class="sr-only">Rut</label>
-                                    <input type="text" id="login-rut" class="form-control" placeholder="Ingresar Rut" required autofocus autocomplete="off" name="rut" minlength="8" maxlength="8">
+                                    <input type="text" id="login-rut" class="form-control" placeholder="Ingresar Rut" required autofocus autocomplete="off" name="rut" minlength="7" maxlength="8">
                                 </div>
                                 <div class="form-group">
                                     <label for="login-password" class="sr-only">Contraseña</label>

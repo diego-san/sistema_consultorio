@@ -93,14 +93,14 @@ $nrop = count($pacientedia);
                 </div>
                 <div class="row">
                     <div class="col-md-6 admin_dato">
-                        <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0]['2']." ".$datos[0]['4'];?></p>
+                        <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0]['2']." ".$datos[0]['3'];?></p>
                         <p class="lead"> <strong>Rut: </strong><?php echo $datos[0]['0']."-".$datos[0]['1'];?></p>
                         <p class="lead"> <strong>Correo: </strong><?php echo $datos[0]['7']?></p>
                         <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0]['9'];?></p>
                     </div>
                     <div class="col-md-6 admin_dato">
                         <p class="lead"> <strong>Tipo: </strong><?php echo $datos[0]['5'];?></p>
-                        <p class="lead"> <strong>Titulo: </strong><?php echo $datos[0]['3'];?></p>
+                        <p class="lead"> <strong>Titulo: </strong><?php echo $datos[0]['4'];?></p>
                         <p class="lead"> <strong>Telefono: </strong><?php echo $datos[0]['6'];?></p>
                         <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0]['8'];?> </p>
                     </div>
@@ -126,7 +126,7 @@ $nrop = count($pacientedia);
                         echo "<div class='col-md-8 admin_dato'>";
                        echo " <p class='lead text'> <strong>Nombre: </strong>".$datospacientedia[0]['nombre_persona']." "
                            .$datospacientedia[0]['apellido_persona']."<strong> Rut: </strong>".$datospacientedia[0]['0']."-".$datospacientedia[0]['1']
-                          ."<strong>Fecha: </strong>".$pacientedia[$i]['fecha']."</p>";
+                          ."<strong> Fecha: </strong>".$pacientedia[$i]['fecha']."</p>";
 
                         echo "</div>";
 

@@ -83,7 +83,7 @@ $datoshistoorden = array_reverse($datohito);
         </div>
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <a type="button" class="btn btn-danger btn-lg" href="pdf/pdf.php">Descargar Historial</a>
+                <a type="button" class="btn btn-danger btn-lg" href="pdf/pdf.php" target="_blank">Descargar Historial</a>
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -112,7 +112,7 @@ $datoshistoorden = array_reverse($datohito);
                         </div>
                         <div class="row">
                             <div class="col-md-12 reserva_bt">
-                                <p class="lead"><strong>Infomre: </strong><?php echo $value[2];?></p>
+                                <p class="lead"><strong>Informe: </strong><?php echo $value[2];?></p>
                             </div>
                         </div>
                     </div>

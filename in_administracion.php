@@ -36,8 +36,9 @@ if (isset($_REQUEST['rut'])){
         $telefono=$_REQUEST['telefono'];
         $correo=$_REQUEST['correo'];
         $direc=$_REQUEST['direc'];
+        $per= $_REQUEST['per'];
         $in = new insertar();
-        $in->ingresaruser($rut,'ADMINISTRACION');
+        $in->ingresaruser($rut,$per);
         $in->in_admin($rut,$nombre,$apellido,$cargo,$fecha,$titulo,$telefono,$correo,$direc);
         $mensaje = 1;
     }else{
@@ -62,7 +63,6 @@ if (isset($_REQUEST['rut'])){
         <h1 class="text-center">| Sistema Consultorio |</h1>
     </div>
 </header>
-
 <nav class="navbar navbar-default" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -76,9 +76,10 @@ if (isset($_REQUEST['rut'])){
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="root.php">Home</a></li>
-
-                <li><a href="in_administracion.php">Ingresar Administracion</a></li>
+                <li><a href="in_administracion.php">Ingresar administracion</a></li>
                 <li><a href="in_clinica.php">Ingresar Clinica</a></li>
+                <li><a href="resetroot.php">Restablecer  Contraseña</a></li>
+                <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
@@ -126,7 +127,14 @@ if (isset($_REQUEST['rut'])){
                             <label for="mail">Email</label>
                             <input type="email" class="form-control" id="mail" name="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                             <label for="dir">Direccion: </label>
-                            <input type="text" name="direc" required id="dir" minlength="1" class="form-control"><br>
+                            <input type="text" name="direc" required id="dir" minlength="1" class="form-control">
+                                <label for="mo">Permiso:</label>
+                                <select class="form-control" name="per" id="mo">
+                                    <option value="ADMINISTRACION">ADMINISTRACION</option>
+                                    <option value="ROOT">ROOT</option>
+
+
+                                </select><br>
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
                             </div>
                         </div>

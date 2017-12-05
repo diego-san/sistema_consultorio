@@ -78,7 +78,7 @@ if (isset($_REQUEST['rut'])){
                 <li class="active"><a href="root.php">Home</a></li>
                 <li><a href="in_administracion.php">Ingresar administracion</a></li>
                 <li><a href="in_clinica.php">Ingresar Clinica</a></li>
-                <li><a href="#">lista</a></li>
+                <li><a href="resetroot.php">Restablecer  Contraseña</a></li>
                 <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
