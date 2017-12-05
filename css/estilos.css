@@ -137,7 +137,14 @@ h1{
 /*---datos---*/
 
 .datos_fondo{
+     border: solid 2px #bce8f1;
+
+ }
+
+.datos_fondo_gra{
     border: solid 2px #bce8f1;
+    background: #ffffff;
+
 }
 .datos_header{
     background: #d9edf7;

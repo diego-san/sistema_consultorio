@@ -35,6 +35,32 @@ $datos= $consulta->panelnormal($r);
 $rese=$consulta->reserva($r);
 $_SESSION['GE'] =$datos[0][6];
 
+$histo = $consulta->historial($r);
+
+$cantidadtipo = array("GENERAL"=>0,"DENTAL"=>0,"oft"=>0,"mental"=>0,"ped"=>0,"kine"=>0,"mate"=>0,"gine"=>0);
+
+foreach ($histo as $key => $value){
+
+    if($value[3]=="GENERAL"){
+        $cantidadtipo['GENERAL']++;
+    }elseif ($value[3]=="OFTAMOLOGIA"){
+        $cantidadtipo['oft']++;
+    }elseif ($value[3]=="MENTAL"){
+        $cantidadtipo['mental']++;
+    }elseif ($value[3]=="PEDIATRIA"){
+        $cantidadtipo['ped']++;
+    }elseif ($value[3]=="KINESIOLOGIA"){
+        $cantidadtipo['kine']++;
+    }elseif ($value[3]=="MATERNAL"){
+        $cantidadtipo['mate']++;
+    }elseif ($value[3]=="GINECOLOGIA"){
+        $cantidadtipo['gine']++;
+    }elseif ($value[3]=="DENTAL"){
+        $cantidadtipo['DENTAL']++;
+    }
+
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -46,6 +72,32 @@ $_SESSION['GE'] =$datos[0][6];
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/validar.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Consultas', 'Cantidad'],
+                ['Dental',      <?php echo $cantidadtipo['DENTAL'];?>],
+                ['Oftalmologia',       <?php echo $cantidadtipo['oft'];?>],
+                ['Salud Mental',   <?php echo $cantidadtipo['mental'];?>],
+                ['Pediatria',  <?php echo $cantidadtipo['ped'];?>],
+                ['Kinesiologia',     <?php echo $cantidadtipo['kine'];?>],
+                ['Medicina General',  <?php echo $cantidadtipo['GENERAL'];?>],
+                ['Maternal',   <?php echo $cantidadtipo['mate'];?>],
+                ['Ginecologia',   <?php echo $cantidadtipo['gine'];?>]
+            ]);
+
+            var options = {
+                title: 'Cantidad de consultas',
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
 </head>
 
 <body>
@@ -119,6 +171,27 @@ $_SESSION['GE'] =$datos[0][6];
         </div>
         <div class="col-md-1"></div>
     </div>
+    <?php if($cantidadtipo['GENERAL']>0 || $cantidadtipo['oft'] >0 ||  $cantidadtipo['mental'] >0 ||  $cantidadtipo['ped'] >0 ||  $cantidadtipo['kine'] >0 ||  $cantidadtipo['mate'] >0 ||  $cantidadtipo['gine'] >0 ||  $cantidadtipo['DENTAL'] >0 ):?>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo_gra ">
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">Grafica</p>
+                    </div>
+                </div>
+                <div class="table-responsive " >
+                    <div id="piechart_3d" style="width: 1090px; height: 400px;"></div>
+                    <div style="height:5px; width:5px; overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;"></div>
+                    <div style="height:5px; width:5px; overflow-x:scroll ; overflow-y: hidden; padding-bottom:10px;"></div>
+
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <?php endif;?>
         <div class="row">
             <div class="col-md-12 persona_espacio"></div>
         </div>
