@@ -156,7 +156,7 @@ while ($i<5) {
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <tr>
-                            <td>Hora</td>
+                           
                             <td class="text-center">Hora</td>
                             <td class="text-center"><?php echo $consulta->saber_dia_fecha($datofecha[0]);?></td>
                             <td class="text-center"><?php echo $consulta->saber_dia_fecha($datofecha[1]);?></td>

@@ -1,73 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/in_paciente.php" line="15" mnemonic="2" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dddd1693-8c83-4b7d-9079-89656bf5dd95" name="Default" comment="Genera bd si no existe">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bd/test.php" afterPath="" />
+    <list default="true" id="a66b708d-f084-49a5-9d27-b4cca81de341" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administracion.php" afterPath="$PROJECT_DIR$/administracion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/conexion.php" afterPath="$PROJECT_DIR$/bd/conexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/sistema_consultorio.sql" afterPath="$PROJECT_DIR$/bd/sistema_consultorio.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/estilos.css" afterPath="$PROJECT_DIR$/css/estilos.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hisotial.php" afterPath="$PROJECT_DIR$/hisotial.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/histoperonaca.php" afterPath="$PROJECT_DIR$/histoperonaca.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/in_administracion.php" afterPath="$PROJECT_DIR$/in_administracion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/in_clinica.php" afterPath="$PROJECT_DIR$/in_clinica.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/in_paciente.php" afterPath="$PROJECT_DIR$/in_paciente.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/medico.php" afterPath="$PROJECT_DIR$/medico.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdf/pdf.php" afterPath="$PROJECT_DIR$/pdf/pdf.php" />
     </list>
-    <ignored path=".idea/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CommittedChangesCache">
-    <option name="initialCount" value="920" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="sistema_consultorio@localhost" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="sistema_consultorio@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="sistema_consultorio" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="sistema_consultorio@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="sistema_consultorio" type="e3449647:DbNodeDescriptor" />
-        <item name="clinica_administracion" type="e3449647:DbNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="FileEditorManager">
-    <leaf />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="modelobootrap" />
-      </list>
-    </option>
-    <option name="SCHEME" value="Project" />
+    <leaf>
+      <file leaf-file-name="personainfo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/personainfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="202" column="7" lean-forward="true" selection-start-line="202" selection-start-column="7" selection-end-line="216" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="panelnormal.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/panelnormal.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="181" column="65" lean-forward="false" selection-start-line="181" selection-start-column="65" selection-end-line="181" selection-end-column="65" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estilos.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/estilos.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="145" column="24" lean-forward="false" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,51 +58,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/prueba.php" />
-        <option value="$PROJECT_DIR$/validar.php" />
-        <option value="$PROJECT_DIR$/cambiarpass.php" />
-        <option value="$PROJECT_DIR$/aa.php" />
-        <option value="$PROJECT_DIR$/resetp.php" />
-        <option value="$PROJECT_DIR$/resetroot.php" />
-        <option value="$PROJECT_DIR$/procesar.php" />
-        <option value="$PROJECT_DIR$/root.php" />
-        <option value="$PROJECT_DIR$/reservape.php" />
-        <option value="$PROJECT_DIR$/panelnormal.php" />
-        <option value="$PROJECT_DIR$/copruebareserva.php" />
-        <option value="$PROJECT_DIR$/procesarreserva.php" />
-        <option value="$PROJECT_DIR$/js/validar.js" />
-        <option value="$PROJECT_DIR$/compruebareserva.php" />
-        <option value="$PROJECT_DIR$/reserva.php" />
-        <option value="$PROJECT_DIR$/bd/delete.php" />
-        <option value="$PROJECT_DIR$/bd/update.php" />
-        <option value="$PROJECT_DIR$/bd/test.php" />
-        <option value="$PROJECT_DIR$/reservaDEN.php" />
-        <option value="$PROJECT_DIR$/reservaGE.php" />
-        <option value="$PROJECT_DIR$/reservaGI.php" />
-        <option value="$PROJECT_DIR$/reservaKIN.php" />
-        <option value="$PROJECT_DIR$/reservaMA.php" />
-        <option value="$PROJECT_DIR$/reservaMEN.php" />
-        <option value="$PROJECT_DIR$/reservaOFT.php" />
-        <option value="$PROJECT_DIR$/reservaPED.php" />
-        <option value="$PROJECT_DIR$/bd/insertar.php" />
-        <option value="$PROJECT_DIR$/pdf/config/tcpdf_config.php" />
-        <option value="$PROJECT_DIR$/pdf/index.php" />
-        <option value="$PROJECT_DIR$/in_historial.php" />
-        <option value="$PROJECT_DIR$/bd/consulta.php" />
-        <option value="$PROJECT_DIR$/personainfo.php" />
-        <option value="$PROJECT_DIR$/medico.php" />
-        <option value="$PROJECT_DIR$/pdf/pdf.php" />
-        <option value="$PROJECT_DIR$/histoperonaca.php" />
-        <option value="$PROJECT_DIR$/hisotial.php" />
-        <option value="$PROJECT_DIR$/administracion.php" />
         <option value="$PROJECT_DIR$/css/estilos.css" />
-        <option value="$PROJECT_DIR$/buscarpe.php" />
-        <option value="$PROJECT_DIR$/in_paciente.php" />
-        <option value="$PROJECT_DIR$/bd/test/creaBD.php" />
-        <option value="$PROJECT_DIR$/bd/conexion.php" />
-        <option value="$PROJECT_DIR$/in_administracion.php" />
-        <option value="$PROJECT_DIR$/in_clinica.php" />
+        <option value="$PROJECT_DIR$/panelnormal.php" />
       </list>
     </option>
   </component>
@@ -129,8 +69,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP xampp" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
     <option name="x" value="216" />
     <option name="width" value="697" />
     <option name="height" value="728" />
@@ -158,6 +98,11 @@
               <item name="sistema_consultorio" type="b2602c69:ProjectViewProjectNode" />
               <item name="sistema_consultorio" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="sistema_consultorio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sistema_consultorio" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -176,21 +121,6 @@
       <pane id="Scratches" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Subversion.SSH" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="database.data.extractors.current.id" value="SQL-Insert-Statements.sql.groovy" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sistema_consultorio\img" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sistema_consultorio\css" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -206,208 +136,27 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration" maxAnnotateRevisions="1800">
-    <configuration>C:\Users\yo\AppData\Roaming\Subversion</configuration>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="dddd1693-8c83-4b7d-9079-89656bf5dd95" name="Default" comment="" />
-      <created>1508884407630</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1508884407630</updated>
-      <workItem from="1508884409740" duration="11000" />
-      <workItem from="1508884463870" duration="2618000" />
-      <workItem from="1508939109033" duration="4917000" />
-      <workItem from="1508961443491" duration="1538000" />
-      <workItem from="1509826691244" duration="353000" />
-      <workItem from="1509827071532" duration="3848000" />
-      <workItem from="1509831484550" duration="103000" />
-      <workItem from="1509831815332" duration="710000" />
-      <workItem from="1509973667681" duration="1560000" />
-      <workItem from="1510239993390" duration="1448000" />
-      <workItem from="1510588393811" duration="1709000" />
-      <workItem from="1510769079666" duration="7733000" />
-      <workItem from="1510838340929" duration="8144000" />
-      <workItem from="1511027024889" duration="21816000" />
-      <workItem from="1511183388888" duration="5898000" />
-      <workItem from="1511193276135" duration="731000" />
-      <workItem from="1511212192537" duration="6983000" />
-      <workItem from="1511359830578" duration="201000" />
-      <workItem from="1511360180405" duration="2855000" />
-      <workItem from="1511374516089" duration="6845000" />
-      <workItem from="1511439282955" duration="9288000" />
-      <workItem from="1511633736735" duration="12820000" />
-      <workItem from="1511712154659" duration="23095000" />
-      <workItem from="1511785917147" duration="6659000" />
-      <workItem from="1511880781159" duration="8672000" />
-      <workItem from="1511978755017" duration="6508000" />
-      <workItem from="1512330619295" duration="9270000" />
-      <workItem from="1512340276694" duration="4752000" />
-      <workItem from="1512345081357" duration="1476000" />
-      <workItem from="1512391249340" duration="3793000" />
-      <workItem from="1512395851999" duration="291000" />
-      <workItem from="1512506551583" duration="2348000" />
-    </task>
-    <task id="LOCAL-00001" summary="fist">
-      <created>1508884699546</created>
+    <task id="LOCAL-00001" summary="arreglos">
+      <created>1512510602703</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1508884699546</updated>
+      <updated>1512510602703</updated>
     </task>
-    <task id="LOCAL-00002" summary="administracioj">
-      <created>1510776218465</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1510776218465</updated>
-    </task>
-    <task id="LOCAL-00003" summary="ingresar persona">
-      <created>1510847785414</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1510847785414</updated>
-    </task>
-    <task id="LOCAL-00004" summary="ingresar persona">
-      <created>1510847801787</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1510847801787</updated>
-    </task>
-    <task id="LOCAL-00005" summary="ingresar persona terminado">
-      <created>1511033623031</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1511033623031</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Cambio de password">
-      <created>1511037412191</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1511037412191</updated>
-    </task>
-    <task id="LOCAL-00007" summary="REGISRAR TERMINADOS PERSONA , ADMIN, CLINICA">
-      <created>1511046739028</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1511046739028</updated>
-    </task>
-    <task id="LOCAL-00008" summary="VER DATOS">
-      <created>1511052116180</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1511052116180</updated>
-    </task>
-    <task id="LOCAL-00009" summary="panel normal">
-      <created>1511215564687</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1511215564687</updated>
-    </task>
-    <task id="LOCAL-00010" summary="delete reserva">
-      <created>1511221172417</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1511221172417</updated>
-    </task>
-    <task id="LOCAL-00011" summary="delete reserva">
-      <created>1511374994725</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1511374994725</updated>
-    </task>
-    <task id="LOCAL-00012" summary="reserva calendario&#10;&#10;alpha de calendario">
-      <created>1511665575898</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1511665575898</updated>
-    </task>
-    <task id="LOCAL-00013" summary="reserva calendario&#10;&#10;alpha V0.1 de calendario">
-      <created>1511726991656</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1511726991656</updated>
-    </task>
-    <task id="LOCAL-00014" summary="reserva calendario TERMINADO">
-      <created>1511735492499</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1511735492499</updated>
-    </task>
-    <task id="LOCAL-00015" summary="clinica">
-      <created>1511794287649</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1511794287649</updated>
-    </task>
-    <task id="LOCAL-00016" summary="clinica">
-      <created>1511795860727</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1511795860727</updated>
-    </task>
-    <task id="LOCAL-00017" summary="ingresar historial">
-      <created>1511983362930</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1511983362930</updated>
-    </task>
-    <task id="LOCAL-00018" summary="genera hitorial pdf">
-      <created>1512340207200</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1512340207200</updated>
-    </task>
-    <task id="LOCAL-00019" summary="genera hitorial pdf">
-      <created>1512340416351</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1512340416351</updated>
-    </task>
-    <task id="LOCAL-00020" summary="ingresa consulta medico">
-      <created>1512346513920</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1512346513920</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168993000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="1267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19364598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19364598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21558245" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -449,31 +198,27 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fist" />
-    <MESSAGE value="administracioj" />
-    <MESSAGE value="ingresar persona" />
-    <MESSAGE value="ingresar persona terminado" />
-    <MESSAGE value="Cambio de password" />
-    <MESSAGE value="REGISRAR TERMINADOS PERSONA , ADMIN, CLINICA" />
-    <MESSAGE value="VER DATOS" />
-    <MESSAGE value="panel normal" />
-    <MESSAGE value="delete reserva" />
-    <MESSAGE value="reserva calendario&#10;&#10;alpha de calendario" />
-    <MESSAGE value="reserva calendario&#10;&#10;alpha V0.1 de calendario" />
-    <MESSAGE value="reserva calendario TERMINADO" />
-    <MESSAGE value="clinica" />
-    <MESSAGE value="ingresar historial" />
-    <MESSAGE value="genera hitorial pdf" />
-    <MESSAGE value="ingresa consulta medico" />
-    <MESSAGE value="Genera bd si no existe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Genera bd si no existe" />
+    <MESSAGE value="arreglos" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -785,21 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/panelnormal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-372">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/estilos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="112" column="14" lean-forward="false" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cambiarpass.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-736">
@@ -820,13 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="164" column="49" lean-forward="false" selection-start-line="164" selection-start-column="49" selection-end-line="164" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personainfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="193" column="98" lean-forward="false" selection-start-line="193" selection-start-column="98" selection-end-line="193" selection-end-column="98" />
           <folding />
         </state>
       </provider>
@@ -926,20 +649,37 @@
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.19375" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/personainfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="202" column="7" lean-forward="true" selection-start-line="202" selection-start-column="7" selection-end-line="216" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/estilos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="145" column="24" lean-forward="false" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panelnormal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="181" column="65" lean-forward="false" selection-start-line="181" selection-start-column="65" selection-end-line="181" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
