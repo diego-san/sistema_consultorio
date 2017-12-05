@@ -26,7 +26,39 @@ $_SESSION['tiempo'] = time();
 
 $get = new consulta();
 $datos=$get->info_root($rut);
+
+//consulta grafico
+$consulta = new consulta();
+$dia= $consulta->reserva($fecha);
+$semana = $consulta->reserva($fecha);
+$mes = $consulta->reserva($fecha);
+
+$cantidadtipo = array("GENERAL"=>0,"DENTAL"=>0,"oft"=>0,"mental"=>0,"ped"=>0,"kine"=>0,"mate"=>0,"gine"=>0);
+
+foreach ($histo as $key => $value){
+
+    if($value[3]=="GENERAL"){
+        $cantidadtipo['GENERAL']++;
+    }elseif ($value[3]=="OFTAMOLOGIA"){
+        $cantidadtipo['oft']++;
+    }elseif ($value[3]=="MENTAL"){
+        $cantidadtipo['mental']++;
+    }elseif ($value[3]=="PEDIATRIA"){
+        $cantidadtipo['ped']++;
+    }elseif ($value[3]=="KINESIOLOGIA"){
+        $cantidadtipo['kine']++;
+    }elseif ($value[3]=="MATERNAL"){
+        $cantidadtipo['mate']++;
+    }elseif ($value[3]=="GINECOLOGIA"){
+        $cantidadtipo['gine']++;
+    }elseif ($value[3]=="DENTAL"){
+        $cantidadtipo['DENTAL']++;
+    }
+
+}
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,43 +116,36 @@ $datos=$get->info_root($rut);
                 <div class="row">
                     <div class="col-md-12 admin_dato">
 
-                            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                            <script type="text/javascript" src="js/loader.js"></script>
                             <script type="text/javascript">
-                                google.charts.load('current', {'packages':['bar']});
-                                google.charts.setOnLoadCallback(drawStuff);
+                               google.charts.load('current', {'packages':['bar']});
+                              google.charts.setOnLoadCallback(drawChart);
 
-                                function drawStuff() {
-                                    var data = new google.visualization.arrayToDataTable([
-                                        ['Move', 'Percentage'],
-                                        ["Dental", 44],
-                                        ["Oftalmologia", 31],
-                                        ["Salud Mental", 12],
-                                        ["Kinesiologia", 10],
-                                        ['Medicina General', 2],
-                                        ['Pediatria', 1]
-                                    ]);
+                              function drawChart() {
+                                var data = google.visualization.arrayToDataTable([
+                                  ['Especialidades', 'Dia', 'semana', 'mes'],
+                                  ['DENTAL', 1000, 400, 200],
+                                  ['OFTALMOLOGIA', 1170, 460, 250],
+                                  ['SALUD MENTAL', 660, 1120, 300],
+                                  ['KINESIOLOGIA', 1030, 540, 350],
+                                  ['MEDICINA GENERAL', 1030, 540, 350],
+                                  ['PEDIATRIA', 1030, 540, 350]
+                                ]);
 
-                                    var options = {
-                                        width: 1090,
-                                        legend: { position: 'none' },
-                                        chart: {
-                                            title: 'Atenciones por dia',
-                                            subtitle: '' },
-                                        axes: {
-                                            x: {
-                                                0: { side: 'top', label: ''} // Top x-axis.
-                                            }
-                                        },
-                                        bar: { groupWidth: "90%" }
-                                    };
-
-                                    var chart = new google.charts.Bar(document.getElementById('top_x_div'));
-                                    // Convert the Classic options to Material options.
-                                    chart.draw(data, google.charts.Bar.convertOptions(options));
+                                var options = {
+                                  chart: {
+                                    title: 'Atenciones',
+                                    subtitle: '',
+                                  }
                                 };
+
+                                var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+                                chart.draw(data, google.charts.Bar.convertOptions(options));
+                              }
                             </script>
                         <div class="table-responsive" >
-                            <div id="top_x_div" style="width: 1090px; height: 500px;"></div>
+                            <div id="columnchart_material" style="width: 1110px; height: 800px;"></div>
                             <div style="height:5px; width:5px; overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;"></div>
                             <div style="height:5px; width:5px; overflow-x:scroll ; overflow-y: hidden; padding-bottom:10px;"></div>
                                 
