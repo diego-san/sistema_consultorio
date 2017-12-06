@@ -28,28 +28,31 @@ if(isset($_REQUEST['rut'])){
     $rut=$_REQUEST['rut'];
     $nroficha = $_REQUEST['ficha'];
     $busca= new consulta();
+    if (strtoupper(substr($rut,-1))== $busca->verifica_rut_real($rut)) {
+        if (empty($busca->comprubanro($rut, $nroficha))) {
+            $nombre = $_REQUEST['nombre'];
+            $apellido = $_REQUEST['apellido'];
 
-   if (empty($busca->comprubanro($rut,$nroficha))) {
-       $nombre = $_REQUEST['nombre'];
-       $apellido = $_REQUEST['apellido'];
+            $fecha_nac = $_REQUEST['fecha_nac'];
+            $genero = $_REQUEST['genero'];
+            $direcc = $_REQUEST['direc'];
+            $servicio = $_REQUEST['servicio'];
+            $ciudadnac = $_REQUEST['ciudadnac'];
+            $telefono = $_REQUEST['telefono'];
+            $sector = $_REQUEST['sector'];
+            $esta = $_REQUEST['estable'];
+            $movi = $_REQUEST['movi'];
 
-       $fecha_nac = $_REQUEST['fecha_nac'];
-       $genero = $_REQUEST['genero'];
-       $direcc = $_REQUEST['direc'];
-       $servicio = $_REQUEST['servicio'];
-       $ciudadnac = $_REQUEST['ciudadnac'];
-       $telefono = $_REQUEST['telefono'];
-       $sector = $_REQUEST['sector'];
-       $esta = $_REQUEST['estable'];
-       $movi = $_REQUEST['movi'];
-
-       $ingreso = new insertar();
-       $ingreso->ingresaruser($rut,'NORMAL');
-       $ingreso->insertar_persona($nombre, $apellido, $rut, $nroficha, $fecha_nac, $genero, $direcc, $servicio, $ciudadnac, $telefono, $sector, $esta, $movi);
-       $mensaje = 1;
-   }else{
-        $mensaje = 2;
-   }
+            $ingreso = new insertar();
+            $ingreso->ingresaruser(substr($rut, 0, -1), 'NORMAL');
+            $ingreso->insertar_persona($nombre, $apellido,substr($rut, 0, -1), $nroficha, $fecha_nac, $genero, $direcc, $servicio, $ciudadnac, $telefono, $sector, $esta, $movi);
+            $mensaje = 1;
+        } else {
+            $mensaje = 2;
+        }
+    }else{
+        $mensaje=3;
+    }
 }
 
 
@@ -121,7 +124,7 @@ if(isset($_REQUEST['rut'])){
                                <label for="ape">Apellido: </label>
                                <input type="text" name="apellido" required id="ape" minlength="1" class="form-control">
                                <label for="ru">Rut: </label>
-                               <input type="text" name="rut" required id="ru" minlength="7" maxlength="8" class="form-control" pattern="[0-9]{7,8}">
+                               <input type="text" name="rut" required id="ru" minlength="8" maxlength="9" class="form-control" >
                                <label for="nro">Numero ficha: </label>
                                <input type="text" name="ficha" required id="nro" minlength="1" class="form-control" pattern="[0-9]{1,11}"title="Solo numeros">
 
@@ -184,6 +187,10 @@ if(isset($_REQUEST['rut'])){
                 <?php elseif ($mensaje== 2):?>
                     <div class="alert alert-danger" role="alert">
                         Persona ya esta ingresada.
+                    </div>
+                <?php elseif ($mensaje== 3):?>
+                    <div class="alert alert-danger" role="alert">
+                        Rut Invalido.
                     </div>
                 <?php endif;?>
             </div>

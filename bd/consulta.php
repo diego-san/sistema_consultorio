@@ -217,6 +217,17 @@ class consulta{
 
     }
 
+    function verifica_rut_real($rut){
+        $r=substr($rut, 0, -1);
+        $s=1;
+        for($m=0;$r!=0;$r/=10)
+            $s=($s+$r%10*(9-$m++%6))%11;
+        $digito=chr($s?$s+47:75);
+
+        return $digito;
+
+    }
+
 
 
     }

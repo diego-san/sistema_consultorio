@@ -27,7 +27,8 @@ $_SESSION['tiempo'] = time();
 if (isset($_REQUEST['rut'])){
     $rut= $_REQUEST['rut'];
     $busca= new consulta();
-    if(empty($busca->compruba($rut))){
+    if (strtoupper(substr($rut,-1))== $busca->verifica_rut_real($rut)){
+    if(empty($busca->compruba(substr($rut, 0, -1)))){
         $nombre = $_REQUEST['nombre'];
         $apellido = $_REQUEST['apellido'];
         $cargo=$_REQUEST['cargo'];
@@ -38,11 +39,15 @@ if (isset($_REQUEST['rut'])){
         $direc=$_REQUEST['direc'];
         $per= $_REQUEST['per'];
         $in = new insertar();
-        $in->ingresaruser($rut,$per);
-        $in->in_admin($rut,$nombre,$apellido,$cargo,$fecha,$titulo,$telefono,$correo,$direc);
+        $rt=substr($rut, 0, -1);
+        $in->ingresaruser(substr($rut, 0, -1),$per);
+        $in->in_admin($rt,$nombre,$apellido,$cargo,$fecha,$titulo,$telefono,$correo,$direc);
+
         $mensaje = 1;
     }else{
         $mensaje = 2;
+    }}else{
+        $mensaje = 3;
     }
 }
 ?>
@@ -106,7 +111,7 @@ if (isset($_REQUEST['rut'])){
                             <label for="ap">Apellido: </label>
                             <input type="text" name="apellido" required id="ap" minlength="1" class="form-control">
                             <label for="ru">Rut: </label>
-                            <input type="text" name="rut" required id="ru" minlength="7" maxlength="8" class="form-control" pattern="[0-9]{7,8}">
+                            <input type="text" name="rut" required id="ru" minlength="8" maxlength="9" class="form-control" >
                             <label for="ca">Cargo: </label>
                             <input type="text" name="cargo" required id="ca" minlength="1" class="form-control">
                             <label for="fechanac" class=" control-label">Fecha de Nacimiento:</label>
@@ -154,6 +159,10 @@ if (isset($_REQUEST['rut'])){
                 <?php elseif ($mensaje== 2):?>
                     <div class="alert alert-danger" role="alert">
                         Persona ya esta ingresada.
+                    </div>
+                <?php elseif ($mensaje== 3):?>
+                    <div class="alert alert-danger" role="alert">
+                        Rut Invalido.
                     </div>
                 <?php endif;?>
             </div>
