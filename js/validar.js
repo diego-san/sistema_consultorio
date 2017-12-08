@@ -179,3 +179,35 @@ function reservaingreso(rut,tipo) {
 
 
 }
+
+function buscarpersona() {
+    var rut;
+    rut = document.getElementById("ru").value;
+
+            $.ajax({
+                url: 'procesar.php',
+                method: "GET",
+                data: {nro: rut,tipo:4},
+            })
+                .done(function(data) {
+                    console.log("success");
+
+                    if(data=="true"){
+                        location.href= "personainfo.php?r="+rut;
+                    }else{
+                        $("#mostrar").html('');
+                        $("#mostrar").append(data);
+                    }
+
+
+
+                })
+                .fail(function() {
+                    console.log("error");
+                })
+                .always(function() {
+                    console.log("complete");
+                });
+
+
+}

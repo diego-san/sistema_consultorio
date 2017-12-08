@@ -191,7 +191,9 @@ foreach ($histo as $key => $value){
                         <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0][7];?></p>
                         <p class="lead"> <strong>Movilizacion: </strong><?php echo $datos[0][13];?></p>
                         <p><a type="button" class="btn btn-primary btn-lg" href="histoperonaca.php?r=<?php echo$datos[0][0];?> ">Ver Historial</a>
+                            <?php if($_SESSION['tipo'] == 'CLINICA'):?>
                             <a type="button" class="btn btn-primary btn-lg" href="in_historial.php?r=<?php echo$datos[0][0];?> ">Ingresar Consulta</a>
+                            <?php endif;?>
                         </p>
 
 

@@ -64,6 +64,23 @@ if($_GET['tipo']==1) {
     }
 
 
+}elseif ($_GET['tipo']==4){
+
+    $rut = $_GET['nro'];
+    $consulta= new consulta();
+    $consu= $consulta->compruba($rut);
+
+
+    if(!empty($consu)){
+
+       echo "true";
+
+    }else{
+        echo "<br><div class='alert alert-danger' role='alert'>
+                        Persona no Registrada </div>";
+    }
+
+
 }else{
 
 }

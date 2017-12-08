@@ -183,7 +183,8 @@ foreach ($histo as $key => $value){
                     </div>
                 </div>
                 <div class="table-responsive " >
-                    <div id="piechart_3d" style="width: 1090px; height: 400px;"></div>
+                    <div id="piechart_3d" style="wi
+                    dth: 1090px; height: 400px;"></div>
                     <div style="height:5px; width:5px; overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;"></div>
                     <div style="height:5px; width:5px; overflow-x:scroll ; overflow-y: hidden; padding-bottom:10px;"></div>
 

@@ -22,6 +22,7 @@ if(isset($_SESSION['tiempo']) ) {
 
 }
 $_SESSION['tiempo'] = time();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -31,6 +32,7 @@ $_SESSION['tiempo'] = time();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/validar.js"></script>
 </head>
 
 <body>
@@ -39,6 +41,7 @@ $_SESSION['tiempo'] = time();
         <h1 class="text-center">| Sistema Consultorio |</h1>
     </div>
 </header>
+
 <nav class="navbar navbar-default" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -51,9 +54,10 @@ $_SESSION['tiempo'] = time();
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
+                <li class="dropdown">
                 <li class="active"><a href="administracion.php">Home</a></li>
                 <li><a href="in_paciente.php">Ingresar Paciente</a></li>
-                <li><a href="buscarpe.php">Busqueda Paciente</a></li>
+                <li><a href="#">Busqueda Paciente</a></li>
                 <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
                 <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
@@ -64,7 +68,28 @@ $_SESSION['tiempo'] = time();
     </div>
 </nav>
 <main>
-    <div class="container-fluid"></div>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1 admin_tirulo">
+                <h2 class="text-center">Buscar Paciente</h2>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 .col-md-offset-4 pass_fondo">
+
+                <div class="form-group">
+                    <label for="ru">Ingresar Rut: </label>
+                    <input type="text" name="rut" required id="ru" minlength="7" maxlength="8" class="form-control" pattern="[0-9]{7,8}">
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return buscarpersona()">Cambiar</button>
+                    <div id="mostrar"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </main>
 <footer>
     <div class="container">
