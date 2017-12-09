@@ -91,7 +91,7 @@ class insertar {
         for($m=0;$r!=0;$r/=10)
             $s=($s+$r%10*(9-$m++%6))%11;
         $digito=chr($s?$s+47:75);
-        $sql="insert into clinica_administracion (rut_clinica, digito_clin, nombre_clinica, apellido_clinica, titulo_clinica, cargo_clinica, numero_clinica, correo_clinica, direcc_clinica, fech_nac_clinica) VALUES (?,?,?,?,?,?,?,?,?,?)";
+        $sql="insert into clinica_administracion (rut_clinica, digito_clin, nombre_clinica, apellido_clinica, titulo_clinica, cargo_clinica, numero_clinica, correo_clinica, direcc_clinica, fech_nac_clinica,estado) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         $smt=$conn->prepare($sql);
         $smt->bindparam(1,$rut);
         $smt->bindparam(2,$digito);
@@ -103,6 +103,7 @@ class insertar {
         $smt->bindparam(8,$correo);
         $smt->bindparam(9,$direc);
         $smt->bindparam(10,$fecha);
+        $smt->bindparam(11,"ACTIVO");
         $smt->execute();
         $conn=null;
     }

@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a66b708d-f084-49a5-9d27-b4cca81de341" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qrlector/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qrlector/jquery-1.11.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qrlector/llqrcode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qrlector/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qrlector/procesar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/350e273a-0699-4364-8d80-c580b02688c6.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/350e273a-0699-4364-8d80-c580b02688c6.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buscarpe.php" afterPath="$PROJECT_DIR$/buscarpe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/estilos.css" afterPath="$PROJECT_DIR$/css/estilos.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/validar.js" afterPath="$PROJECT_DIR$/js/validar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/panelnormal.php" afterPath="$PROJECT_DIR$/panelnormal.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personainfo.php" afterPath="$PROJECT_DIR$/personainfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/procesar.php" afterPath="$PROJECT_DIR$/procesar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resetp.php" afterPath="$PROJECT_DIR$/resetp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resetroot.php" afterPath="$PROJECT_DIR$/resetroot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/consulta.php" afterPath="$PROJECT_DIR$/bd/consulta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/insertar.php" afterPath="$PROJECT_DIR$/bd/insertar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grafica.php" afterPath="$PROJECT_DIR$/grafica.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,22 +28,73 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="sistema_consultorio@localhost" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="sistema_consultorio@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="sistema_consultorio" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="sistema_consultorio@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="sistema_consultorio" type="e3449647:DbNodeDescriptor" />
-        <item name="administracion" type="e3449647:DbNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="grafica.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grafica.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consulta.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bd/consulta.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="234" column="8" lean-forward="false" selection-start-line="234" selection-start-column="8" selection-end-line="234" selection-end-column="8" />
+              <folding>
+                <marker date="1512784758443" expanded="true" signature="243:307" ph="select rut,t... user" />
+                <marker date="1512784758443" expanded="true" signature="543:585" ph="select * fro... persona" />
+                <marker date="1512784758443" expanded="true" signature="543:589" ph="select * fro... persona" />
+                <marker date="1512784758443" expanded="true" signature="821:852" ph="select * fro... persona" />
+                <marker date="1512784758443" expanded="true" signature="821:856" ph="select * fro... persona" />
+                <marker date="1512784758443" expanded="true" signature="1097:1139" ph="select * fro... user" />
+                <marker date="1512784758443" expanded="true" signature="1097:1158" ph="select * fro... persona" />
+                <marker date="1512784758443" expanded="true" signature="1097:1159" ph="select * fro... persona" />
+                <marker date="1512784758443" expanded="true" signature="1403:1433" ph="select * fro... user" />
+                <marker date="1512784758443" expanded="true" signature="1403:1437" ph="select * fro... user" />
+                <marker date="1512784758443" expanded="true" signature="1403:1457" ph="select * fro... user" />
+                <marker date="1512784758443" expanded="true" signature="1690:1746" ph="select * fro... administracion" />
+                <marker date="1512784758443" expanded="true" signature="1980:2013" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="2251:2308" ph="select * fro... clinica_administracion" />
+                <marker date="1512784758443" expanded="true" signature="2555:2608" ph="select * fro... clinica_administracion" />
+                <marker date="1512784758443" expanded="true" signature="2555:2642" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="2555:2646" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="2555:2668" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="2555:2704" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="2913:2972" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="2913:2980" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="2913:2981" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="4977:5030" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="4977:5036" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="4977:5037" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="5313:5365" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="5313:5380" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="5313:5381" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="5313:5404" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="5313:5408" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="5313:5433" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="5313:5469" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="5664:5694" ph="select * fro... reserva" />
+                <marker date="1512784758443" expanded="true" signature="5664:5706" ph="select * fro... historial" />
+                <marker date="1512784758443" expanded="true" signature="5664:5707" ph="select * fro... historial" />
+                <marker date="1512784758443" expanded="true" signature="6269:6364" ph="select * fro... reserva" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,10 +102,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bd/consulta.php" />
         <option value="$PROJECT_DIR$/in_clinica.php" />
         <option value="$PROJECT_DIR$/bd/test/a.php" />
-        <option value="$PROJECT_DIR$/bd/insertar.php" />
         <option value="$PROJECT_DIR$/in_administracion.php" />
         <option value="$PROJECT_DIR$/in_paciente.php" />
         <option value="$PROJECT_DIR$/resetp.php" />
@@ -80,6 +120,9 @@
         <option value="$PROJECT_DIR$/css/estilos.css" />
         <option value="$PROJECT_DIR$/qrlector/main.js" />
         <option value="$PROJECT_DIR$/qrlector/index.php" />
+        <option value="$PROJECT_DIR$/bd/insertar.php" />
+        <option value="$PROJECT_DIR$/grafica.php" />
+        <option value="$PROJECT_DIR$/bd/consulta.php" />
       </list>
     </option>
   </component>
@@ -121,13 +164,12 @@
             <path>
               <item name="sistema_consultorio" type="b2602c69:ProjectViewProjectNode" />
               <item name="sistema_consultorio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bd" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -139,6 +181,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,7 +226,8 @@
       <updated>1512520610657</updated>
       <workItem from="1512520626136" duration="6640000" />
       <workItem from="1512576402428" duration="7748000" />
-      <workItem from="1512767695075" duration="4262000" />
+      <workItem from="1512767695075" duration="4781000" />
+      <workItem from="1512783905134" duration="864000" />
     </task>
     <task id="LOCAL-00002" summary="valida rut">
       <created>1512527323084</created>
@@ -192,16 +236,24 @@
       <option name="project" value="LOCAL" />
       <updated>1512527323085</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="lector QR">
+      <created>1512774558028</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1512774558028</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19917000" />
+    <option name="totallyTimeSpent" value="21300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20272315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20574887" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21558245" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -270,7 +322,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="arreglos" />
     <MESSAGE value="valida rut" />
-    <option name="LAST_COMMIT_MESSAGE" value="valida rut" />
+    <MESSAGE value="lector QR" />
+    <option name="LAST_COMMIT_MESSAGE" value="lector QR" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -411,19 +464,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grafica.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="126" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/validar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-142">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -487,7 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="70" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -524,21 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bd/insertar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="37" lean-forward="true" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
-          <folding>
-            <marker date="1512526684226" expanded="true" signature="356:617" ph="INSERT INTO persona... " />
-            <marker date="1512526684226" expanded="true" signature="1563:1613" ph="insert into user... " />
-            <marker date="1512526684226" expanded="true" signature="2082:2320" ph="insert into administracion... " />
-            <marker date="1512526684226" expanded="true" signature="3048:3269" ph="insert into clinica_administracion... " />
-            <marker date="1512526684226" expanded="true" signature="3809:3868" ph="INSERT INTO reserva... " />
-            <marker date="1512526684226" expanded="true" signature="4174:4280" ph="INSERT INTO historial... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/in_paciente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -551,7 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -575,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-629">
           <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,7 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="618">
           <caret line="195" column="58" lean-forward="false" selection-start-line="195" selection-start-column="58" selection-end-line="195" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -617,50 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bd/consulta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="199" column="135" lean-forward="false" selection-start-line="199" selection-start-column="135" selection-end-line="199" selection-end-column="135" />
-          <folding>
-            <marker date="1512521955633" expanded="true" signature="243:307" ph="select rut,t... user" />
-            <marker date="1512521955633" expanded="true" signature="543:585" ph="select * fro... persona" />
-            <marker date="1512521955633" expanded="true" signature="543:589" ph="select * fro... persona" />
-            <marker date="1512521955633" expanded="true" signature="821:852" ph="select * fro... persona" />
-            <marker date="1512521955633" expanded="true" signature="821:856" ph="select * fro... persona" />
-            <marker date="1512521955633" expanded="true" signature="1097:1139" ph="select * fro... user" />
-            <marker date="1512521955633" expanded="true" signature="1097:1158" ph="select * fro... persona" />
-            <marker date="1512521955633" expanded="true" signature="1097:1159" ph="select * fro... persona" />
-            <marker date="1512521955633" expanded="true" signature="1403:1433" ph="select * fro... user" />
-            <marker date="1512521955633" expanded="true" signature="1403:1437" ph="select * fro... user" />
-            <marker date="1512521955633" expanded="true" signature="1403:1457" ph="select * fro... user" />
-            <marker date="1512521955633" expanded="true" signature="1690:1746" ph="select * fro... administracion" />
-            <marker date="1512521955633" expanded="true" signature="1980:2013" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="2251:2308" ph="select * fro... clinica_administracion" />
-            <marker date="1512521955633" expanded="true" signature="2555:2608" ph="select * fro... clinica_administracion" />
-            <marker date="1512521955633" expanded="true" signature="2555:2642" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="2555:2646" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="2555:2668" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="2555:2704" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="2913:2972" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="2913:2980" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="2913:2981" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="4977:5030" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="4977:5036" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="4977:5037" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="5313:5365" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="5313:5380" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="5313:5381" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="5313:5404" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="5313:5408" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="5313:5433" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="5313:5469" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="5664:5694" ph="select * fro... reserva" />
-            <marker date="1512521955633" expanded="true" signature="5664:5706" ph="select * fro... historial" />
-            <marker date="1512521955633" expanded="true" signature="5664:5707" ph="select * fro... historial" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/buscarpe.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -669,30 +650,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="116" column="30" lean-forward="true" selection-start-line="116" selection-start-column="30" selection-end-line="116" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/qrprocee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lectroqr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js" />
+    <entry file="file://$PROJECT_DIR$/js/qrprocee.php" />
+    <entry file="file://$PROJECT_DIR$/lectroqr.php" />
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -705,7 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="220" column="12" lean-forward="false" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,7 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1353">
           <caret line="245" column="11" lean-forward="false" selection-start-line="245" selection-start-column="11" selection-end-line="245" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,8 +679,77 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="44" column="72" lean-forward="false" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bd/insertar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="93" column="243" lean-forward="false" selection-start-line="93" selection-start-column="243" selection-end-line="93" selection-end-column="243" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1512775045413" expanded="true" signature="356:617" ph="INSERT INTO persona... " />
+            <marker date="1512775045413" expanded="true" signature="1563:1613" ph="insert into user... " />
+            <marker date="1512775045413" expanded="true" signature="2082:2320" ph="insert into administracion... " />
+            <marker date="1512775045413" expanded="true" signature="3048:3278" ph="insert into clinica_administracion... " />
+            <marker date="1512775045413" expanded="true" signature="3856:3915" ph="INSERT INTO reserva... " />
+            <marker date="1512775045413" expanded="true" signature="4221:4327" ph="INSERT INTO historial... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grafica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bd/consulta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="234" column="8" lean-forward="false" selection-start-line="234" selection-start-column="8" selection-end-line="234" selection-end-column="8" />
+          <folding>
+            <marker date="1512784758443" expanded="true" signature="243:307" ph="select rut,t... user" />
+            <marker date="1512784758443" expanded="true" signature="543:585" ph="select * fro... persona" />
+            <marker date="1512784758443" expanded="true" signature="543:589" ph="select * fro... persona" />
+            <marker date="1512784758443" expanded="true" signature="821:852" ph="select * fro... persona" />
+            <marker date="1512784758443" expanded="true" signature="821:856" ph="select * fro... persona" />
+            <marker date="1512784758443" expanded="true" signature="1097:1139" ph="select * fro... user" />
+            <marker date="1512784758443" expanded="true" signature="1097:1158" ph="select * fro... persona" />
+            <marker date="1512784758443" expanded="true" signature="1097:1159" ph="select * fro... persona" />
+            <marker date="1512784758443" expanded="true" signature="1403:1433" ph="select * fro... user" />
+            <marker date="1512784758443" expanded="true" signature="1403:1437" ph="select * fro... user" />
+            <marker date="1512784758443" expanded="true" signature="1403:1457" ph="select * fro... user" />
+            <marker date="1512784758443" expanded="true" signature="1690:1746" ph="select * fro... administracion" />
+            <marker date="1512784758443" expanded="true" signature="1980:2013" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="2251:2308" ph="select * fro... clinica_administracion" />
+            <marker date="1512784758443" expanded="true" signature="2555:2608" ph="select * fro... clinica_administracion" />
+            <marker date="1512784758443" expanded="true" signature="2555:2642" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="2555:2646" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="2555:2668" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="2555:2704" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="2913:2972" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="2913:2980" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="2913:2981" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="4977:5030" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="4977:5036" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="4977:5037" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="5313:5365" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="5313:5380" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="5313:5381" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="5313:5404" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="5313:5408" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="5313:5433" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="5313:5469" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="5664:5694" ph="select * fro... reserva" />
+            <marker date="1512784758443" expanded="true" signature="5664:5706" ph="select * fro... historial" />
+            <marker date="1512784758443" expanded="true" signature="5664:5707" ph="select * fro... historial" />
+            <marker date="1512784758443" expanded="true" signature="6269:6364" ph="select * fro... reserva" />
           </folding>
         </state>
       </provider>

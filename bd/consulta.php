@@ -227,7 +227,18 @@ class consulta{
         return $digito;
 
     }
-
+    function consultames($fecha){
+        require "conexion.php";
+        $mes = strtotime('+1 month',strtotime($fecha));
+        $nuevafecha = date ('Y-m-d', $mes);
+        $sql="select * from reserva WHERE fecha BETWEEN '".$fecha." 08:00:00' AND '" .$nuevafecha." 23:59:00'";
+        
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+        return $resultado;
+    }
 
 
     }
