@@ -27,35 +27,14 @@ $_SESSION['tiempo'] = time();
 $get = new consulta();
 $datos=$get->info_root($rut);
 
+$fecha = date('Y-m-d');
 //consulta grafico
 $consulta = new consulta();
-$dia= $consulta->reserva($fecha);
-$semana = $consulta->reserva($fecha);
-$mes = $consulta->reserva($fecha);
+//$dia= $consulta->reserva($fecha);
+//$semana = $consulta->reserva($fecha);
+$mes = $consulta->consultames($fecha);
 
-$cantidadtipo = array("GENERAL"=>0,"DENTAL"=>0,"oft"=>0,"mental"=>0,"ped"=>0,"kine"=>0,"mate"=>0,"gine"=>0);
-
-foreach ($histo as $key => $value){
-
-    if($value[3]=="GENERAL"){
-        $cantidadtipo['GENERAL']++;
-    }elseif ($value[3]=="OFTAMOLOGIA"){
-        $cantidadtipo['oft']++;
-    }elseif ($value[3]=="MENTAL"){
-        $cantidadtipo['mental']++;
-    }elseif ($value[3]=="PEDIATRIA"){
-        $cantidadtipo['ped']++;
-    }elseif ($value[3]=="KINESIOLOGIA"){
-        $cantidadtipo['kine']++;
-    }elseif ($value[3]=="MATERNAL"){
-        $cantidadtipo['mate']++;
-    }elseif ($value[3]=="GINECOLOGIA"){
-        $cantidadtipo['gine']++;
-    }elseif ($value[3]=="DENTAL"){
-        $cantidadtipo['DENTAL']++;
-    }
-
-}
+print_r($mes);
 
 ?>
 
