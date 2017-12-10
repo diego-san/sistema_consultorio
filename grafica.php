@@ -85,7 +85,7 @@ foreach ($histo as $key => $value){
                 ['MEDICINA GENERAL', <?php echo $dia,$cantidadtipo['GENERAL'];?>, <?php echo $semana,$cantidadtipo['GENERAL'];?>, <?php echo $mes,$cantidadtipo['GENERAL'];?>],
                 ['PEDIATRIA', <?php echo $dia,$cantidadtipo['ped'];?>, <?php echo $semana,$cantidadtipo['ped'];?>, <?php echo $mes,$cantidadtipo['ped'];?>],
                 ['MATERNAL', <?php echo $dia,$cantidadtipo['mate'];?>, <?php echo $semana,$cantidadtipo['mate'];?>, <?php echo $mes,$cantidadtipo['mate'];?>],
-                ['GINECOLOGIA', <?php echo $dia,$cantidadtipo['PEDIATRIA'];?>, <?php echo $semana,$cantidadtipo['PEDIATRIA'];?>, <?php echo $mes,$cantidadtipo['PEDIATRIA'];?>]
+                ['GINECOLOGIA', <?php echo $dia,$cantidadtipo['ped'];?>, <?php echo $semana,$cantidadtipo['ped'];?>, <?php echo $mes,$cantidadtipo['ped'];?>]
             ]);
 
             var options = {
