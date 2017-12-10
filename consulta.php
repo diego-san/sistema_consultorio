@@ -227,7 +227,30 @@ class consulta{
         $smt->execute();
         $resultado= $smt->fetchall();
         $conn=null;
-        print_r($resultado);
+        return $resultado;
+    }
+
+    function consultadia($fecha){
+        require "conexion.php";
+        $dia = strtotime('+1 day',strtotime($fecha));
+        $nuevafecha = date ('Y-m-d', $dia);
+        $sql="select * from reserva WHERE fecha BETWEEN ".$fecha." 08:00:00 AND " .$nuevafecha." 23:59:00"; 
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+        return $resultado;
+    }
+
+    function consultasemana($fecha){
+        require "conexion.php";
+        $semana = strtotime('+1 week',strtotime($fecha));
+        $nuevafecha = date ('Y-m-d', $semana);
+        $sql="select * from reserva WHERE fecha BETWEEN ".$fecha." 08:00:00 AND " .$nuevafecha." 23:59:00"; 
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
         return $resultado;
     }
 
