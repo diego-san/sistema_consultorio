@@ -352,3 +352,28 @@ function delad(rut) {
 
 
     }
+
+function grafica(tipo) {
+
+
+        $.ajax({
+            url: 'procesagraficas.php',
+            method: "GET",
+            data: {t:tipo},
+        })
+            .done(function(data) {
+                $("#grafica").html('');
+                $("#grafica").append(data);
+
+            })
+            .fail(function() {
+                console.log("error");
+            })
+            .always(function() {
+                console.log("complete");
+            });
+
+
+
+
+}

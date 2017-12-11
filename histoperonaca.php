@@ -77,7 +77,7 @@ $datoshistoorden = array_reverse($datohito);
                     <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
                     <li><a href="listaespera.php">Lista Espera</a></li>
                     <li><a href="grafica.php">Grafica</a></li>
-                    <li><a href="modiadmin.php">Modificar Mis Datos</a></li>
+                    <li><a href="datosadmin.php"> Mis Datos</a></li>
                     <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -87,6 +87,7 @@ $datoshistoorden = array_reverse($datohito);
         </div>
     </nav>
 <?php else:?>
+
     <nav class="navbar navbar-default" >
         <div class="container-fluid">
             <div class="navbar-header">
@@ -102,7 +103,7 @@ $datoshistoorden = array_reverse($datohito);
                     <li class="active"><a href="medico.php">Home</a></li>
                     <li><a href="in_historial.php">Ingresar Historial</a></li>
                     <li><a href="buscarpe.php">Buscar Persona</a></li>
-                    <li><a href="modicli.php">Modificar Mis Datos</a></li>
+                    <li><a href="datoscli.php">Mis Datos</a></li>
                     <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

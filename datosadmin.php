@@ -25,16 +25,15 @@ if(isset($_SESSION['tiempo']) ) {
 $_SESSION['tiempo'] = time();
 
 $get = new consulta();
-
-$lista= $get->esperalist();
+$datos=$get->info_root($rut);
 
 ?>
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <title>CESFAM</title>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
@@ -46,6 +45,7 @@ $lista= $get->esperalist();
         <h1 class="text-center">| Sistema Consultorio |</h1>
     </div>
 </header>
+
 <nav class="navbar navbar-default" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -74,47 +74,44 @@ $lista= $get->esperalist();
     </div>
 </nav>
 <main>
-    <div class="container-fluid">
+    <div class="container-fluid admin-fondo">
         <div class="row ">
             <div class="col-md-10 col-md-offset-1 admin_tirulo">
-                <h2 class="text-center">Lista De Espera</h2>
+                <h2 class="text-center">Informacion</h2>
             </div>
             <div class="col-md-1"></div>
-        </div>
-        <div class="row espaciolista">
-            <div class="col-md-10 col-md-offset-1 admin_tirulo">
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <tr  class="info">
-                            <th>ID</th>
-                            <th>Rut</th>
-                            <th>Tipo</th>
-                            <th>Fecha</th>
-                            <th>Ficha</th>
-                        </tr>
-                        
-                        <?php foreach ($lista as $key => $value):?>
-                            <tr>
-                                <td><?php echo $value[3];?></td>
-                                <td><?php echo $value[0];?></td>
-                                <td><?php echo $value[1];?></td>
-                                <td><?php echo $value[2];?></td>
-                                <td class="text-center"><a type="button" class="btn btn-primary" href="personainfo.php?r=<?php echo $value[0];?>">Ficha</a></td>
-                            </tr>
-                            
-                        <?php endforeach;?>
-                    </table>
 
+
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo">
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">Informacion personal</p>
+                    </div>
                 </div>
-
-
-
-
+                <div class="row">
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0]['2']." ".$datos[0]['4'];?></p>
+                        <p class="lead"> <strong>Rut: </strong><?php echo $datos[0]['0']."-".$datos[0]['1'];?></p>
+                        <p class="lead"> <strong>Correo: </strong><?php echo $datos[0]['7']?></p>
+                        <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0]['9'];?></p>
+                    </div>
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Cargo: </strong><?php echo $datos[0]['3'];?></p>
+                        <p class="lead"> <strong>Titulo: </strong><?php echo $datos[0]['5'];?></p>
+                        <p class="lead"> <strong>Telefono: </strong><?php echo $datos[0]['6'];?></p>
+                        <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0]['8'];?> </p>
+                        <a type="button" class="btn btn-primary btn-lg btn-block" href="modiadmin.php">Modificar</a>
+                    </div>
+                </div>
             </div>
             <div class="col-md-1"></div>
         </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
 
-    </div>
 </main>
 <footer>
     <div class="container">
@@ -128,7 +125,8 @@ $lista= $get->esperalist();
     </div>
 </footer>
 <script src="js/jquery-3.2.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/validar.js"></script>
 
 </body>
 </html>

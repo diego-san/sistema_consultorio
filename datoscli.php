@@ -1,11 +1,11 @@
 <?php
-require "bd/consulta.php";
+require_once "bd/consulta.php";
 session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
 $rut=$varsesion;
 
-if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACION') {
+if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'CLINICA') {
     header("Location:login.php");
     die();
 }
@@ -25,11 +25,15 @@ if(isset($_SESSION['tiempo']) ) {
 $_SESSION['tiempo'] = time();
 
 $get = new consulta();
+$datos=$get->info_clinia($rut);
+$tipo=$datos[0]['5'];
+$pacientedia=$get->pacientedia($tipo);
+$nrop = count($pacientedia);
 
-$lista= $get->esperalist();
+
+
 
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -46,6 +50,8 @@ $lista= $get->esperalist();
         <h1 class="text-center">| Sistema Consultorio |</h1>
     </div>
 </header>
+
+
 <nav class="navbar navbar-default" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -58,13 +64,10 @@ $lista= $get->esperalist();
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="administracion.php">Home</a></li>
-                <li><a href="in_paciente.php">Ingresar Paciente</a></li>
-                <li><a href="buscarpe.php">Busqueda Paciente</a></li>
-                <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
-                <li><a href="listaespera.php">Lista Espera</a></li>
-                <li><a href="grafica.php">Grafica</a></li>
-                <li><a href="datosadmin.php"> Mis Datos</a></li>
+                <li class="active"><a href="medico.php">Home</a></li>
+                <li><a href="in_historial.php">Ingresar Historial</a></li>
+                <li><a href="buscarpe.php">Buscar Persona</a></li>
+                <li><a href="datoscli.php">Mis Datos</a></li>
                 <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -74,47 +77,49 @@ $lista= $get->esperalist();
     </div>
 </nav>
 <main>
-    <div class="container-fluid">
+    <div class="container-fluid admin-fondo">
         <div class="row ">
             <div class="col-md-10 col-md-offset-1 admin_tirulo">
-                <h2 class="text-center">Lista De Espera</h2>
+                <h2 class="text-center">Informacion</h2>
             </div>
             <div class="col-md-1"></div>
-        </div>
-        <div class="row espaciolista">
-            <div class="col-md-10 col-md-offset-1 admin_tirulo">
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <tr  class="info">
-                            <th>ID</th>
-                            <th>Rut</th>
-                            <th>Tipo</th>
-                            <th>Fecha</th>
-                            <th>Ficha</th>
-                        </tr>
-                        
-                        <?php foreach ($lista as $key => $value):?>
-                            <tr>
-                                <td><?php echo $value[3];?></td>
-                                <td><?php echo $value[0];?></td>
-                                <td><?php echo $value[1];?></td>
-                                <td><?php echo $value[2];?></td>
-                                <td class="text-center"><a type="button" class="btn btn-primary" href="personainfo.php?r=<?php echo $value[0];?>">Ficha</a></td>
-                            </tr>
-                            
-                        <?php endforeach;?>
-                    </table>
 
+
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo">
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">Informacion personal</p>
+                    </div>
                 </div>
-
-
-
-
+                <div class="row">
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0]['2']." ".$datos[0]['3'];?></p>
+                        <p class="lead"> <strong>Rut: </strong><?php echo $datos[0]['0']."-".$datos[0]['1'];?></p>
+                        <p class="lead"> <strong>Correo: </strong><?php echo $datos[0]['7']?></p>
+                        <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0]['9'];?></p>
+                    </div>
+                    <div class="col-md-6 admin_dato">
+                        <p class="lead"> <strong>Tipo: </strong><?php echo $datos[0]['5'];?></p>
+                        <p class="lead"> <strong>Titulo: </strong><?php echo $datos[0]['4'];?></p>
+                        <p class="lead"> <strong>Telefono: </strong><?php echo $datos[0]['6'];?></p>
+                        <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0]['8'];?> </p>
+                        <a href="modicli.php" type="button" class="btn btn-primary btn-lg btn-block">Modificar</a>
+                    </div>
+                </div>
             </div>
             <div class="col-md-1"></div>
         </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
 
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
     </div>
+
 </main>
 <footer>
     <div class="container">

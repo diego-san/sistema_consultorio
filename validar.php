@@ -37,6 +37,8 @@ if (!empty($_REQUEST['rut'] && !empty($_REQUEST['password'])) && is_numeric($_RE
             $_SESSION['tiempo'] = time();
             header("Location:root.php");
 
+        }else{
+            header("Location:login.php?error=1");
         }
 
 

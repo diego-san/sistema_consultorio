@@ -52,6 +52,7 @@ $nrop = count($pacientedia);
 </header>
 
 
+
 <nav class="navbar navbar-default" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -67,7 +68,7 @@ $nrop = count($pacientedia);
                 <li class="active"><a href="medico.php">Home</a></li>
                 <li><a href="in_historial.php">Ingresar Historial</a></li>
                 <li><a href="buscarpe.php">Buscar Persona</a></li>
-                <li><a href="modicli.php">Modificar Mis Datos</a></li>
+                <li><a href="datoscli.php">Mis Datos</a></li>
                 <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -86,30 +87,7 @@ $nrop = count($pacientedia);
 
 
         </div>
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 datos_fondo">
-                <div class="row">
-                    <div class="col-md-12 datos_header">
-                        <p class="text_datos text-center">Informacion personal</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 admin_dato">
-                        <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0]['2']." ".$datos[0]['3'];?></p>
-                        <p class="lead"> <strong>Rut: </strong><?php echo $datos[0]['0']."-".$datos[0]['1'];?></p>
-                        <p class="lead"> <strong>Correo: </strong><?php echo $datos[0]['7']?></p>
-                        <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0]['9'];?></p>
-                    </div>
-                    <div class="col-md-6 admin_dato">
-                        <p class="lead"> <strong>Tipo: </strong><?php echo $datos[0]['5'];?></p>
-                        <p class="lead"> <strong>Titulo: </strong><?php echo $datos[0]['4'];?></p>
-                        <p class="lead"> <strong>Telefono: </strong><?php echo $datos[0]['6'];?></p>
-                        <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0]['8'];?> </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
+
         <div class="row">
             <div class="col-md-12 persona_espacio"></div>
         </div>

@@ -151,7 +151,10 @@ h1{
      background: #ffffff;
 
  }
+.datos_bottom{
+    border-bottom: solid 2px #bce8f1;
 
+}
 .datos_fondo_gra{
     border: solid 2px #bce8f1;
     background: #ffffff;
@@ -270,4 +273,9 @@ h1{
 
 .espaciolista{
     min-height: 500px;
+}
+
+.div-scroll{
+    overflow-y: scroll;
+    height:400px;
 }

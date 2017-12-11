@@ -24,14 +24,7 @@ if(isset($_SESSION['tiempo']) ) {
 }
 $_SESSION['tiempo'] = time();
 
-$consulta = new consulta();
 
-
-$fecha = date('Y-m-d');
-
-$mes = $consulta->consultames($fecha);
-$dia = $consulta->consultadia($fecha);
-$ano = $consulta->consultaano($fecha);
 
 
 ?>
@@ -46,276 +39,6 @@ $ano = $consulta->consultaano($fecha);
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
     <script type="text/javascript" src="js/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['bar']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Tipo', 'Cantidad de Reserva'],
-                <?php
-                foreach ($mes as $key => $value){
-                    if ($value[1]=="KINESIOLOGIA"){
-                        echo " ['KINESIOLOGIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-                <?php
-                foreach ($mes as $key => $value){
-                    if ($value[1]=="OFTAMOLOGIA"){
-                        echo " ['OFTAMOLOGIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($mes as $key => $value){
-                    if ($value[1]=="PEDIATRIA"){
-                        echo " ['PEDIATRIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($mes as $key => $value){
-                    if ($value[1]=="MATERNAL"){
-                        echo " ['MATERNAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($mes as $key => $value){
-                    if ($value[1]=="GINECOLOGIA"){
-                        echo " ['GINECOLOGIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($mes as $key => $value){
-                    if ($value[1]=="DENTAL"){
-                        echo " ['DENTAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($mes as $key => $value){
-                    if ($value[1]=="GENERAL"){
-                        echo " ['GENERAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($mes as $key => $value){
-                    if ($value[1]=="MENTAL"){
-                        echo " ['MENTAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-
-
-
-
-
-
-            ]);
-
-            var options = {
-                chart: {
-                    title: 'Grafica De reservas por Mes',
-
-                }
-            };
-
-            var chart = new google.charts.Bar(document.getElementById('mes'));
-
-            chart.draw(data, google.charts.Bar.convertOptions(options));
-        }
-    </script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['bar']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Tipo', 'Cantidad de Reserva'],
-                <?php
-                foreach ($dia as $key => $value){
-                    if ($value[1]=="KINESIOLOGIA"){
-                        echo " ['KINESIOLOGIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-                <?php
-                foreach ($dia as $key => $value){
-                    if ($value[1]=="OFTAMOLOGIA"){
-                        echo " ['OFTAMOLOGIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($dia as $key => $value){
-                    if ($value[1]=="PEDIATRIA"){
-                        echo " ['PEDIATRIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($dia as $key => $value){
-                    if ($value[1]=="MATERNAL"){
-                        echo " ['MATERNAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($dia as $key => $value){
-                    if ($value[1]=="GINECOLOGIA"){
-                        echo " ['GINECOLOGIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($dia as $key => $value){
-                    if ($value[1]=="DENTAL"){
-                        echo " ['DENTAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($dia as $key => $value){
-                    if ($value[1]=="GENERAL"){
-                        echo " ['GENERAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($dia as $key => $value){
-                    if ($value[1]=="MENTAL"){
-                        echo " ['MENTAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-
-
-
-
-
-
-            ]);
-
-            var options = {
-                chart: {
-                    title: 'Grafica De reservas DIA',
-
-                }
-            };
-
-            var chart = new google.charts.Bar(document.getElementById('dia'));
-
-            chart.draw(data, google.charts.Bar.convertOptions(options));
-        }
-    </script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['bar']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Tipo', 'Cantidad de Reserva'],
-                <?php
-                foreach ($ano as $key => $value){
-                    if ($value[1]=="KINESIOLOGIA"){
-                        echo " ['KINESIOLOGIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-                <?php
-                foreach ($ano as $key => $value){
-                    if ($value[1]=="OFTAMOLOGIA"){
-                        echo " ['OFTAMOLOGIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($ano as $key => $value){
-                    if ($value[1]=="PEDIATRIA"){
-                        echo " ['PEDIATRIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($ano as $key => $value){
-                    if ($value[1]=="MATERNAL"){
-                        echo " ['MATERNAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($ano as $key => $value){
-                    if ($value[1]=="GINECOLOGIA"){
-                        echo " ['GINECOLOGIA',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($ano as $key => $value){
-                    if ($value[1]=="DENTAL"){
-                        echo " ['DENTAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($ano as $key => $value){
-                    if ($value[1]=="GENERAL"){
-                        echo " ['GENERAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-                <?php
-                foreach ($ano as $key => $value){
-                    if ($value[1]=="MENTAL"){
-                        echo " ['MENTAL',".$value[0]."  ],";
-                    }
-                }
-                ?>
-
-
-
-
-
-
-
-            ]);
-
-            var options = {
-                chart: {
-                    title: 'Grafica De reservas Por Año',
-
-                }
-            };
-
-            var chart = new google.charts.Bar(document.getElementById('ano'));
-
-            chart.draw(data, google.charts.Bar.convertOptions(options));
-        }
-    </script>
 
 </head>
 </head>
@@ -344,7 +67,7 @@ $ano = $consulta->consultaano($fecha);
                 <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
                 <li><a href="listaespera.php">Lista Espera</a></li>
                 <li><a href="grafica.php">Grafica</a></li>
-                <li><a href="modiadmin.php">Modificar Mis Datos</a></li>
+                <li><a href="datosadmin.php"> Mis Datos</a></li>
                 <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -355,57 +78,200 @@ $ano = $consulta->consultaano($fecha);
 </nav>
 <main>
     <div class="container-fluid admin-fondo">
-        <div class="row ">
-            <div class="col-md-10 col-md-offset-1 admin_tirulo">
-                <h2 class="text-center">Grafica</h2>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center reserva_bt">
+                <button type="button" class="btn btn-warning" onclick="return grafica(0)">Dia De Hoy</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        GENERAL <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return grafica(1)">Mes</a></li>
+                        <li><a onclick="return grafica(2)">Año</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        KINESIOLOGIA <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return grafica(3)">Mes</a></li>
+                        <li><a onclick="return grafica(4)">Año</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        OFTAMOLOGIA <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return grafica(5)">Mes</a></li>
+                        <li><a onclick="return grafica(6)">Año</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        PEDIATRIA <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return grafica(7)">Mes</a></li>
+                        <li><a onclick="return grafica(8)">Año</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MATERNAL <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return grafica(9)">Mes</a></li>
+                        <li><a onclick="return grafica(10)">Año</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        GINECOLOGIA<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return grafica(11)">Mes</a></li>
+                        <li><a onclick="return grafica(12)">Año</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DENTAL<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return grafica(13)">Mes</a></li>
+                        <li><a onclick="return grafica(14)">Año</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MENTAL<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return grafica(15)">Mes</a></li>
+                        <li><a onclick="return grafica(16)">Año</a></li>
+                    </ul>
+                </div>
+
             </div>
             <div class="col-md-1"></div>
+        </div>
+        <div class="row " ">
+            <div class="col-md-10 col-md-offset-1 reserva_bt datos_fondo_gra" id="grafica" >
+                <?php
+                $consulta = new consulta();
+                $fecha = date('Y-m-d');
+                $ano = $consulta->consultadia($fecha);
+                $ki=0;
+                foreach ($ano as $key => $value){if ($value[1]=="KINESIOLOGIA"){
+                    $ki++;
+                }
+                }
+
+                $of=0;
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="OFTAMOLOGIA"){
+                        $of++;
+                    }
+                }
 
 
+                $pe=0;
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="PEDIATRIA"){
+                        $pe++;
+                    }
+                }
+
+
+                $ma=0;
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="MATERNAL"){
+                        $ma++;
+                    }
+                }
+
+
+                $gi=0;
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="GINECOLOGIA"){
+                        $gi++;
+                    }
+                }
+
+                $den=0;
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="DENTAL"){
+                        $den++;
+                    }
+                }
+
+
+                $ge=0;
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="GENERAL"){
+                        $ge++;
+                    }
+                }
+
+
+                $me=0;
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="MENTAL"){
+                        $me++;
+                    }
+                }
+
+
+
+
+                echo " <div class='table-responsive ' >
+<script type='text/javascript'>
+    google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+          var data = google.visualization.arrayToDataTable([
+                  ['Tipo', 'Cantidad'],
+                  ['KINESIOLOGIA', ".$ki."],
+                  ['OFTAMOLOGIA',  ".$of."],
+                  ['PEDIATRIA',  ".$pe."],
+                  ['MATERNAL', ".$ma."],
+                  ['DENTAL', ".$den."],
+                  ['GENERAL', ".$ge."],
+                  ['MENTAL', ".$me."],
+                  ['GINECOLOGIA',    ".$gi."]
+              ]);
+
+          var options = {
+              title: 'cantidad de consultas para hoy'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+ 
+    <div id='piechart' style='width: 1000px; height: 500px;'></div>
+    <div style='height:5px; width:5px; overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;'></div>
+                    <div style='height:5px; width:5px; overflow-x:scroll ; overflow-y: hidden; padding-bottom:10px;'></div></div>";
+
+
+
+                ?>
+
+
+            </div>
+            <div class="col-md-1"></div>
         </div>
         <div class="row">
-            <div class="col-md-10 col-md-offset-1 datos_fondo">
-
-                <div class="row">
-                    <div class="col-md-12 admin_dato">
-
-
-                        <div class="table-responsive" >
-                            <div id="dia" style="width: 1000px; height: 500px;"></div>
-                            <div style="height:5px; width:5px; overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;"></div>
-                            <div style="height:5px; width:5px; overflow-x:scroll ; overflow-y: hidden; padding-bottom:10px;"></div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                <div class="row">
-                    <div class="col-md-12 admin_dato">
-
-
-                        <div class="table-responsive" >
-                            <div id="mes" style="width: 1000px; height: 500px;"></div>
-                            <div style="height:5px; width:5px; overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;"></div>
-                            <div style="height:5px; width:5px; overflow-x:scroll ; overflow-y: hidden; padding-bottom:10px;"></div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 admin_dato">
-
-
-                        <div class="table-responsive" >
-                            <div id="ano" style="width: 1000px; height: 500px;"></div>
-                            <div style="height:5px; width:5px; overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;"></div>
-                            <div style="height:5px; width:5px; overflow-x:scroll ; overflow-y: hidden; padding-bottom:10px;"></div>
-
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-1"></div>
+            <div class="col-md-12 persona_espacio"></div>
         </div>
+
 </main>
 <footer>
     <div class="container">
@@ -420,6 +286,7 @@ $ano = $consulta->consultaano($fecha);
 </footer>
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/validar.js"></script>
 
 </body>
 </html>

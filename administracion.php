@@ -64,7 +64,7 @@ $lista= $get->pendiente();
                 <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
                 <li><a href="listaespera.php">Lista Espera</a></li>
                 <li><a href="grafica.php">Grafica</a></li>
-                <li><a href="modiadmin.php">Modificar Mis Datos</a></li>
+                <li><a href="datosadmin.php"> Mis Datos</a></li>
                 <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -83,52 +83,267 @@ $lista= $get->pendiente();
 
 
         </div>
+
+
         <div class="row">
-            <div class="col-md-10 col-md-offset-1 datos_fondo">
+            <div class="col-md-10 col-md-offset-1 datos_fondo div-scroll" >
                 <div class="row">
                     <div class="col-md-12 datos_header">
-                        <p class="text_datos text-center">Informacion personal</p>
+                        <p class="text_datos text-center">General</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6 admin_dato">
-                        <p class="lead"> <strong>Nombre: </strong><?php echo $datos[0]['2']." ".$datos[0]['4'];?></p>
-                        <p class="lead"> <strong>Rut: </strong><?php echo $datos[0]['0']."-".$datos[0]['1'];?></p>
-                        <p class="lead"> <strong>Correo: </strong><?php echo $datos[0]['7']?></p>
-                        <p class="lead"> <strong>Fecha de nacimiento: </strong><?php echo $datos[0]['9'];?></p>
+                <?php if (!empty($lista)):?>
+                    <?php foreach ($lista as$key => $value):?>
+                        <?php if ($value[2]=="GENERAL"):?>
+                            <?php
+                            $infoper=$get->panelnormal($value[0]);
+                            ?>
+                            <div class="row datos_bottom" >
+                                <div class="col-md-8">
+                                    <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                                    <p class="lead"><strong>Nombre: </strong><?php echo $infoper[0][3]." ".$infoper[0][4];?><strong> Rut: </strong><?php echo $infoper[0][0]."-".$infoper[0][1];?></p>
+                                    <p class="lead"> <strong>Numero De Telefono: </strong><?php echo $infoper[0][10];?> </p>
+                                </div>
+                                <div class="col-md-4  reserva bot">
+                                    <button type="button" class="btn btn-primary btn-block " onclick="return confirmar(<?php echo $value[4];?>,<?php echo $value[0];?>)">Confimar</button>
+                                    <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                    <?php endforeach;?>
+                <?php else:?>
+                    <div class="col-md-12 reserva  ">
+                        <h2 class="text-cente reserva ">No hay Reserva</h2>
                     </div>
-                    <div class="col-md-6 admin_dato">
-                        <p class="lead"> <strong>Cargo: </strong><?php echo $datos[0]['3'];?></p>
-                        <p class="lead"> <strong>Titulo: </strong><?php echo $datos[0]['5'];?></p>
-                        <p class="lead"> <strong>Telefono: </strong><?php echo $datos[0]['6'];?></p>
-                        <p class="lead"> <strong>Direccion: </strong><?php echo $datos[0]['8'];?> </p>
-                    </div>
-                </div>
+                <?php endif;?>
             </div>
-            <div class="col-md-1"></div>
         </div>
         <div class="row">
             <div class="col-md-12 persona_espacio"></div>
         </div>
         <div class="row">
-            <div class="col-md-10 col-md-offset-1 datos_fondo">
+            <div class="col-md-10 col-md-offset-1 datos_fondo div-scroll" >
                 <div class="row">
                     <div class="col-md-12 datos_header">
-                        <p class="text_datos text-center">Lista Por Confirmar</p>
+                        <p class="text_datos text-center">GINECOLOGIA</p>
+                    </div>
+                </div>
+                <?php if (!empty($lista)):?>
+                    <?php foreach ($lista as$key => $value):?>
+                        <?php
+                        $infoper=$get->panelnormal($value[0]);
+                        ?>
+                        <?php if ($value[2]=="GINECOLOGIA"):?>
+                            <?php
+                            $infoper=$get->panelnormal($value[0]);
+                            ?>
+                            <div class="row datos_bottom" >
+                                <div class="col-md-8 ">
+                                    <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                                    <p class="lead"><strong>Nombre: </strong><?php echo $infoper[0][3]." ".$infoper[0][4];?><strong> Rut: </strong><?php echo $infoper[0][0]."-".$infoper[0][1];?></p>
+                                    <p class="lead"> <strong>Numero De Telefono: </strong><?php echo $infoper[0][10];?> </p>
+                                </div>
+                                <div class="col-md-4  reserva bot">
+                                    <button type="button" class="btn btn-primary btn-block " onclick="return confirmar(<?php echo $value[4];?>,<?php echo $value[0];?>)">Confimar</button>
+                                    <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                    <?php endforeach;?>
+                <?php else:?>
+                    <div class="col-md-12 reserva  ">
+                        <h2 class="text-cente reserva ">No hay Reserva</h2>
+                    </div>
+                <?php endif;?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo div-scroll" >
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">PEDIATRIA</p>
+                    </div>
+                </div>
+                <?php if (!empty($lista)):?>
+                    <?php foreach ($lista as$key => $value):?>
+                        <?php
+                        $infoper=$get->panelnormal($value[0]);
+                        ?>
+                        <?php if ($value[2]=="PEDIATRIA"):?>
+                            <?php
+                            $infoper=$get->panelnormal($value[0]);
+                            ?>
+                            <div class="row datos_bottom " >
+                                <div class="col-md-8">
+                                    <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                                    <p class="lead"><strong>Nombre: </strong><?php echo $infoper[0][3]." ".$infoper[0][4];?><strong> Rut: </strong><?php echo $infoper[0][0]."-".$infoper[0][1];?></p>
+                                    <p class="lead"> <strong>Numero De Telefono: </strong><?php echo $infoper[0][10];?> </p>
+                                </div>
+                                <div class="col-md-4  reserva bot">
+                                    <button type="button" class="btn btn-primary btn-block " onclick="return confirmar(<?php echo $value[4];?>,<?php echo $value[0];?>)">Confimar</button>
+                                    <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                    <?php endforeach;?>
+                <?php else:?>
+                    <div class="col-md-12 reserva  ">
+                        <h2 class="text-cente reserva ">No hay Reserva</h2>
+                    </div>
+                <?php endif;?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo div-scroll" >
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">MENTAL</p>
+                    </div>
+                </div>
+                <?php if (!empty($lista)):?>
+                    <?php foreach ($lista as$key => $value):?>
+                        <?php
+                        $infoper=$get->panelnormal($value[0]);
+                        ?>
+                        <?php if ($value[2]=="MENTAL"):?>
+                            <?php
+                            $infoper=$get->panelnormal($value[0]);
+                            ?>
+                            <div class="row  datos_bottom" >
+                                <div class="col-md-8">
+                                    <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                                    <p class="lead"><strong>Nombre: </strong><?php echo $infoper[0][3]." ".$infoper[0][4];?><strong> Rut: </strong><?php echo $infoper[0][0]."-".$infoper[0][1];?></p>
+                                    <p class="lead"> <strong>Numero De Telefono: </strong><?php echo $infoper[0][10];?> </p>
+                                </div>
+                                <div class="col-md-4  reserva bot">
+                                    <button type="button" class="btn btn-primary btn-block " onclick="return confirmar(<?php echo $value[4];?>,<?php echo $value[0];?>)">Confimar</button>
+                                    <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                    <?php endforeach;?>
+                <?php else:?>
+                    <div class="col-md-12 reserva  ">
+                        <h2 class="text-cente reserva ">No hay Reserva</h2>
+                    </div>
+                <?php endif;?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo div-scroll" >
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">KINESIOLOGIA</p>
+                    </div>
+                </div>
+                <?php if (!empty($lista)):?>
+                    <?php foreach ($lista as$key => $value):?>
+                        <?php
+                        $infoper=$get->panelnormal($value[0]);
+                        ?>
+                        <?php if ($value[2]=="KINESIOLOGIA"):?>
+                            <?php
+                            $infoper=$get->panelnormal($value[0]);
+                            ?>
+                            <div class="row  datos_bottom" >
+                                <div class="col-md-8">
+                                    <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                                    <p class="lead"><strong>Nombre: </strong><?php echo $infoper[0][3]." ".$infoper[0][4];?><strong> Rut: </strong><?php echo $infoper[0][0]."-".$infoper[0][1];?></p>
+                                    <p class="lead"> <strong>Numero De Telefono: </strong><?php echo $infoper[0][10];?> </p>
+                                </div>
+                                <div class="col-md-4  reserva bot">
+                                    <button type="button" class="btn btn-primary btn-block " onclick="return confirmar(<?php echo $value[4];?>,<?php echo $value[0];?>)">Confimar</button>
+                                    <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                    <?php endforeach;?>
+                <?php else:?>
+                    <div class="col-md-12 reserva  ">
+                        <h2 class="text-cente reserva ">No hay Reserva</h2>
+                    </div>
+                <?php endif;?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo div-scroll" >
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">OFTAMOLOGIA</p>
+                    </div>
+                </div>
+                <?php if (!empty($lista)):?>
+                    <?php foreach ($lista as$key => $value):?>
+                        <?php
+                        $infoper=$get->panelnormal($value[0]);
+                        ?>
+                        <?php if ($value[2]=="OFTAMOLOGIA"):?>
+                            <?php
+                            $infoper=$get->panelnormal($value[0]);
+                            ?>
+                            <div class="row datos_bottom" >
+                                <div class="col-md-8">
+                                    <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                                    <p class="lead"><strong>Nombre: </strong><?php echo $infoper[0][3]." ".$infoper[0][4];?><strong> Rut: </strong><?php echo $infoper[0][0]."-".$infoper[0][1];?></p>
+                                    <p class="lead"> <strong>Numero De Telefono: </strong><?php echo $infoper[0][10];?> </p>
+                                </div>
+                                <div class="col-md-4  reserva bot">
+                                    <button type="button" class="btn btn-primary btn-block " onclick="return confirmar(<?php echo $value[4];?>,<?php echo $value[0];?>)">Confimar</button>
+                                    <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                    <?php endforeach;?>
+                <?php else:?>
+                    <div class="col-md-12 reserva  ">
+                        <h2 class="text-cente reserva ">No hay Reserva</h2>
+                    </div>
+                <?php endif;?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo div-scroll" >
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">DENTAL</p>
                     </div>
                 </div>
                 <?php if (!empty($lista)):?>
                 <?php foreach ($lista as$key => $value):?>
-                <div class="row">
-                    <div class="col-md-8">
-                        <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
-                        <p class="lead"><strong>Estado: </strong><?php echo $value[3];?></p>
-                    </div>
-                    <div class="col-md-4  reserva bot">
-                        <button type="button" class="btn btn-primary btn-block " onclick="return confirmar(<?php echo $value[4];?>,<?php echo $value[0];?>)">Confimar</button>
-                        <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
-                    </div>
-                </div>
+                        <?php
+                            $infoper=$get->panelnormal($value[0]);
+                        ?>
+                        <?php if ($value[2]=="DENTAL"):?>
+                            <?php
+                            $infoper=$get->panelnormal($value[0]);
+                            ?>
+                            <div class="row datos_bottom" >
+                                <div class="col-md-8">
+                                    <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                                    <p class="lead"><strong>Nombre: </strong><?php echo $infoper[0][3]." ".$infoper[0][4];?><strong> Rut: </strong><?php echo $infoper[0][0]."-".$infoper[0][1];?></p>
+                                    <p class="lead"> <strong>Numero De Telefono: </strong><?php echo $infoper[0][10];?> </p>
+                                </div>
+                                <div class="col-md-4  reserva bot">
+                                    <button type="button" class="btn btn-primary btn-block " onclick="return confirmar(<?php echo $value[4];?>,<?php echo $value[0];?>)">Confimar</button>
+                                    <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
+                                </div>
+                            </div>
+                        <?php endif;?>
                 <?php endforeach;?>
                 <?php else:?>
                     <div class="col-md-12 reserva  ">
@@ -137,6 +352,49 @@ $lista= $get->pendiente();
                 <?php endif;?>
             </div>
     </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo div-scroll" >
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">MATERNAL</p>
+                    </div>
+                </div>
+                <?php if (!empty($lista)):?>
+                    <?php foreach ($lista as$key => $value):?>
+                        <?php
+                        $infoper=$get->panelnormal($value[0]);
+                        ?>
+                        <?php if ($value[2]=="MATERNAL"):?>
+                            <?php
+                            $infoper=$get->panelnormal($value[0]);
+                            ?>
+                            <div class="row datos_bottom" >
+                                <div class="col-md-8">
+                                    <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                                    <p class="lead"><strong>Nombre: </strong><?php echo $infoper[0][3]." ".$infoper[0][4];?><strong> Rut: </strong><?php echo $infoper[0][0]."-".$infoper[0][1];?></p>
+                                    <p class="lead"> <strong>Numero De Telefono: </strong><?php echo $infoper[0][10];?> </p>
+                                </div>
+                                <div class="col-md-4  reserva bot">
+                                    <button type="button" class="btn btn-primary btn-block " onclick="return confirmar(<?php echo $value[4];?>,<?php echo $value[0];?>)">Confimar</button>
+                                    <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                    <?php endforeach;?>
+                <?php else:?>
+                    <div class="col-md-12 reserva  ">
+                        <h2 class="text-cente reserva ">No hay Reserva</h2>
+                    </div>
+                <?php endif;?>
+            </div>
+        </div>
+
 </main>
 <footer>
     <div class="container">

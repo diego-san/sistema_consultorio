@@ -227,12 +227,12 @@ class consulta{
         return $digito;
 
     }
-    function consultames($fecha){
+    function consultames($fecha,$tipo){
         require "conexion.php";
         $mes = strtotime('+1 month',strtotime($fecha));
         $nuevafecha = date ('Y-m-d', $mes);
 
-        $sql="select COUNT(id_reserva), tipo_reveva from reserva WHERE fecha BETWEEN '".$fecha." 08:00:00' AND '" .$nuevafecha." 23:59:00' group by tipo_reveva";
+        $sql="select COUNT(id_reserva), tipo_reveva, DATE(fecha)  from reserva WHERE tipo_reveva='".$tipo."' AND date(fecha) BETWEEN '".$fecha." ' AND '" .$nuevafecha."' group by date(fecha)";
 
         $smt=$conn->prepare($sql);
         $smt->execute();
@@ -241,12 +241,12 @@ class consulta{
         return $resultado;
     }
 
-    function consultaano($fecha){
+    function consultaano($fecha,$tipo){
         require "conexion.php";
         $mes = strtotime('+1 year',strtotime($fecha));
         $nuevafecha = date ('Y-m-d', $mes);
 
-        $sql="select COUNT(id_reserva), tipo_reveva from reserva WHERE fecha BETWEEN '".$fecha." 08:00:00' AND '" .$nuevafecha." 23:59:00' group by tipo_reveva";
+        $sql="select COUNT(id_reserva),YEAR(fecha),MONTH(Fecha) from reserva WHERE tipo_reveva='".$tipo."' and fecha BETWEEN '".$fecha." 08:00:00' AND '" .$nuevafecha." 23:59:00' group by MONTH(Fecha)";
 
         $smt=$conn->prepare($sql);
         $smt->execute();
