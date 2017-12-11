@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a66b708d-f084-49a5-9d27-b4cca81de341" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datosadmin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administracion.php" afterPath="$PROJECT_DIR$/administracion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/consulta.php" afterPath="$PROJECT_DIR$/bd/consulta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buscarpe.php" afterPath="$PROJECT_DIR$/buscarpe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/estilos.css" afterPath="$PROJECT_DIR$/css/estilos.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grafica.php" afterPath="$PROJECT_DIR$/grafica.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hisotial.php" afterPath="$PROJECT_DIR$/hisotial.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/histoperonaca.php" afterPath="$PROJECT_DIR$/histoperonaca.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/in_historial.php" afterPath="$PROJECT_DIR$/in_historial.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/in_paciente.php" afterPath="$PROJECT_DIR$/in_paciente.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/validar.js" afterPath="$PROJECT_DIR$/js/validar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listaespera.php" afterPath="$PROJECT_DIR$/listaespera.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/medico.php" afterPath="$PROJECT_DIR$/medico.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modiadmin.php" afterPath="$PROJECT_DIR$/modiadmin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modicli.php" afterPath="$PROJECT_DIR$/modicli.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/panelnormal.php" afterPath="$PROJECT_DIR$/panelnormal.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personainfo.php" afterPath="$PROJECT_DIR$/personainfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reserva.php" afterPath="$PROJECT_DIR$/reserva.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaDEN.php" afterPath="$PROJECT_DIR$/reservaDEN.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaGE.php" afterPath="$PROJECT_DIR$/reservaGE.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaGI.php" afterPath="$PROJECT_DIR$/reservaGI.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaKIN.php" afterPath="$PROJECT_DIR$/reservaKIN.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaMA.php" afterPath="$PROJECT_DIR$/reservaMA.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaMEN.php" afterPath="$PROJECT_DIR$/reservaMEN.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaOFT.php" afterPath="$PROJECT_DIR$/reservaOFT.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservaPED.php" afterPath="$PROJECT_DIR$/reservaPED.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resetp.php" afterPath="$PROJECT_DIR$/resetp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/validar.php" afterPath="$PROJECT_DIR$/validar.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -245,7 +217,7 @@
       <workItem from="1512999159068" duration="940000" />
       <workItem from="1513015114821" duration="13877000" />
       <workItem from="1513029138069" duration="8000" />
-      <workItem from="1513029168398" duration="1173000" />
+      <workItem from="1513029168398" duration="1275000" />
     </task>
     <task id="LOCAL-00002" summary="valida rut">
       <created>1512527323084</created>
@@ -282,15 +254,21 @@
       <option name="project" value="LOCAL" />
       <updated>1513203681347</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="beta 1.1">
+      <created>1513030399089</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1513030399089</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81250000" />
+    <option name="totallyTimeSpent" value="81352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17170954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -373,7 +351,8 @@
     <MESSAGE value="grafica" />
     <MESSAGE value="qr&#10;&#10;generar qr vara validacion a la hora de llegada" />
     <MESSAGE value="beta 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="beta 1" />
+    <MESSAGE value="beta 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="beta 1.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

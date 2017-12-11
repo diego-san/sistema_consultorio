@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-12-2017 a las 22:56:28
+-- Tiempo de generación: 12-12-2017 a las 00:16:02
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.9
 
@@ -175,13 +175,23 @@ CREATE TABLE `persona` (
 --
 
 INSERT INTO `persona` (`rut_persona`, `digito_persona`, `nro_ficha`, `nombre_persona`, `apellido_persona`, `fech_nac_persona`, `genero_persona`, `direccion_persona`, `servicio_salub`, `ciudad_nacimiento`, `numero_telefono`, `sector`, `establecimiento`, `tipo_persona`) VALUES
+('10875439', '7', 453, 'MATIAS', 'SALAZAR', '1989-12-01', 'M', 'chorrillos 1200 - ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 33333333333, '3', 'hospital', 'NO'),
+('11098766', '8', 46, 'HUGO', 'MENA', '1993-10-28', 'M', 'recreo 1788 ViÃ±a del Mar', 'fonasa', 'quilpue', 88888888888, '3', 'hospital', 'NO'),
 ('12121212', '9', 677683, 'TOM', 'GONZALES', '1970-02-05', 'M', '219 NORTE CON CALLE TRES, SANTA INES', 'fonasa', 'valparaiso', 56987684748, '4', 'lucitania', 'NO'),
+('12678953', 'k', 23, 'ROBERTO', 'HERRERA', '1994-09-26', 'M', 'chorrillos 1200 - ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 33333333333, '23', 'hospital', 'NO'),
 ('13131313', '6', 343333, 'MARTA', 'GALINDO', '1970-03-05', 'F', 'Hospital Dr. Gustavo Fricke - DirecciÃ³n: Alv', 'fonasa', ' ViÃ±a del Mar ', 45345452454, '4', 'lucitania', 'NO'),
+('14667460', '7', 67, 'CONSTANZA', 'VILLEGAS', '1996-05-07', 'F', 'recreo 1788 ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 3333222333, '21', 'hospital', 'NO'),
+('15983267', '8', 456, 'ANTONIA', 'CONTRERAS', '1984-03-01', 'F', 'chorrillos 1200 - ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 33333333333, '1', 'hospital', 'NO'),
+('16054326', '4', 12, 'LUCIA', 'GOMEZ', '1984-04-25', 'F', 'Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'valparaiso', 33333333333, '1', 'hospital', 'NO'),
+('16783254', '7', 789, 'JUAN', 'VARGAS', '1990-09-18', 'M', 'chorrillos 1200 - ViÃ±a del Mar', 'fonasa', 'valparaiso', 33331111333, '12', 'hospital', 'NO'),
 ('16891230', '7', 45, 'francisco', 'AGUIRRE', '2015-06-11', 'M', 'de bajo del puente', 'fonasa', 'quillota', 69696969696, 'chorrillos', 'este', 'NO'),
+('17845455', '2', 32, 'LUIS', 'VALDEZ', '1983-12-26', 'M', 'marina 2345 ViÃ±a del mar', 'fonasa', 'viÃ±a del mar', 33333333333, '3', 'hospital', 'NO'),
 ('17995948', '8', 2889, 'felipe', 'ESTAY', '1992-04-21', 'M', 'Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 12222222222, '4', 'hospital', 'NO'),
 ('18045045', '9', 23, 'marcelo', 'IBARRA', '1973-09-11', 'M', 'av. siempre viva 444 ', 'fonasa', 'san bisente de taguatagua', 9634524532, 'los sauses', 'consultorio 1', 'NO'),
 ('18915384', '8', 3453322, 'diego', 'SANCHEZ', '1986-08-16', 'M', ' Hospital Dr. Gustavo Fricke - DirecciÃ³n: Al', 'fonsana', 'valparaiso', 56997045099, 'miraflores', 'lusitania', 'NO'),
+('20981342', '4', 45676, 'CAROL', 'MEDINA', '1988-10-06', 'F', 'chorrillos 1200 - ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 6666666666, '89', 'hospital', 'NO'),
 ('21333266', 'K', 234234243, 'max', 'SANCHEZ', '2013-03-08', 'M', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'valparaiso', 56234242342, '3', 'este', 'NO'),
+('21986452', '3', 785, 'LUIS', 'SAAVEDRA', '1995-11-03', 'M', 'Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 76736731, '34', 'hospital', 'NO'),
 ('23232323', 'K', 902323, 'mariano', 'GONZALES', '1980-07-11', 'M', 'su casa', 'fonasa', 'la serena', 234234232, 'miraflores', 'lucitania', 'NO'),
 ('99922222', '6', 4533, 'jaime', 'MORALES', '1980-06-11', 'M', 'su casa', 'fonasa', 'val', 56756756756, '4', 'aqui', 'NO');
 
@@ -214,7 +224,90 @@ INSERT INTO `reserva` (`rut`, `fecha`, `tipo_reveva`, `estado`, `id_reserva`, `q
 ('12121212', '2017-12-13 08:00:00', 'MENTAL', 'PENDIENTE', 140, NULL),
 ('12121212', '2017-12-13 08:15:00', 'GENERAL', 'PENDIENTE', 141, NULL),
 ('12121212', '2017-12-13 09:30:00', 'PEDIATRIA', 'PENDIENTE', 142, NULL),
-('13131313', '2017-12-14 09:30:00', 'GINECOLOGIA', 'PENDIENTE', 143, NULL);
+('13131313', '2017-12-14 09:30:00', 'GINECOLOGIA', 'PENDIENTE', 143, NULL),
+('10875439', '2017-12-13 11:00:00', 'DENTAL', 'PENDIENTE', 237, NULL),
+('10875439', '2017-12-13 11:00:00', 'OFTAMOLOGIA', 'PENDIENTE', 238, NULL),
+('10875439', '2017-12-14 13:00:00', 'MENTAL', 'PENDIENTE', 239, NULL),
+('10875439', '2017-12-15 10:30:00', 'KINESIOLOGIA', 'PENDIENTE', 240, NULL),
+('10875439', '2017-12-20 09:00:00', 'GENERAL', 'PENDIENTE', 241, NULL),
+('11098766', '2017-12-13 15:00:00', 'DENTAL', 'PENDIENTE', 242, NULL),
+('11098766', '2017-12-12 11:00:00', 'OFTAMOLOGIA', 'PENDIENTE', 243, NULL),
+('11098766', '2017-12-15 16:00:00', 'MENTAL', 'PENDIENTE', 244, NULL),
+('11098766', '2017-12-14 11:00:00', 'KINESIOLOGIA', 'PENDIENTE', 245, NULL),
+('11098766', '2017-12-15 08:15:00', 'GENERAL', 'PENDIENTE', 246, NULL),
+('11098766', '2017-12-12 08:00:00', 'PEDIATRIA', 'PENDIENTE', 247, NULL),
+('13131313', '2017-12-14 10:00:00', 'MATERNAL', 'PENDIENTE', 248, NULL),
+('13131313', '2017-12-12 14:00:00', 'DENTAL', 'PENDIENTE', 249, NULL),
+('13131313', '2018-01-04 10:00:00', 'OFTAMOLOGIA', 'PENDIENTE', 250, NULL),
+('13131313', '2017-12-13 11:00:00', 'MENTAL', 'PENDIENTE', 251, NULL),
+('14667460', '2017-12-13 17:00:00', 'DENTAL', 'PENDIENTE', 252, NULL),
+('14667460', '2017-12-14 10:00:00', 'OFTAMOLOGIA', 'PENDIENTE', 253, NULL),
+('14667460', '2017-12-11 09:00:00', 'MENTAL', 'PENDIENTE', 254, NULL),
+('14667460', '2017-12-15 11:00:00', 'PEDIATRIA', 'PENDIENTE', 255, NULL),
+('14667460', '2018-01-08 09:00:00', 'KINESIOLOGIA', 'PENDIENTE', 256, NULL),
+('14667460', '2017-12-14 09:45:00', 'GENERAL', 'PENDIENTE', 257, NULL),
+('14667460', '2017-12-13 10:00:00', 'MATERNAL', 'PENDIENTE', 258, NULL),
+('14667460', '2017-12-13 15:30:00', 'GINECOLOGIA', 'PENDIENTE', 259, NULL),
+('15983267', '2017-12-11 16:00:00', 'DENTAL', 'PENDIENTE', 260, NULL),
+('15983267', '2018-01-11 11:00:00', 'OFTAMOLOGIA', 'PENDIENTE', 261, NULL),
+('15983267', '2017-12-12 15:00:00', 'MENTAL', 'PENDIENTE', 262, NULL),
+('15983267', '2017-12-14 11:30:00', 'PEDIATRIA', 'PENDIENTE', 263, NULL),
+('15983267', '2017-12-12 10:30:00', 'KINESIOLOGIA', 'PENDIENTE', 264, NULL),
+('15983267', '2017-12-11 09:15:00', 'GENERAL', 'PENDIENTE', 265, NULL),
+('15983267', '2017-12-14 11:30:00', 'MATERNAL', 'PENDIENTE', 266, NULL),
+('15983267', '2017-12-14 11:30:00', 'GINECOLOGIA', 'PENDIENTE', 267, NULL),
+('16054326', '2017-12-13 10:00:00', 'DENTAL', 'PENDIENTE', 268, NULL),
+('16054326', '2017-12-15 11:30:00', 'OFTAMOLOGIA', 'PENDIENTE', 269, NULL),
+('16054326', '2017-12-12 11:00:00', 'PEDIATRIA', 'PENDIENTE', 270, NULL),
+('16054326', '2017-12-11 11:30:00', 'KINESIOLOGIA', 'PENDIENTE', 271, NULL),
+('16054326', '2017-12-15 11:00:00', 'MATERNAL', 'PENDIENTE', 272, NULL),
+('16783254', '2017-12-13 09:00:00', 'DENTAL', 'PENDIENTE', 273, NULL),
+('16783254', '2017-12-14 11:00:00', 'MENTAL', 'PENDIENTE', 274, NULL),
+('16783254', '2017-12-12 09:30:00', 'GENERAL', 'PENDIENTE', 275, NULL),
+('16783254', '2017-12-14 15:00:00', 'PEDIATRIA', 'PENDIENTE', 276, NULL),
+('16891230', '2017-12-12 10:00:00', 'MENTAL', 'PENDIENTE', 277, NULL),
+('16891230', '2017-12-13 08:45:00', 'GENERAL', 'PENDIENTE', 278, NULL),
+('16891230', '2017-12-14 10:00:00', 'PEDIATRIA', 'PENDIENTE', 279, NULL),
+('17845455', '2017-12-13 16:00:00', 'DENTAL', 'PENDIENTE', 280, NULL),
+('17845455', '2017-12-14 08:30:00', 'OFTAMOLOGIA', 'PENDIENTE', 281, NULL),
+('17845455', '2017-12-11 13:00:00', 'MENTAL', 'PENDIENTE', 282, NULL),
+('17845455', '2017-12-13 14:00:00', 'KINESIOLOGIA', 'PENDIENTE', 283, NULL),
+('17845455', '2017-12-11 10:30:00', 'PEDIATRIA', 'PENDIENTE', 284, NULL),
+('17995948', '2017-12-13 10:30:00', 'OFTAMOLOGIA', 'PENDIENTE', 285, NULL),
+('17995948', '2017-12-15 15:00:00', 'DENTAL', 'PENDIENTE', 286, NULL),
+('17995948', '2017-12-15 09:30:00', 'KINESIOLOGIA', 'PENDIENTE', 287, NULL),
+('17995948', '2017-12-12 09:00:00', 'GENERAL', 'PENDIENTE', 288, NULL),
+('18045045', '2017-12-13 14:00:00', 'DENTAL', 'PENDIENTE', 289, NULL),
+('18045045', '2017-12-13 13:00:00', 'MENTAL', 'PENDIENTE', 290, NULL),
+('18045045', '2017-12-14 09:15:00', 'GENERAL', 'PENDIENTE', 291, NULL),
+('18045045', '2017-12-14 12:30:00', 'PEDIATRIA', 'PENDIENTE', 292, NULL),
+('18915384', '2017-12-14 13:30:00', 'OFTAMOLOGIA', 'PENDIENTE', 293, NULL),
+('18915384', '2017-12-14 17:00:00', 'MENTAL', 'PENDIENTE', 294, NULL),
+('18915384', '2017-12-14 13:30:00', 'GENERAL', 'PENDIENTE', 295, NULL),
+('20981342', '2017-12-13 15:00:00', 'OFTAMOLOGIA', 'PENDIENTE', 296, NULL),
+('20981342', '2017-12-13 12:00:00', 'DENTAL', 'PENDIENTE', 297, NULL),
+('20981342', '2017-12-12 14:30:00', 'MATERNAL', 'PENDIENTE', 298, NULL),
+('20981342', '2018-01-10 09:30:00', 'GINECOLOGIA', 'PENDIENTE', 299, NULL),
+('21333266', '2017-12-13 13:00:00', 'DENTAL', 'PENDIENTE', 300, NULL),
+('21333266', '2017-12-14 08:00:00', 'GENERAL', 'PENDIENTE', 301, NULL),
+('21333266', '2017-12-14 09:30:00', 'KINESIOLOGIA', 'PENDIENTE', 302, NULL),
+('21333266', '2017-12-15 14:00:00', 'MENTAL', 'PENDIENTE', 303, NULL),
+('21986452', '2017-12-14 14:00:00', 'DENTAL', 'PENDIENTE', 304, NULL),
+('21986452', '2017-12-14 15:00:00', 'MENTAL', 'PENDIENTE', 305, NULL),
+('21986452', '2017-12-14 11:45:00', 'GENERAL', 'PENDIENTE', 306, NULL),
+('21986452', '2017-12-13 11:00:00', 'KINESIOLOGIA', 'PENDIENTE', 307, NULL),
+('21986452', '2017-12-13 10:00:00', 'PEDIATRIA', 'PENDIENTE', 308, NULL),
+('23232323', '2017-12-12 11:00:00', 'DENTAL', 'PENDIENTE', 309, NULL),
+('23232323', '2017-12-11 10:30:00', 'OFTAMOLOGIA', 'PENDIENTE', 310, NULL),
+('23232323', '2017-12-13 17:00:00', 'MENTAL', 'PENDIENTE', 311, NULL),
+('23232323', '2017-12-14 08:45:00', 'GENERAL', 'PENDIENTE', 312, NULL),
+('23232323', '2017-12-15 16:00:00', 'KINESIOLOGIA', 'PENDIENTE', 313, NULL),
+('99922222', '2017-12-14 11:00:00', 'DENTAL', 'PENDIENTE', 314, NULL),
+('99922222', '2017-12-14 13:00:00', 'OFTAMOLOGIA', 'PENDIENTE', 315, NULL),
+('99922222', '2018-01-08 15:00:00', 'MENTAL', 'PENDIENTE', 316, NULL),
+('99922222', '2017-12-12 13:30:00', 'KINESIOLOGIA', 'PENDIENTE', 317, NULL),
+('99922222', '2017-12-15 16:15:00', 'GENERAL', 'PENDIENTE', 318, NULL),
+('99922222', '2018-01-11 09:30:00', 'PEDIATRIA', 'PENDIENTE', 319, NULL);
 
 -- --------------------------------------------------------
 
@@ -234,13 +327,23 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`rut`, `password`, `tipo`) VALUES
 ('1000000', 'mu3mAXx4Xkzw6', 'ROOT'),
+('10875439', 'mu3mAXx4Xkzw6', 'NORMAL'),
+('11098766', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('12121212', 'mu3mAXx4Xkzw6', 'NORMAL'),
+('12678953', 'muFrnP66FrLPM', 'NORMAL'),
 ('13131313', 'mu3mAXx4Xkzw6', 'NORMAL'),
+('14667460', 'mu3mAXx4Xkzw6', 'NORMAL'),
+('15983267', 'mu3mAXx4Xkzw6', 'NORMAL'),
+('16054326', 'mu3mAXx4Xkzw6', 'NORMAL'),
+('16783254', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('16891230', 'muS2jtPgoEkT2', 'NORMAL'),
+('17845455', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('17995948', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('18045045', 'mu8T9R2k5ysDY', 'NORMAL'),
 ('18915384', 'mu3mAXx4Xkzw6', 'NORMAL'),
+('20981342', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('21333266', 'mu3mAXx4Xkzw6', 'NORMAL'),
+('21986452', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('22222222', 'mu3mAXx4Xkzw6', 'ADMINISTRACION'),
 ('23232323', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('24242424', 'mu3mAXx4Xkzw6', 'CLINICA'),
@@ -265,7 +368,7 @@ INSERT INTO `user` (`rut`, `password`, `tipo`) VALUES
 -- Indices de la tabla `administracion`
 --
 ALTER TABLE `administracion`
-  ADD PRIMARY KEY (`digito_admin`),
+  ADD PRIMARY KEY (`rut_administracion`),
   ADD KEY `fk_user_admin` (`rut_administracion`);
 
 --
@@ -322,7 +425,7 @@ ALTER TABLE `historial`
 -- AUTO_INCREMENT de la tabla `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=330;
 
 --
 -- Restricciones para tablas volcadas

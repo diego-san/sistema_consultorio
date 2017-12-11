@@ -110,8 +110,8 @@ class Create_database
 
               $crear_tb_users = $this->pdo->prepare('
 
-                ALTER TABLE `administracion`
-  ADD PRIMARY KEY (`digito_admin`),
+               ALTER TABLE `administracion`
+  ADD PRIMARY KEY (`rut_administracion`),
   ADD KEY `fk_user_admin` (`rut_administracion`);
 
   ALTER TABLE `clinica_administracion`
