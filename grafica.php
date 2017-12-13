@@ -31,7 +31,33 @@ $fecha = date('Y-m-d');
 
 $mes = $consulta->consultames($fecha);
 
-print_r($mes);
+$dia = $consulta->consultadia($fecha);
+
+$semana = $consulta->consultasemana($fecha);
+
+$cantidadtipo = array("GENERAL"=>0,"DENTAL"=>0,"oft"=>0,"mental"=>0,"ped"=>0,"kine"=>0,"mate"=>0,"gine"=>0);
+
+foreach ($histo as $key => $value){
+
+    if($value[3]=="GENERAL"){
+        $cantidadtipo['GENERAL']++;
+    }elseif ($value[3]=="OFTAMOLOGIA"){
+        $cantidadtipo['oft']++;
+    }elseif ($value[3]=="MENTAL"){
+        $cantidadtipo['mental']++;
+    }elseif ($value[3]=="PEDIATRIA"){
+        $cantidadtipo['ped']++;
+    }elseif ($value[3]=="KINESIOLOGIA"){
+        $cantidadtipo['kine']++;
+    }elseif ($value[3]=="MATERNAL"){
+        $cantidadtipo['mate']++;
+    }elseif ($value[3]=="GINECOLOGIA"){
+        $cantidadtipo['gine']++;
+    }elseif ($value[3]=="DENTAL"){
+        $cantidadtipo['DENTAL']++;
+    }
+
+}
 
 ?>
 
@@ -51,13 +77,15 @@ print_r($mes);
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Especialidades', 'Dia', 'semana', 'mes'],
-                ['DENTAL', 1000, 400, 200],
-                ['OFTALMOLOGIA', 1170, 460, 250],
-                ['SALUD MENTAL', 660, 1120, 300],
-                ['KINESIOLOGIA', 1030, 540, 350],
-                ['MEDICINA GENERAL', 1030, 540, 350],
-                ['PEDIATRIA', 1030, 540, 350]
+                ['Especialidades', 'Dia', 'Semana', 'Mes'],
+                ['DENTAL', <?php echo $dia,$cantidadtipo['DENTAL'];?>, <?php echo $semana,$cantidadtipo['DENTAL'];?>, <?php echo $mes,$cantidadtipo['DENTAL'];?>],
+                ['OFTALMOLOGIA', <?php echo $dia,$cantidadtipo['oft'];?>, <?php echo $semana,$cantidadtipo['oft'];?>, <?php echo $mes,$cantidadtipo['oft'];?>],
+                ['SALUD MENTAL', <?php echo $dia,$cantidadtipo['mental'];?>, <?php echo $semana,$cantidadtipo['mental'];?>, <?php echo $mes,$cantidadtipo['mental'];?>],
+                ['KINESIOLOGIA', <?php echo $dia,$cantidadtipo['kine'];?>, <?php echo $semana,$cantidadtipo['kine'];?>, <?php echo $mes,$cantidadtipo['kine'];?>],
+                ['MEDICINA GENERAL', <?php echo $dia,$cantidadtipo['GENERAL'];?>, <?php echo $semana,$cantidadtipo['GENERAL'];?>, <?php echo $mes,$cantidadtipo['GENERAL'];?>],
+                ['PEDIATRIA', <?php echo $dia,$cantidadtipo['ped'];?>, <?php echo $semana,$cantidadtipo['ped'];?>, <?php echo $mes,$cantidadtipo['ped'];?>],
+                ['MATERNAL', <?php echo $dia,$cantidadtipo['mate'];?>, <?php echo $semana,$cantidadtipo['mate'];?>, <?php echo $mes,$cantidadtipo['mate'];?>],
+                ['GINECOLOGIA', <?php echo $dia,$cantidadtipo['ped'];?>, <?php echo $semana,$cantidadtipo['ped'];?>, <?php echo $mes,$cantidadtipo['ped'];?>]
             ]);
 
             var options = {
