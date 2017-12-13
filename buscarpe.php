@@ -2,9 +2,16 @@
 session_start();
 error_reporting(0);
 $varsesion=$_SESSION['login'];
-$rut=$varsesion;
 
-if ($varsesion == null || $varsesion = '' || $_SESSION['tipo'] != 'ADMINISTRACION') {
+
+if ($varsesion == null || $varsesion = '' ) {
+    header("Location:login.php");
+    die();
+}elseif ( $_SESSION['tipo'] == 'ADMINISTRACION'){
+
+}elseif ( $_SESSION['tipo'] == 'CLINICA'){
+
+}else{
     header("Location:login.php");
     die();
 }
@@ -42,31 +49,61 @@ $_SESSION['tiempo'] = time();
     </div>
 </header>
 
-<nav class="navbar navbar-default" >
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+<?php if ($_SESSION['tipo'] == 'ADMINISTRACION'):?>
+    <nav class="navbar navbar-default" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="administracion.php">Home</a></li>
+                    <li><a href="in_paciente.php">Ingresar Paciente</a></li>
+                    <li><a href="buscarpe.php">Busqueda Paciente</a></li>
+                    <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
+                    <li><a href="listaespera.php">Lista Espera</a></li>
+                    <li><a href="grafica.php">Grafica</a></li>
+                    <li><a href="modiadmin.php">Modificar Mis Datos</a></li>
+                    <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                <li class="active"><a href="administracion.php">Home</a></li>
-                <li><a href="in_paciente.php">Ingresar Paciente</a></li>
-                <li><a href="#">Busqueda Paciente</a></li>
-                <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
-                <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
-            </ul>
+    </nav>
+<?php else:?>
+    <nav class="navbar navbar-default" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="medico.php">Home</a></li>
+                    <li><a href="in_historial.php">Ingresar Historial</a></li>
+                    <li><a href="buscarpe.php">Buscar Persona</a></li>
+                    <li><a href="modicli.php">Modificar Mis Datos</a></li>
+                    <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
+<?php endif;?>
 <main>
     <div class="container">
         <div class="row ">

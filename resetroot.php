@@ -42,6 +42,7 @@ $_SESSION['tiempo'] = time();
     </div>
 </header>
 
+
 <nav class="navbar navbar-default" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -57,6 +58,8 @@ $_SESSION['tiempo'] = time();
                 <li class="active"><a href="root.php">Home</a></li>
                 <li><a href="in_administracion.php">Ingresar administracion</a></li>
                 <li><a href="in_clinica.php">Ingresar Clinica</a></li>
+                <li><a href="lista.php">Lista</a></li>
+                <li><a href="modiadmin.php">Modificar Mis Datos</a></li>
                 <li><a href="resetroot.php">Restablecer  Contraseña</a></li>
                 <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>

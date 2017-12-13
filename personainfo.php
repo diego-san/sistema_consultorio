@@ -125,8 +125,11 @@ foreach ($histo as $key => $value){
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="administracion.php">Home</a></li>
                     <li><a href="in_paciente.php">Ingresar Paciente</a></li>
-                    <li><a href="#">Busqueda Paciente</a></li>
+                    <li><a href="buscarpe.php">Busqueda Paciente</a></li>
                     <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
+                    <li><a href="listaespera.php">Lista Espera</a></li>
+                    <li><a href="grafica.php">Grafica</a></li>
+                    <li><a href="modiadmin.php">Modificar Mis Datos</a></li>
                     <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -136,28 +139,30 @@ foreach ($histo as $key => $value){
         </div>
     </nav>
 <?php else:?>
-<nav class="navbar navbar-default" >
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+    <nav class="navbar navbar-default" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="medico.php">Home</a></li>
+                    <li><a href="in_historial.php">Ingresar Historial</a></li>
+                    <li><a href="buscarpe.php">Buscar Persona</a></li>
+                    <li><a href="modicli.php">Modificar Mis Datos</a></li>
+                    <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="medico.php">Home</a></li>
-                <li><a href="in_historial.php">Ingresar Historial</a></li>
-                <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
 
 <?php endif;?>
 <main>
@@ -205,6 +210,7 @@ foreach ($histo as $key => $value){
         <div class="row">
             <div class="col-md-12 persona_espacio"></div>
         </div>
+        <?php if (!empty($histo)):?>
         <div class="row">
             <div class="col-md-10 col-md-offset-1 datos_fondo ">
 
@@ -218,7 +224,7 @@ foreach ($histo as $key => $value){
             <div class="col-md-1"></div>
         </div>
 
-
+        <?php endif;?>
     </div>
 </main>
 <footer>

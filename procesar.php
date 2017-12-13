@@ -141,6 +141,43 @@ if($_GET['tipo']==1) {
     }
 
 
+}elseif ($_GET['tipo']==7){
+
+    $rut = $_GET['r'];
+
+    $del= new delete();
+    $del->deladminuser($rut);
+    $del->deladminadmin($rut);
+
+
+
+
+}elseif ($_GET['tipo']==8){
+
+    $rut = $_GET['r'];
+    $estado="ACTIVO";
+    $update = new update();
+
+    $update->estadocli($rut,$estado);
+
+
+
+
+
+
+}elseif ($_GET['tipo']==9){
+
+    $rut = $_GET['r'];
+    $estado="INACTIVO";
+    $update = new update();
+
+    $update->estadocli($rut,$estado);
+
+
+
+
+
+
 }else{
 
 }

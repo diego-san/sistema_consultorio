@@ -33,6 +33,7 @@ echo $varsesion;
 $consulta = new consulta();
 $datos= $consulta->panelnormal($r);
 $rese=$consulta->reserva($r);
+//tipo de genero
 $_SESSION['GE'] =$datos[0][6];
 
 $histo = $consulta->historial($r);
@@ -122,6 +123,7 @@ foreach ($histo as $key => $value){
                 <li class="active"><a href="panelnormal.php">Home</a></li>
                 <li><a href="reserva.php">Pedir Consulta</a></li>
                 <li><a href="hisotial.php">Historial</a></li>
+                <li><a href="modiper.php">Modificar Datos</a></li>
                 <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -274,6 +276,41 @@ foreach ($histo as $key => $value){
 </footer>
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/locales/bootstrap-datetimepicker.es.js" charset="UTF-8"></script>
 
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'es',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+    $('.form_date').datetimepicker({
+        language:  'es',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $('.form_time').datetimepicker({
+        language:  'es',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
 </body>
 </html>

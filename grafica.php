@@ -30,34 +30,9 @@ $consulta = new consulta();
 $fecha = date('Y-m-d');
 
 $mes = $consulta->consultames($fecha);
-
 $dia = $consulta->consultadia($fecha);
+$ano = $consulta->consultaano($fecha);
 
-$semana = $consulta->consultasemana($fecha);
-
-$cantidadtipo = array("GENERAL"=>0,"DENTAL"=>0,"oft"=>0,"mental"=>0,"ped"=>0,"kine"=>0,"mate"=>0,"gine"=>0);
-
-foreach ($histo as $key => $value){
-
-    if($value[3]=="GENERAL"){
-        $cantidadtipo['GENERAL']++;
-    }elseif ($value[3]=="OFTAMOLOGIA"){
-        $cantidadtipo['oft']++;
-    }elseif ($value[3]=="MENTAL"){
-        $cantidadtipo['mental']++;
-    }elseif ($value[3]=="PEDIATRIA"){
-        $cantidadtipo['ped']++;
-    }elseif ($value[3]=="KINESIOLOGIA"){
-        $cantidadtipo['kine']++;
-    }elseif ($value[3]=="MATERNAL"){
-        $cantidadtipo['mate']++;
-    }elseif ($value[3]=="GINECOLOGIA"){
-        $cantidadtipo['gine']++;
-    }elseif ($value[3]=="DENTAL"){
-        $cantidadtipo['DENTAL']++;
-    }
-
-}
 
 ?>
 
@@ -77,29 +52,272 @@ foreach ($histo as $key => $value){
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Especialidades', 'Dia', 'Semana', 'Mes'],
-                ['DENTAL', <?php echo $dia,$cantidadtipo['DENTAL'];?>, <?php echo $semana,$cantidadtipo['DENTAL'];?>, <?php echo $mes,$cantidadtipo['DENTAL'];?>],
-                ['OFTALMOLOGIA', <?php echo $dia,$cantidadtipo['oft'];?>, <?php echo $semana,$cantidadtipo['oft'];?>, <?php echo $mes,$cantidadtipo['oft'];?>],
-                ['SALUD MENTAL', <?php echo $dia,$cantidadtipo['mental'];?>, <?php echo $semana,$cantidadtipo['mental'];?>, <?php echo $mes,$cantidadtipo['mental'];?>],
-                ['KINESIOLOGIA', <?php echo $dia,$cantidadtipo['kine'];?>, <?php echo $semana,$cantidadtipo['kine'];?>, <?php echo $mes,$cantidadtipo['kine'];?>],
-                ['MEDICINA GENERAL', <?php echo $dia,$cantidadtipo['GENERAL'];?>, <?php echo $semana,$cantidadtipo['GENERAL'];?>, <?php echo $mes,$cantidadtipo['GENERAL'];?>],
-                ['PEDIATRIA', <?php echo $dia,$cantidadtipo['ped'];?>, <?php echo $semana,$cantidadtipo['ped'];?>, <?php echo $mes,$cantidadtipo['ped'];?>],
-                ['MATERNAL', <?php echo $dia,$cantidadtipo['mate'];?>, <?php echo $semana,$cantidadtipo['mate'];?>, <?php echo $mes,$cantidadtipo['mate'];?>],
-                ['GINECOLOGIA', <?php echo $dia,$cantidadtipo['ped'];?>, <?php echo $semana,$cantidadtipo['ped'];?>, <?php echo $mes,$cantidadtipo['ped'];?>]
+                ['Tipo', 'Cantidad de Reserva'],
+                <?php
+                foreach ($mes as $key => $value){
+                    if ($value[1]=="KINESIOLOGIA"){
+                        echo " ['KINESIOLOGIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+                <?php
+                foreach ($mes as $key => $value){
+                    if ($value[1]=="OFTAMOLOGIA"){
+                        echo " ['OFTAMOLOGIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($mes as $key => $value){
+                    if ($value[1]=="PEDIATRIA"){
+                        echo " ['PEDIATRIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($mes as $key => $value){
+                    if ($value[1]=="MATERNAL"){
+                        echo " ['MATERNAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($mes as $key => $value){
+                    if ($value[1]=="GINECOLOGIA"){
+                        echo " ['GINECOLOGIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($mes as $key => $value){
+                    if ($value[1]=="DENTAL"){
+                        echo " ['DENTAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($mes as $key => $value){
+                    if ($value[1]=="GENERAL"){
+                        echo " ['GENERAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($mes as $key => $value){
+                    if ($value[1]=="MENTAL"){
+                        echo " ['MENTAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+
+
+
+
+
+
             ]);
 
             var options = {
                 chart: {
-                    title: 'Atenciones',
-                    subtitle: '',
+                    title: 'Grafica De reservas por Mes',
+
                 }
             };
 
-            var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+            var chart = new google.charts.Bar(document.getElementById('mes'));
 
             chart.draw(data, google.charts.Bar.convertOptions(options));
         }
     </script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Tipo', 'Cantidad de Reserva'],
+                <?php
+                foreach ($dia as $key => $value){
+                    if ($value[1]=="KINESIOLOGIA"){
+                        echo " ['KINESIOLOGIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+                <?php
+                foreach ($dia as $key => $value){
+                    if ($value[1]=="OFTAMOLOGIA"){
+                        echo " ['OFTAMOLOGIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($dia as $key => $value){
+                    if ($value[1]=="PEDIATRIA"){
+                        echo " ['PEDIATRIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($dia as $key => $value){
+                    if ($value[1]=="MATERNAL"){
+                        echo " ['MATERNAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($dia as $key => $value){
+                    if ($value[1]=="GINECOLOGIA"){
+                        echo " ['GINECOLOGIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($dia as $key => $value){
+                    if ($value[1]=="DENTAL"){
+                        echo " ['DENTAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($dia as $key => $value){
+                    if ($value[1]=="GENERAL"){
+                        echo " ['GENERAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($dia as $key => $value){
+                    if ($value[1]=="MENTAL"){
+                        echo " ['MENTAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+
+
+
+
+
+
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Grafica De reservas DIA',
+
+                }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('dia'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Tipo', 'Cantidad de Reserva'],
+                <?php
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="KINESIOLOGIA"){
+                        echo " ['KINESIOLOGIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+                <?php
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="OFTAMOLOGIA"){
+                        echo " ['OFTAMOLOGIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="PEDIATRIA"){
+                        echo " ['PEDIATRIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="MATERNAL"){
+                        echo " ['MATERNAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="GINECOLOGIA"){
+                        echo " ['GINECOLOGIA',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="DENTAL"){
+                        echo " ['DENTAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="GENERAL"){
+                        echo " ['GENERAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+                <?php
+                foreach ($ano as $key => $value){
+                    if ($value[1]=="MENTAL"){
+                        echo " ['MENTAL',".$value[0]."  ],";
+                    }
+                }
+                ?>
+
+
+
+
+
+
+
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Grafica De reservas Por Año',
+
+                }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('ano'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+    </script>
+
+</head>
 </head>
 
 <body>
@@ -108,7 +326,6 @@ foreach ($histo as $key => $value){
         <h1 class="text-center">| Sistema Consultorio |</h1>
     </div>
 </header>
-
 <nav class="navbar navbar-default" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -122,6 +339,13 @@ foreach ($histo as $key => $value){
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="administracion.php">Home</a></li>
+                <li><a href="in_paciente.php">Ingresar Paciente</a></li>
+                <li><a href="buscarpe.php">Busqueda Paciente</a></li>
+                <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
+                <li><a href="listaespera.php">Lista Espera</a></li>
+                <li><a href="grafica.php">Grafica</a></li>
+                <li><a href="modiadmin.php">Modificar Mis Datos</a></li>
+                <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="close.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
@@ -141,8 +365,29 @@ foreach ($histo as $key => $value){
         </div>
         <div class="row">
             <div class="col-md-10 col-md-offset-1 datos_fondo">
+
                 <div class="row">
-                    <div class="col-md-12 datos_header">
+                    <div class="col-md-12 admin_dato">
+
+
+                        <div class="table-responsive" >
+                            <div id="dia" style="width: 1000px; height: 500px;"></div>
+                            <div style="height:5px; width:5px; overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;"></div>
+                            <div style="height:5px; width:5px; overflow-x:scroll ; overflow-y: hidden; padding-bottom:10px;"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-md-12 admin_dato">
+
+
+                        <div class="table-responsive" >
+                            <div id="mes" style="width: 1000px; height: 500px;"></div>
+                            <div style="height:5px; width:5px; overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;"></div>
+                            <div style="height:5px; width:5px; overflow-x:scroll ; overflow-y: hidden; padding-bottom:10px;"></div>
+
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -150,13 +395,13 @@ foreach ($histo as $key => $value){
 
 
                         <div class="table-responsive" >
-                            <div id="columnchart_material" style="width: 1110px; height: 800px;"></div>
+                            <div id="ano" style="width: 1000px; height: 500px;"></div>
                             <div style="height:5px; width:5px; overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;"></div>
                             <div style="height:5px; width:5px; overflow-x:scroll ; overflow-y: hidden; padding-bottom:10px;"></div>
-                                
-                            </div>
+
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
             <div class="col-md-1"></div>

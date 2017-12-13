@@ -78,7 +78,6 @@ if(isset($_REQUEST['rut'])){
         <h1 class="text-center">| Sistema Consultorio |</h1>
     </div>
 </header>
-
 <nav class="navbar navbar-default" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -93,6 +92,8 @@ if(isset($_REQUEST['rut'])){
             <ul class="nav navbar-nav">
                 <li class="active"><a href="medico.php">Home</a></li>
                 <li><a href="in_historial.php">Ingresar Historial</a></li>
+                <li><a href="buscarpe.php">Buscar Persona</a></li>
+                <li><a href="modicli.php">Modificar Mis Datos</a></li>
                 <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

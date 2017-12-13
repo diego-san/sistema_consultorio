@@ -265,3 +265,9 @@ h1{
     }
 
 }
+
+/*lista-----*/
+
+.espaciolista{
+    min-height: 500px;
+}

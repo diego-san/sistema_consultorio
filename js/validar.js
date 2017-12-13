@@ -274,3 +274,81 @@ function buscarpersonaap() {
 
 
 }
+
+function delad(rut) {
+
+    if (confirm("Seguro de Eliminar") == true) {
+
+        $.ajax({
+            url: 'procesar.php',
+            method: "GET",
+            data: {r: rut, tipo: 7},
+        })
+            .done(function (data) {
+                console.log("su");
+                location.reload(true);
+            })
+            .fail(function () {
+                console.log("error");
+            })
+            .always(function () {
+                console.log("complete");
+            });
+
+    } else {
+        return false;
+    }
+}
+    function accli(rut) {
+
+        if (confirm("Seguro de Activar") == true) {
+
+            $.ajax({
+                url: 'procesar.php',
+                method: "GET",
+                data: {r:rut,tipo:8},
+            })
+                .done(function(data) {
+                    console.log("su");
+                    location.reload(true);
+                })
+                .fail(function() {
+                    console.log("error");
+                })
+                .always(function() {
+                    console.log("complete");
+                });
+
+        } else {
+            return false;
+        }
+
+
+}
+
+    function incli(rut) {
+
+        if (confirm("Seguro de Desactivar") == true) {
+
+            $.ajax({
+                url: 'procesar.php',
+                method: "GET",
+                data: {r:rut,tipo:9},
+            })
+                .done(function(data) {
+                    console.log("su");
+                    location.reload(true);
+                })
+                .fail(function() {
+                    console.log("error");
+                })
+                .always(function() {
+                    console.log("complete");
+                });
+
+        } else {
+            return false;
+        }
+
+
+    }

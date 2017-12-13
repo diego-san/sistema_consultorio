@@ -52,4 +52,27 @@ class delete{
         $conn=null;
     }
 
+    function deladminuser($rut){
+        require "conexion.php";
+
+        $sql ="DELETE FROM user WHERE rut =:rut ";
+
+        $smt=$conn->prepare($sql);
+        $smt->bindParam(':rut',$rut);
+
+        $smt->execute();
+        $conn=null;
+    }
+    function deladminadmin($rut){
+        require "conexion.php";
+
+        $sql ="DELETE FROM administracion WHERE rut_administracion =:rut ";
+
+        $smt=$conn->prepare($sql);
+        $smt->bindParam(':rut',$rut);
+
+        $smt->execute();
+        $conn=null;
+    }
+
 }

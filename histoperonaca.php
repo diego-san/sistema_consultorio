@@ -58,7 +58,6 @@ $datoshistoorden = array_reverse($datohito);
         <h1 class="text-center">| Sistema Consultorio |</h1>
     </div>
 </header>
-
 <?php if ($_SESSION['tipo'] == 'ADMINISTRACION'):?>
     <nav class="navbar navbar-default" >
         <div class="container-fluid">
@@ -74,8 +73,11 @@ $datoshistoorden = array_reverse($datohito);
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="administracion.php">Home</a></li>
                     <li><a href="in_paciente.php">Ingresar Paciente</a></li>
-                    <li><a href="#">Busqueda Paciente</a></li>
+                    <li><a href="buscarpe.php">Busqueda Paciente</a></li>
                     <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
+                    <li><a href="listaespera.php">Lista Espera</a></li>
+                    <li><a href="grafica.php">Grafica</a></li>
+                    <li><a href="modiadmin.php">Modificar Mis Datos</a></li>
                     <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -99,6 +101,8 @@ $datoshistoorden = array_reverse($datohito);
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="medico.php">Home</a></li>
                     <li><a href="in_historial.php">Ingresar Historial</a></li>
+                    <li><a href="buscarpe.php">Buscar Persona</a></li>
+                    <li><a href="modicli.php">Modificar Mis Datos</a></li>
                     <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

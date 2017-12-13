@@ -62,6 +62,9 @@ $lista= $get->pendiente();
                 <li><a href="in_paciente.php">Ingresar Paciente</a></li>
                 <li><a href="buscarpe.php">Busqueda Paciente</a></li>
                 <li><a href="resetp.php">Restablecer Contraseña Persona</a></li>
+                <li><a href="listaespera.php">Lista Espera</a></li>
+                <li><a href="grafica.php">Grafica</a></li>
+                <li><a href="modiadmin.php">Modificar Mis Datos</a></li>
                 <li><a href="cambiarpass.php">Cambiar Contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

@@ -231,7 +231,8 @@ class consulta{
         require "conexion.php";
         $mes = strtotime('+1 month',strtotime($fecha));
         $nuevafecha = date ('Y-m-d', $mes);
-        $sql="select * from reserva WHERE fecha BETWEEN '".$fecha." 08:00:00' AND '" .$nuevafecha." 23:59:00'";
+
+        $sql="select COUNT(id_reserva), tipo_reveva from reserva WHERE fecha BETWEEN '".$fecha." 08:00:00' AND '" .$nuevafecha." 23:59:00' group by tipo_reveva";
 
         $smt=$conn->prepare($sql);
         $smt->execute();
@@ -239,6 +240,34 @@ class consulta{
         $conn=null;
         return $resultado;
     }
+
+    function consultaano($fecha){
+        require "conexion.php";
+        $mes = strtotime('+1 year',strtotime($fecha));
+        $nuevafecha = date ('Y-m-d', $mes);
+
+        $sql="select COUNT(id_reserva), tipo_reveva from reserva WHERE fecha BETWEEN '".$fecha." 08:00:00' AND '" .$nuevafecha." 23:59:00' group by tipo_reveva";
+
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+        return $resultado;
+    }
+
+    function consultadia($fecha){
+        require "conexion.php";
+
+
+        $sql="select COUNT(id_reserva), tipo_reveva from reserva WHERE fecha BETWEEN '".$fecha." 08:00:00' AND '" .$fecha." 23:59:00' group by tipo_reveva";
+
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+        return $resultado;
+    }
+
     function pendiente(){
         require "conexion.php";
         $sql="select * from reserva WHERe estado= 'PENDIENTE'";
@@ -299,6 +328,43 @@ class consulta{
 
         return $resultado;
 
+
+    }
+
+    function esperalist (){
+        require "conexion.php";
+
+        $sql="select * from espera " ;
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
+
+    }
+    function listaad (){
+        require "conexion.php";
+
+        $sql="select * from administracion " ;
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
+
+    }
+    function listame (){
+        require "conexion.php";
+
+        $sql="select * from clinica_administracion " ;
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
 
     }
 

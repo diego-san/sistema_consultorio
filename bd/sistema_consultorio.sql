@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-12-2017 a las 15:38:29
+-- Tiempo de generación: 13-12-2017 a las 22:56:28
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.9
 
@@ -46,8 +46,8 @@ CREATE TABLE `administracion` (
 --
 
 INSERT INTO `administracion` (`rut_administracion`, `digito_admin`, `nombre_administracion`, `cargo_admin`, `apellido_administracion`, `titulo_admin`, `numero_admin`, `correo_admin`, `direcc_admin`, `fech_nac_admin`) VALUES
-('22222222', '2', 'marta', 'secretaria', 'segundo', 'secretaria', 45345232524, 'marta@gmail.com', 'su casas', '1930-06-12'),
-('55555555', '5', 'marcelo', 'informatica', 'ibarra', 'ingeniero informatico', 56997045099, 'marcelo@gmail.com', 'su casas', '1985-11-15');
+('22222222', '2', 'MARTA', 'secretaria', 'SEGUNDO', 'secretaria', 45345232524, 'marta@gmail.com', ' DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1930-06-12'),
+('55555555', '5', 'MARCELO', 'informatica', 'IBARRA', 'ingeniero informatico', 56997045099, 'marcelo@gmail.com', 'su casas', '1986-08-15');
 
 -- --------------------------------------------------------
 
@@ -82,22 +82,8 @@ INSERT INTO `clinica_administracion` (`rut_clinica`, `digito_clin`, `nombre_clin
 ('34343434', '0', 'pedro', 'perez', 'medico dental', 'DENTAL', 56342423423, 'pedro@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1974-12-07', 'ACTIVO'),
 ('56345345', '1', 'jaime', 'morales', 'vendedor de paltas', 'MENTAL', 56345345345, 'jaime@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1974-12-07', 'ACTIVO'),
 ('56566454', '9', 'marcelo', 'ibarba', 'medico pediatra', 'PEDIATRIA', 56345345356, 'marcelo@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1974-12-07', 'ACTIVO'),
-('77777777', '7', 'don', 'cooper', 'medico general', 'GENERAL', 56456456456, 'don@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1974-12-07', 'ACTIVO'),
+('77777777', '7', 'DON', 'COOPER', 'medico general', 'GENERAL', 56456456456, 'don@gmai.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1974-12-07', 'ACTIVO'),
 ('9288248', '9', 'JOSE', 'MANOLITO', 'enfermero', 'ENFERMERIA', 56345345345, 'jose@gmail.com', ' DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1980-06-12', 'ACTIVO');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `contacto`
---
-
-CREATE TABLE `contacto` (
-  `rut_contacto` char(8) COLLATE utf8_spanish_ci NOT NULL,
-  `nombre_contacto` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `apellido_contacto` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `numero_contacto` bigint(20) NOT NULL,
-  `direcc_contacto` varchar(200) COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -111,6 +97,14 @@ CREATE TABLE `espera` (
   `fecha_es` datetime NOT NULL,
   `id_es` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `espera`
+--
+
+INSERT INTO `espera` (`rut_es`, `tipo_es`, `fecha_es`, `id_es`) VALUES
+('12121212', 'OFTAMOLOGIA', '2017-12-13 09:30:00', 132),
+('13131313', 'GENERAL', '2017-12-13 09:30:00', 135);
 
 -- --------------------------------------------------------
 
@@ -149,7 +143,9 @@ INSERT INTO `historial` (`rut_histo`, `rut_especialista`, `informe_ante`, `tipo_
 ('13131313', '27272727', 'va a morir', 'MATERNAL', '2017-12-04 14:09:36', 25),
 ('17995948', '25252525', 'el tipo no ve nada', 'OFTAMOLOGIA', '2017-12-04 14:20:24', 26),
 ('13131313', '77777777', 'siempre biene', 'GENERAL', '2017-12-04 15:31:15', 27),
-('12121212', '77777777', 'Los linfomas no Hodgkin comienzan cuando un tipo de glÃ³bulos blancos, llamado cÃ©lulas T o cÃ©lulas B, se hacen anormales. Las cÃ©lulas se dividen una y otra vez aumentando el nÃºmero de cÃ©lulas anormales. Las cÃ©lulas anormales pueden diseminarse a casi todas las demÃ¡s partes del cuerpo. La mayor parte del tiempo, los mÃ©dicos no pueden determinar por quÃ© una persona desarrolla un linfoma no Hodgkin. Usted estÃ¡ en mayor riesgo si tiene un sistema inmunitario dÃ©bil o cierto tipo de infecciones.', 'GENERAL', '2017-12-13 14:34:02', 28);
+('12121212', '77777777', 'Los linfomas no Hodgkin comienzan cuando un tipo de glÃ³bulos blancos, llamado cÃ©lulas T o cÃ©lulas B, se hacen anormales. Las cÃ©lulas se dividen una y otra vez aumentando el nÃºmero de cÃ©lulas anormales. Las cÃ©lulas anormales pueden diseminarse a casi todas las demÃ¡s partes del cuerpo. La mayor parte del tiempo, los mÃ©dicos no pueden determinar por quÃ© una persona desarrolla un linfoma no Hodgkin. Usted estÃ¡ en mayor riesgo si tiene un sistema inmunitario dÃ©bil o cierto tipo de infecciones.', 'GENERAL', '2017-12-13 14:34:02', 28),
+('12121212', '77777777', 'Firefox has some awkward fieldset styling involving width that interferes with the responsive table. This cannot be overridden without a Firefox-specific hack that we don\'t provide in Bootstrap:', 'GENERAL', '2017-12-13 16:54:56', 29),
+('12121212', '77777777', 'Laub (German: leaf, foliage) may refer to: Laub-Petschnikoff Stradivarius, an antique violin; USS Laub (disambiguation). Laub is the surname of: Daryl Laub, television and radio personality; Donald Laub (born 1935), American plastic surgeon; Ferdinand Laub (1832-1875), Czech violinist; Henry Laub (1792â€“1813), officer ...', 'GENERAL', '2017-12-13 18:28:43', 30);
 
 -- --------------------------------------------------------
 
@@ -171,24 +167,23 @@ CREATE TABLE `persona` (
   `numero_telefono` bigint(20) NOT NULL,
   `sector` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `establecimiento` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `tipo_persona` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `rut_contac` char(8) COLLATE utf8_spanish_ci DEFAULT NULL
+  `tipo_persona` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `persona`
 --
 
-INSERT INTO `persona` (`rut_persona`, `digito_persona`, `nro_ficha`, `nombre_persona`, `apellido_persona`, `fech_nac_persona`, `genero_persona`, `direccion_persona`, `servicio_salub`, `ciudad_nacimiento`, `numero_telefono`, `sector`, `establecimiento`, `tipo_persona`, `rut_contac`) VALUES
-('12121212', '9', 677683, 'tom', 'GONZALES', '1970-02-05', 'M', '19 NORTE CON CALLE TRES, SANTA INES', 'fonasa', 'valparaiso', 56987684748, '4', 'lucitania', 'NO', NULL),
-('13131313', '6', 343333, 'marta', 'GALINDO', '1970-02-05', 'F', 'Hospital Dr. Gustavo Fricke - DirecciÃ³n: Alv', 'fonasa', ' ViÃ±a del Mar ', 45345452454, '4', 'lucitania', 'NO', NULL),
-('16891230', '7', 45, 'francisco', 'AGUIRRE', '2015-06-11', 'M', 'de bajo del puente', 'fonasa', 'quillota', 69696969696, 'chorrillos', 'este', 'NO', NULL),
-('17995948', '8', 2889, 'felipe', 'ESTAY', '1992-04-21', 'M', 'Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 12222222222, '4', 'hospital', 'NO', NULL),
-('18045045', '9', 23, 'marcelo', 'IBARRA', '1973-09-11', 'M', 'av. siempre viva 444 ', 'fonasa', 'san bisente de taguatagua', 9634524532, 'los sauses', 'consultorio 1', 'NO', NULL),
-('18915384', '8', 3453322, 'diego', 'SANCHEZ', '1986-08-16', 'M', ' Hospital Dr. Gustavo Fricke - DirecciÃ³n: Al', 'fonsana', 'valparaiso', 56997045099, 'miraflores', 'lusitania', 'NO', NULL),
-('21333266', 'K', 234234243, 'max', 'SANCHEZ', '2013-03-08', 'M', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'valparaiso', 56234242342, '3', 'este', 'NO', NULL),
-('23232323', 'K', 902323, 'mariano', 'GONZALES', '1980-07-11', 'M', 'su casa', 'fonasa', 'la serena', 234234232, 'miraflores', 'lucitania', 'NO', NULL),
-('99922222', '6', 4533, 'jaime', 'MORALES', '1980-06-11', 'M', 'su casa', 'fonasa', 'val', 56756756756, '4', 'aqui', 'NO', NULL);
+INSERT INTO `persona` (`rut_persona`, `digito_persona`, `nro_ficha`, `nombre_persona`, `apellido_persona`, `fech_nac_persona`, `genero_persona`, `direccion_persona`, `servicio_salub`, `ciudad_nacimiento`, `numero_telefono`, `sector`, `establecimiento`, `tipo_persona`) VALUES
+('12121212', '9', 677683, 'TOM', 'GONZALES', '1970-02-05', 'M', '219 NORTE CON CALLE TRES, SANTA INES', 'fonasa', 'valparaiso', 56987684748, '4', 'lucitania', 'NO'),
+('13131313', '6', 343333, 'MARTA', 'GALINDO', '1970-03-05', 'F', 'Hospital Dr. Gustavo Fricke - DirecciÃ³n: Alv', 'fonasa', ' ViÃ±a del Mar ', 45345452454, '4', 'lucitania', 'NO'),
+('16891230', '7', 45, 'francisco', 'AGUIRRE', '2015-06-11', 'M', 'de bajo del puente', 'fonasa', 'quillota', 69696969696, 'chorrillos', 'este', 'NO'),
+('17995948', '8', 2889, 'felipe', 'ESTAY', '1992-04-21', 'M', 'Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 12222222222, '4', 'hospital', 'NO'),
+('18045045', '9', 23, 'marcelo', 'IBARRA', '1973-09-11', 'M', 'av. siempre viva 444 ', 'fonasa', 'san bisente de taguatagua', 9634524532, 'los sauses', 'consultorio 1', 'NO'),
+('18915384', '8', 3453322, 'diego', 'SANCHEZ', '1986-08-16', 'M', ' Hospital Dr. Gustavo Fricke - DirecciÃ³n: Al', 'fonsana', 'valparaiso', 56997045099, 'miraflores', 'lusitania', 'NO'),
+('21333266', 'K', 234234243, 'max', 'SANCHEZ', '2013-03-08', 'M', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'valparaiso', 56234242342, '3', 'este', 'NO'),
+('23232323', 'K', 902323, 'mariano', 'GONZALES', '1980-07-11', 'M', 'su casa', 'fonasa', 'la serena', 234234232, 'miraflores', 'lucitania', 'NO'),
+('99922222', '6', 4533, 'jaime', 'MORALES', '1980-06-11', 'M', 'su casa', 'fonasa', 'val', 56756756756, '4', 'aqui', 'NO');
 
 -- --------------------------------------------------------
 
@@ -210,8 +205,16 @@ CREATE TABLE `reserva` (
 --
 
 INSERT INTO `reserva` (`rut`, `fecha`, `tipo_reveva`, `estado`, `id_reserva`, `qr`) VALUES
-('13131313', '2017-12-12 08:15:00', 'GENERAL', 'CONFIRMADA', 124, '12475a3f01f25c65ef36222506dfa0c2eeb.png'),
-('13131313', '2017-12-13 09:00:00', 'PEDIATRIA', 'CONFIRMADA', 125, '125bb77bcad9f7225709ee6abce9532328b.png');
+('12121212', '2017-12-13 09:30:00', 'OFTAMOLOGIA', 'CONFIRMADA', 132, '132090a393aa250d85cf5720c8c136efd9b.png'),
+('13131313', '2017-12-13 09:30:00', 'GENERAL', 'CONFIRMADA', 135, '13502bca4f38ffa647d1f5b1200012b5ff0.png'),
+('13131313', '2017-12-13 09:00:00', 'KINESIOLOGIA', 'PENDIENTE', 136, NULL),
+('13131313', '2017-12-13 09:00:00', 'PEDIATRIA', 'PENDIENTE', 137, NULL),
+('12121212', '2017-12-13 09:30:00', 'KINESIOLOGIA', 'PENDIENTE', 138, NULL),
+('12121212', '2017-12-13 08:00:00', 'DENTAL', 'PENDIENTE', 139, NULL),
+('12121212', '2017-12-13 08:00:00', 'MENTAL', 'PENDIENTE', 140, NULL),
+('12121212', '2017-12-13 08:15:00', 'GENERAL', 'PENDIENTE', 141, NULL),
+('12121212', '2017-12-13 09:30:00', 'PEDIATRIA', 'PENDIENTE', 142, NULL),
+('13131313', '2017-12-14 09:30:00', 'GINECOLOGIA', 'PENDIENTE', 143, NULL);
 
 -- --------------------------------------------------------
 
@@ -251,7 +254,8 @@ INSERT INTO `user` (`rut`, `password`, `tipo`) VALUES
 ('56566454', 'mu2M.6J5W25ko', 'CLINICA'),
 ('77777777', 'mu3mAXx4Xkzw6', 'CLINICA'),
 ('9288248', 'mub76z0mdAp1k', 'CLINICA'),
-('99922222', 'mu4yGPieUPKDQ', 'NORMAL');
+('99922222', 'mu4yGPieUPKDQ', 'NORMAL'),
+('99999999', 'mub0GQ33FJQoE', 'ADMINISTRACION');
 
 --
 -- Índices para tablas volcadas
@@ -269,12 +273,6 @@ ALTER TABLE `administracion`
 --
 ALTER TABLE `clinica_administracion`
   ADD PRIMARY KEY (`rut_clinica`);
-
---
--- Indices de la tabla `contacto`
---
-ALTER TABLE `contacto`
-  ADD PRIMARY KEY (`rut_contacto`);
 
 --
 -- Indices de la tabla `espera`
@@ -295,8 +293,7 @@ ALTER TABLE `historial`
 -- Indices de la tabla `persona`
 --
 ALTER TABLE `persona`
-  ADD PRIMARY KEY (`rut_persona`),
-  ADD KEY `persona_contacto_rut_contacto_fk` (`rut_contac`);
+  ADD PRIMARY KEY (`rut_persona`);
 
 --
 -- Indices de la tabla `reserva`
@@ -319,13 +316,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `historial`
 --
 ALTER TABLE `historial`
-  MODIFY `in_histo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `in_histo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
 -- Restricciones para tablas volcadas
@@ -342,12 +339,6 @@ ALTER TABLE `administracion`
 --
 ALTER TABLE `clinica_administracion`
   ADD CONSTRAINT `fk_user_clinica` FOREIGN KEY (`rut_clinica`) REFERENCES `user` (`rut`);
-
---
--- Filtros para la tabla `contacto`
---
-ALTER TABLE `contacto`
-  ADD CONSTRAINT `contacto_persona_rut_contac_fk` FOREIGN KEY (`rut_contacto`) REFERENCES `persona` (`rut_contac`);
 
 --
 -- Filtros para la tabla `espera`

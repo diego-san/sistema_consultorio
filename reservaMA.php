@@ -116,6 +116,7 @@ while ($i<5) {
                 <li class="active"><a href="panelnormal.php">Home</a></li>
                 <li><a href="reserva.php">Pedir Consulta</a></li>
                 <li><a href="hisotial.php">Historial</a></li>
+                <li><a href="modiper.php">Modificar Datos</a></li>
                 <li><a href="cambiarpass.php">Cambiar contraseña</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
