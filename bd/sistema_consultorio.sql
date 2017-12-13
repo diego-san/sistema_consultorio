@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-12-2017 a las 20:42:25
+-- Tiempo de generación: 13-12-2017 a las 15:38:29
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.9
 
@@ -29,15 +29,15 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `administracion` (
-  `rut_administracion` char(8) NOT NULL,
-  `digito_admin` char(1) NOT NULL,
-  `nombre_administracion` varchar(45) NOT NULL,
-  `cargo_admin` varchar(45) NOT NULL,
-  `apellido_administracion` varchar(45) NOT NULL,
-  `titulo_admin` varchar(45) NOT NULL,
+  `rut_administracion` char(8) COLLATE utf8_spanish_ci NOT NULL,
+  `digito_admin` char(1) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre_administracion` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `cargo_admin` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `apellido_administracion` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `titulo_admin` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `numero_admin` bigint(20) NOT NULL,
-  `correo_admin` varchar(100) NOT NULL,
-  `direcc_admin` varchar(200) NOT NULL,
+  `correo_admin` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `direcc_admin` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
   `fech_nac_admin` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -56,32 +56,34 @@ INSERT INTO `administracion` (`rut_administracion`, `digito_admin`, `nombre_admi
 --
 
 CREATE TABLE `clinica_administracion` (
-  `rut_clinica` char(8) NOT NULL,
-  `digito_clin` char(1) NOT NULL,
-  `nombre_clinica` varchar(45) NOT NULL,
-  `apellido_clinica` varchar(45) NOT NULL,
-  `titulo_clinica` varchar(45) NOT NULL,
-  `cargo_clinica` varchar(45) NOT NULL,
+  `rut_clinica` char(8) COLLATE utf8_spanish_ci NOT NULL,
+  `digito_clin` char(1) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre_clinica` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `apellido_clinica` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `titulo_clinica` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `cargo_clinica` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `numero_clinica` bigint(20) NOT NULL,
-  `correo_clinica` varchar(200) NOT NULL,
-  `direcc_clinica` varchar(200) NOT NULL,
-  `fech_nac_clinica` date NOT NULL
+  `correo_clinica` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
+  `direcc_clinica` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
+  `fech_nac_clinica` date NOT NULL,
+  `estado` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `clinica_administracion`
 --
 
-INSERT INTO `clinica_administracion` (`rut_clinica`, `digito_clin`, `nombre_clinica`, `apellido_clinica`, `titulo_clinica`, `cargo_clinica`, `numero_clinica`, `correo_clinica`, `direcc_clinica`, `fech_nac_clinica`) VALUES
-('24242424', '7', 'marco', 'perez', 'KINECIOLOGO', 'KINESIOLOGIA', 56838472893, 'marcos@gmail.com', ' DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1970-02-04'),
-('25252525', '4', 'peter', 'ojera', 'OFTAMOLOgo', 'OFTAMOLOGIA', 56567456756, 'petter@hotmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1979-01-02'),
-('26262626', '1', 'marcelo', 'ibarra', 'MEDICO PEDIATRIA', 'PEDIATRIA', 56353453453, 'marceloiba@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1970-02-01'),
-('27272727', '9', 'marta', 'ojera', 'medico', 'MATERNAL', 56466374563, 'marta23@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1980-02-02'),
-('28282828', '6', 'yan', 'lucaveche', 'GINECOLO', 'GINECOLOGIA', 56342342342, 'yan@gmail.com', ' DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1980-06-11'),
-('34343434', '0', 'pedro', 'perez', 'medico dental', 'DENTAL', 56342423423, 'pedro@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1974-12-07'),
-('56345345', '1', 'jaime', 'morales', 'vendedor de paltas', 'MENTAL', 56345345345, 'jaime@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1974-12-07'),
-('56566454', '9', 'marcelo', 'ibarba', 'medico pediatra', 'PEDIATRIA', 56345345356, 'marcelo@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1974-12-07'),
-('77777777', '7', 'don', 'cooper', 'medico general', 'GENERAL', 56456456456, 'don@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1974-12-07');
+INSERT INTO `clinica_administracion` (`rut_clinica`, `digito_clin`, `nombre_clinica`, `apellido_clinica`, `titulo_clinica`, `cargo_clinica`, `numero_clinica`, `correo_clinica`, `direcc_clinica`, `fech_nac_clinica`, `estado`) VALUES
+('24242424', '7', 'marco', 'perez', 'KINECIOLOGO', 'KINESIOLOGIA', 56838472893, 'marcos@gmail.com', ' DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1970-02-04', 'ACTIVO'),
+('25252525', '4', 'peter', 'ojera', 'OFTAMOLOgo', 'OFTAMOLOGIA', 56567456756, 'petter@hotmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1979-01-02', 'ACTIVO'),
+('26262626', '1', 'marcelo', 'ibarra', 'MEDICO PEDIATRIA', 'PEDIATRIA', 56353453453, 'marceloiba@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1970-02-01', 'ACTIVO'),
+('27272727', '9', 'marta', 'ojera', 'medico', 'MATERNAL', 56466374563, 'marta23@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1980-02-02', 'ACTIVO'),
+('28282828', '6', 'yan', 'lucaveche', 'GINECOLO', 'GINECOLOGIA', 56342342342, 'yan@gmail.com', ' DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1980-06-11', 'ACTIVO'),
+('34343434', '0', 'pedro', 'perez', 'medico dental', 'DENTAL', 56342423423, 'pedro@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1974-12-07', 'ACTIVO'),
+('56345345', '1', 'jaime', 'morales', 'vendedor de paltas', 'MENTAL', 56345345345, 'jaime@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1974-12-07', 'ACTIVO'),
+('56566454', '9', 'marcelo', 'ibarba', 'medico pediatra', 'PEDIATRIA', 56345345356, 'marcelo@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', '1974-12-07', 'ACTIVO'),
+('77777777', '7', 'don', 'cooper', 'medico general', 'GENERAL', 56456456456, 'don@gmail.com', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1974-12-07', 'ACTIVO'),
+('9288248', '9', 'JOSE', 'MANOLITO', 'enfermero', 'ENFERMERIA', 56345345345, 'jose@gmail.com', ' DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar ', '1980-06-12', 'ACTIVO');
 
 -- --------------------------------------------------------
 
@@ -90,11 +92,24 @@ INSERT INTO `clinica_administracion` (`rut_clinica`, `digito_clin`, `nombre_clin
 --
 
 CREATE TABLE `contacto` (
-  `rut_contacto` char(8) NOT NULL,
-  `nombre_contacto` varchar(45) NOT NULL,
-  `apellido_contacto` varchar(45) NOT NULL,
+  `rut_contacto` char(8) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre_contacto` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `apellido_contacto` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `numero_contacto` bigint(20) NOT NULL,
-  `direcc_contacto` varchar(200) NOT NULL
+  `direcc_contacto` varchar(200) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `espera`
+--
+
+CREATE TABLE `espera` (
+  `rut_es` char(8) COLLATE utf8_spanish_ci NOT NULL,
+  `tipo_es` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `fecha_es` datetime NOT NULL,
+  `id_es` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -104,10 +119,10 @@ CREATE TABLE `contacto` (
 --
 
 CREATE TABLE `historial` (
-  `rut_histo` char(8) NOT NULL,
-  `rut_especialista` char(8) NOT NULL,
-  `informe_ante` varchar(2000) NOT NULL,
-  `tipo_atencion` varchar(45) NOT NULL,
+  `rut_histo` char(8) COLLATE utf8_spanish_ci NOT NULL,
+  `rut_especialista` char(8) COLLATE utf8_spanish_ci NOT NULL,
+  `informe_ante` varchar(2000) COLLATE utf8_spanish_ci NOT NULL,
+  `tipo_atencion` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `fecha` datetime NOT NULL,
   `in_histo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -133,7 +148,8 @@ INSERT INTO `historial` (`rut_histo`, `rut_especialista`, `informe_ante`, `tipo_
 ('13131313', '34343434', 'tiene caries', 'DENTAL', '2017-12-04 14:01:28', 24),
 ('13131313', '27272727', 'va a morir', 'MATERNAL', '2017-12-04 14:09:36', 25),
 ('17995948', '25252525', 'el tipo no ve nada', 'OFTAMOLOGIA', '2017-12-04 14:20:24', 26),
-('13131313', '77777777', 'siempre biene', 'GENERAL', '2017-12-04 15:31:15', 27);
+('13131313', '77777777', 'siempre biene', 'GENERAL', '2017-12-04 15:31:15', 27),
+('12121212', '77777777', 'Los linfomas no Hodgkin comienzan cuando un tipo de glÃ³bulos blancos, llamado cÃ©lulas T o cÃ©lulas B, se hacen anormales. Las cÃ©lulas se dividen una y otra vez aumentando el nÃºmero de cÃ©lulas anormales. Las cÃ©lulas anormales pueden diseminarse a casi todas las demÃ¡s partes del cuerpo. La mayor parte del tiempo, los mÃ©dicos no pueden determinar por quÃ© una persona desarrolla un linfoma no Hodgkin. Usted estÃ¡ en mayor riesgo si tiene un sistema inmunitario dÃ©bil o cierto tipo de infecciones.', 'GENERAL', '2017-12-13 14:34:02', 28);
 
 -- --------------------------------------------------------
 
@@ -142,35 +158,37 @@ INSERT INTO `historial` (`rut_histo`, `rut_especialista`, `informe_ante`, `tipo_
 --
 
 CREATE TABLE `persona` (
-  `rut_persona` char(8) NOT NULL,
-  `digito_persona` char(1) NOT NULL,
+  `rut_persona` char(8) COLLATE utf8_spanish_ci NOT NULL,
+  `digito_persona` char(1) COLLATE utf8_spanish_ci NOT NULL,
   `nro_ficha` int(11) NOT NULL,
-  `nombre_persona` varchar(45) NOT NULL,
-  `apellido_persona` varchar(45) NOT NULL,
+  `nombre_persona` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `apellido_persona` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `fech_nac_persona` date NOT NULL,
-  `genero_persona` char(1) NOT NULL,
-  `direccion_persona` varchar(45) NOT NULL,
-  `servicio_salub` varchar(45) NOT NULL,
-  `ciudad_nacimiento` varchar(45) NOT NULL,
+  `genero_persona` char(1) COLLATE utf8_spanish_ci NOT NULL,
+  `direccion_persona` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `servicio_salub` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `ciudad_nacimiento` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `numero_telefono` bigint(20) NOT NULL,
-  `sector` varchar(45) NOT NULL,
-  `establecimiento` varchar(45) NOT NULL,
-  `tipo_persona` varchar(45) NOT NULL,
-  `rut_contac` char(8) DEFAULT NULL
+  `sector` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `establecimiento` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `tipo_persona` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `rut_contac` char(8) COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
 --
 -- Volcado de datos para la tabla `persona`
 --
 
 INSERT INTO `persona` (`rut_persona`, `digito_persona`, `nro_ficha`, `nombre_persona`, `apellido_persona`, `fech_nac_persona`, `genero_persona`, `direccion_persona`, `servicio_salub`, `ciudad_nacimiento`, `numero_telefono`, `sector`, `establecimiento`, `tipo_persona`, `rut_contac`) VALUES
-('12121212', '9', 677683, 'tom', 'gonzales', '1970-02-05', 'M', '19 NORTE CON CALLE TRES, SANTA INES', 'fonasa', 'valparaiso', 56987684748, '4', 'lucitania', 'NO', NULL),
-('13131313', '6', 343333, 'marta', 'galindo', '1970-02-05', 'F', 'Hospital Dr. Gustavo Fricke - DirecciÃ³n: Alv', 'fonasa', ' ViÃ±a del Mar ', 45345452454, '4', 'lucitania', 'NO', NULL),
-('16891230', '7', 45, 'francisco', 'aguirre', '2015-06-11', 'M', 'de bajo del puente', 'fonasa', 'quillota', 69696969696, 'chorrillos', 'este', 'NO', NULL),
-('17995948', '8', 2889, 'felipe', 'estay', '1992-04-21', 'M', 'Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 12222222222, '4', 'hospital', 'NO', NULL),
-('18045045', '9', 23, 'marcelo', 'ibarra', '1973-09-11', 'M', 'av. siempre viva 444 ', 'fonasa', 'san bisente de taguatagua', 9634524532, 'los sauses', 'consultorio 1', 'NO', NULL),
-('18915384', '8', 3453322, 'diego', 'sanchez', '1986-08-16', 'M', ' Hospital Dr. Gustavo Fricke - DirecciÃ³n: Al', 'fonsana', 'valparaiso', 56997045099, 'miraflores', 'lusitania', 'NO', NULL),
-('23232323', 'K', 902323, 'mariano', 'gonzales', '1980-07-11', 'M', 'su casa', 'fonasa', 'la serena', 234234232, 'miraflores', 'lucitania', 'NO', NULL),
-('99922222', '6', 4533, 'jaime', 'morales', '1980-06-11', 'M', 'su casa', 'fonasa', 'val', 56756756756, '4', 'aqui', 'NO', NULL);
+('12121212', '9', 677683, 'tom', 'GONZALES', '1970-02-05', 'M', '19 NORTE CON CALLE TRES, SANTA INES', 'fonasa', 'valparaiso', 56987684748, '4', 'lucitania', 'NO', NULL),
+('13131313', '6', 343333, 'marta', 'GALINDO', '1970-02-05', 'F', 'Hospital Dr. Gustavo Fricke - DirecciÃ³n: Alv', 'fonasa', ' ViÃ±a del Mar ', 45345452454, '4', 'lucitania', 'NO', NULL),
+('16891230', '7', 45, 'francisco', 'AGUIRRE', '2015-06-11', 'M', 'de bajo del puente', 'fonasa', 'quillota', 69696969696, 'chorrillos', 'este', 'NO', NULL),
+('17995948', '8', 2889, 'felipe', 'ESTAY', '1992-04-21', 'M', 'Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'viÃ±a del mar', 12222222222, '4', 'hospital', 'NO', NULL),
+('18045045', '9', 23, 'marcelo', 'IBARRA', '1973-09-11', 'M', 'av. siempre viva 444 ', 'fonasa', 'san bisente de taguatagua', 9634524532, 'los sauses', 'consultorio 1', 'NO', NULL),
+('18915384', '8', 3453322, 'diego', 'SANCHEZ', '1986-08-16', 'M', ' Hospital Dr. Gustavo Fricke - DirecciÃ³n: Al', 'fonsana', 'valparaiso', 56997045099, 'miraflores', 'lusitania', 'NO', NULL),
+('21333266', 'K', 234234243, 'max', 'SANCHEZ', '2013-03-08', 'M', 'DirecciÃ³n: Alvarez 1532 - ViÃ±a del Mar', 'fonasa', 'valparaiso', 56234242342, '3', 'este', 'NO', NULL),
+('23232323', 'K', 902323, 'mariano', 'GONZALES', '1980-07-11', 'M', 'su casa', 'fonasa', 'la serena', 234234232, 'miraflores', 'lucitania', 'NO', NULL),
+('99922222', '6', 4533, 'jaime', 'MORALES', '1980-06-11', 'M', 'su casa', 'fonasa', 'val', 56756756756, '4', 'aqui', 'NO', NULL);
 
 -- --------------------------------------------------------
 
@@ -179,25 +197,21 @@ INSERT INTO `persona` (`rut_persona`, `digito_persona`, `nro_ficha`, `nombre_per
 --
 
 CREATE TABLE `reserva` (
-  `rut` char(8) NOT NULL,
+  `rut` char(8) COLLATE utf8_spanish_ci NOT NULL,
   `fecha` datetime NOT NULL,
-  `tipo_reveva` varchar(45) NOT NULL,
-  `id_reserva` int(11) NOT NULL
+  `tipo_reveva` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `estado` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `id_reserva` int(11) NOT NULL,
+  `qr` varchar(45) COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `reserva`
 --
 
-INSERT INTO `reserva` (`rut`, `fecha`, `tipo_reveva`, `id_reserva`) VALUES
-('23232323', '2017-11-29 09:30:00', 'GENERAL', 84),
-('12121212', '2017-12-04 08:45:00', 'GENERAL', 96),
-('12121212', '2017-12-05 08:00:00', 'KINESIOLOGIA', 97),
-('13131313', '2017-12-04 08:00:00', 'MENTAL', 100),
-('13131313', '2017-12-04 08:30:00', 'PEDIATRIA', 101),
-('13131313', '2017-12-05 08:30:00', 'KINESIOLOGIA', 102),
-('13131313', '2017-12-04 08:30:00', 'GINECOLOGIA', 104),
-('13131313', '2018-01-08 09:00:00', 'MATERNAL', 105);
+INSERT INTO `reserva` (`rut`, `fecha`, `tipo_reveva`, `estado`, `id_reserva`, `qr`) VALUES
+('13131313', '2017-12-12 08:15:00', 'GENERAL', 'CONFIRMADA', 124, '12475a3f01f25c65ef36222506dfa0c2eeb.png'),
+('13131313', '2017-12-13 09:00:00', 'PEDIATRIA', 'CONFIRMADA', 125, '125bb77bcad9f7225709ee6abce9532328b.png');
 
 -- --------------------------------------------------------
 
@@ -206,9 +220,9 @@ INSERT INTO `reserva` (`rut`, `fecha`, `tipo_reveva`, `id_reserva`) VALUES
 --
 
 CREATE TABLE `user` (
-  `rut` char(8) NOT NULL,
-  `password` varchar(200) NOT NULL,
-  `tipo` varchar(45) NOT NULL
+  `rut` char(8) COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
+  `tipo` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -216,12 +230,14 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`rut`, `password`, `tipo`) VALUES
+('1000000', 'mu3mAXx4Xkzw6', 'ROOT'),
 ('12121212', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('13131313', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('16891230', 'muS2jtPgoEkT2', 'NORMAL'),
 ('17995948', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('18045045', 'mu8T9R2k5ysDY', 'NORMAL'),
 ('18915384', 'mu3mAXx4Xkzw6', 'NORMAL'),
+('21333266', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('22222222', 'mu3mAXx4Xkzw6', 'ADMINISTRACION'),
 ('23232323', 'mu3mAXx4Xkzw6', 'NORMAL'),
 ('24242424', 'mu3mAXx4Xkzw6', 'CLINICA'),
@@ -234,6 +250,7 @@ INSERT INTO `user` (`rut`, `password`, `tipo`) VALUES
 ('56345345', 'mu1.ZF/yb5k8c', 'CLINICA'),
 ('56566454', 'mu2M.6J5W25ko', 'CLINICA'),
 ('77777777', 'mu3mAXx4Xkzw6', 'CLINICA'),
+('9288248', 'mub76z0mdAp1k', 'CLINICA'),
 ('99922222', 'mu4yGPieUPKDQ', 'NORMAL');
 
 --
@@ -258,6 +275,13 @@ ALTER TABLE `clinica_administracion`
 --
 ALTER TABLE `contacto`
   ADD PRIMARY KEY (`rut_contacto`);
+
+--
+-- Indices de la tabla `espera`
+--
+ALTER TABLE `espera`
+  ADD PRIMARY KEY (`id_es`),
+  ADD KEY `espera_reserva_rut_fk` (`rut_es`);
 
 --
 -- Indices de la tabla `historial`
@@ -295,13 +319,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `historial`
 --
 ALTER TABLE `historial`
-  MODIFY `in_histo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `in_histo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- Restricciones para tablas volcadas
@@ -324,6 +348,12 @@ ALTER TABLE `clinica_administracion`
 --
 ALTER TABLE `contacto`
   ADD CONSTRAINT `contacto_persona_rut_contac_fk` FOREIGN KEY (`rut_contacto`) REFERENCES `persona` (`rut_contac`);
+
+--
+-- Filtros para la tabla `espera`
+--
+ALTER TABLE `espera`
+  ADD CONSTRAINT `espera_reserva_id_reserva_fk` FOREIGN KEY (`id_es`) REFERENCES `reserva` (`id_reserva`);
 
 --
 -- Filtros para la tabla `historial`

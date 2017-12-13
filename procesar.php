@@ -97,7 +97,7 @@ if($_GET['tipo']==1) {
 
 }elseif ($_GET['tipo']==6){
 
-    $ap = $_GET['apellido'];
+    $ap = strtoupper($_GET['apellido']);
     $consulta= new consulta();
     $consu= $consulta->buscaapellido($ap);
 
@@ -105,11 +105,29 @@ if($_GET['tipo']==1) {
     if(!empty($consu)){
         $can=count($consu);
         $arr['v']="true";
+        $arr['l']="<div class='table-responsive'>";
+        $arr['l']=$arr['l']." <table class='table table-bordered'>";
+        $arr['l']= $arr['l']."  <tr>
+                     <th>Nombre</th>
+                     <th>Apellido</th> 
+                      <th>Rut</th>
+                      <th>Ficha</th>
+                            </tr>";
+        foreach ($consu as $key => $value){
 
+            $arr['l']= $arr['l']."
+              <tr>
+            <td>".$value[3]."</td>
+            <td>".$value[4]."</td> 
+             <td>".$value[0]."-".$value[1]."</td>
+             <td><a href='personainfo.php?r=".$value[0]."' type='button' class='btn btn-primary'>Ver Ficha</a></td>
+             </tr>
+             ";
 
+        }
 
-
-
+        $arr['l']=$arr['l']." </table>";
+        $arr['l']=$arr['l']." </div>";
 
 
 

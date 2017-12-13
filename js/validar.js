@@ -255,7 +255,7 @@ function buscarpersonaap() {
 
             if(data.v=="true"){
                 $("#lista").html('');
-                $("#lista").append(data.c);
+                $("#lista").append(data.l);
 
             }else{
                 $("#mostrarap").html('');
