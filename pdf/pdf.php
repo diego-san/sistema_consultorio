@@ -27,7 +27,7 @@ if(isset($_SESSION['tiempo']) ) {
     {
         session_unset();
         session_destroy();
-        header("Location:login.php");
+        header("Location:../login.php");
         exit();
     }
 
@@ -40,7 +40,7 @@ $_SESSION['tiempo'] = time();
 
 if (empty($row)) {
 
-    header("Location:login.php");
+    header("Location:../login.php");
 
 }else{
 

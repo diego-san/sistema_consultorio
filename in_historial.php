@@ -45,6 +45,7 @@ if(isset($_REQUEST['rut'])){
     $verifica= $get->panelnormal($rutpersona);
     if (!empty($verifica)){
         $del = new delete();
+        $del->deleteesperaconsulta($rutpersona,$datos[0][5]);
         $del->deletereservaconsulta($rutpersona,$datos[0][5]);
         $fechaini = date('Y-m-d H:i:s');
         $insert = new insertar();

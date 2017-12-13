@@ -26,6 +26,7 @@ $_SESSION['tiempo'] = time();
 
 $get = new consulta();
 $datos=$get->info_root($rut);
+$lista= $get->pendiente();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -103,6 +104,35 @@ $datos=$get->info_root($rut);
             </div>
             <div class="col-md-1"></div>
         </div>
+        <div class="row">
+            <div class="col-md-12 persona_espacio"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 datos_fondo">
+                <div class="row">
+                    <div class="col-md-12 datos_header">
+                        <p class="text_datos text-center">Lista Por Confirmar</p>
+                    </div>
+                </div>
+                <?php if (!empty($lista)):?>
+                <?php foreach ($lista as$key => $value):?>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                        <p class="lead"><strong>Estado: </strong><?php echo $value[3];?></p>
+                    </div>
+                    <div class="col-md-4  reserva bot">
+                        <button type="button" class="btn btn-primary btn-block " onclick="return confirmar(<?php echo $value[4];?>,<?php echo $value[0];?>)">Confimar</button>
+                        <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
+                    </div>
+                </div>
+                <?php endforeach;?>
+                <?php else:?>
+                    <div class="col-md-12 reserva  ">
+                        <h2 class="text-cente reserva ">No hay Reserva</h2>
+                    </div>
+                <?php endif;?>
+            </div>
     </div>
 </main>
 <footer>
@@ -118,6 +148,7 @@ $datos=$get->info_root($rut);
 </footer>
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/validar.js"></script>
 
 </body>
 </html>

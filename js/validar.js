@@ -81,6 +81,34 @@ function seguro(id,rut) {
             data: {nro: id,r:rut,tipo: 1},
         })
             .done(function(data) {
+                console.log(data);
+                location.reload(true);
+            })
+            .fail(function() {
+                console.log("error");
+            })
+            .always(function() {
+                console.log("complete");
+            });
+
+    } else {
+        return false;
+    }
+
+
+
+}
+
+function confirmar(id,rut) {
+
+    if (confirm("Seguro de Confirmar") == true) {
+
+        $.ajax({
+            url: 'procesar.php',
+            method: "GET",
+            data: {nro: id,r:rut,tipo: 5},
+        })
+            .done(function(data) {
                 console.log("su");
                 location.reload(true);
             })
@@ -195,8 +223,8 @@ function buscarpersona() {
                     if(data=="true"){
                         location.href= "personainfo.php?r="+rut;
                     }else{
-                        $("#mostrar").html('');
-                        $("#mostrar").append(data);
+                        $("#mostrarrt").html('');
+                        $("#mostrarrt").append(data);
                     }
 
 
@@ -208,6 +236,41 @@ function buscarpersona() {
                 .always(function() {
                     console.log("complete");
                 });
+
+
+}
+
+function buscarpersonaap() {
+    var ap;
+    ap = document.getElementById("ap").value;
+
+    $.ajax({
+        url: 'procesar.php',
+        method: "GET",
+        data: {apellido: ap,tipo:6},
+        dataType: "json",
+    })
+        .done(function(data) {
+
+
+            if(data.v=="true"){
+                $("#lista").html('');
+                $("#lista").append(data.c);
+
+            }else{
+                $("#mostrarap").html('');
+                $("#mostrarap").append(data.m);
+            }
+
+
+
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
 
 
 }

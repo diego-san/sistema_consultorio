@@ -207,14 +207,41 @@ foreach ($histo as $key => $value){
 
                        <?php if (!empty($rese)):?>
                            <?php foreach ( $rese as $key => $value):?>
-                           <div class="col-md-7 reserva ">
-                               <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?></p>
-
+                            <?php if ($value[3]=="PENDIENTE"):?>
+                           <div class="col-md-8 reserva ">
+                               <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                                <p class="lead"><strong>Estado: </strong><?php echo $value[3];?></p>
                            </div>
-                           <div class="col-md-5 reserva bot ">
-                               <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[3];?>,<?php echo $value[0];?>)">Eliminar</button>
+                           <div class="col-md-4 reserva bot ">
+                               <button type="button" class="btn btn-danger btn-block " onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
                            </div>
+                            <?php else:?>
+                                   <div class="col-md-8 reserva ">
+                                       <p class="lead"> <strong>Fecha de consulta: </strong><?php echo $value[1];?><strong>  Tipo: </strong><?php echo $value[2];?> </p>
+                                       <p class="lead"><strong>Estado: </strong><?php echo $value[3];?></p>
+                                   </div>
+                                   <div class="col-md-4 reserva bot ">
+                                       <!-- Small modal -->
+                                       <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#<?php echo $value[4];?>">Ver Codigo QR</button>
+                                       <button type="button" class="btn btn-danger btn-block" onclick="return seguro(<?php echo $value[4];?>,<?php echo $value[0];?>)">Eliminar</button>
 
+
+                                       <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="<?php echo $value[4];?>">
+                                           <div class="modal-dialog modal-sm" role="document">
+                                               <div class="modal-content">
+                                                   <div class="row">
+                                                      <div class="col-md-12 text-center reserva_bt">
+                                                          <img src="img/<?php echo $value[5];?>"  class="img-rounded">
+                                                          <br>
+                                                          <a href="pdf/qr.php?d=<?php echo $value[4];?>" type="button" target="_blank" class="btn btn-success">Descargar</a>
+                                                      </div>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                               <?php endif;?>
                            <?php endforeach;?>
                        <?php else:?>
                            <div class="col-md-12 reserva  ">

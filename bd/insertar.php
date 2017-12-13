@@ -86,6 +86,7 @@ class insertar {
 
     function in_clini($rut,$nombre,$apellido,$cargo,$fecha,$titulo,$telefono,$correo,$direc){
         require "conexion.php";
+        $ESTA="ACTIVO";
         $r=$rut;
         $s=1;
         for($m=0;$r!=0;$r/=10)
@@ -103,18 +104,20 @@ class insertar {
         $smt->bindparam(8,$correo);
         $smt->bindparam(9,$direc);
         $smt->bindparam(10,$fecha);
-        $smt->bindparam(11,"ACTIVO");
+        $smt->bindparam(11,$ESTA);
         $smt->execute();
         $conn=null;
     }
 
     function in_reserva($rut,$fecha,$tipo){
         require "conexion.php";
-        $sql= "INSERT INTO reserva(rut, fecha, tipo_reveva) VALUES (?,?,?)";
+        $ESTA="PENDIENTE";
+        $sql= "INSERT INTO reserva(rut, fecha, tipo_reveva,estado) VALUES (?,?,?,?)";
         $smt=$conn->prepare($sql);
         $smt->bindparam(1,$rut);
         $smt->bindparam(2,$fecha);
         $smt->bindparam(3,$tipo);
+        $smt->bindparam(4,$ESTA);
         $smt->execute();
         $conn=null;
 
@@ -132,6 +135,22 @@ class insertar {
         $smt->bindparam(3,$info);
         $smt->bindparam(4,$tipo);
         $smt->bindparam(5,$fechaini);
+        $smt->execute();
+        $conn=null;
+
+
+    }
+
+    function in_espera($rut,$fecha,$tipo,$id){
+        require "conexion.php";
+
+        $sql= "INSERT INTO espera(rut_es, tipo_es, fecha_es,id_es) VALUES (?,?,?,?)";
+        $smt=$conn->prepare($sql);
+        $smt->bindparam(1,$rut);
+        $smt->bindparam(2,$tipo);
+        $smt->bindparam(3,$fecha);
+        $smt->bindparam(4,$id );
+
         $smt->execute();
         $conn=null;
 

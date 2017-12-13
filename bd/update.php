@@ -20,6 +20,22 @@ class update {
         $conn=null;
 
     }
+
+    function confreserva($rut,$id,$qr){
+        require "conexion.php";
+        $estado="CONFIRMADA";
+
+
+        $sql ="UPDATE reserva set estado = :esta, qr = :qr WHERE rut = :rut AND  id_reserva = :id";
+        $smt=$conn->prepare($sql);
+        $smt->bindValue(":id", $id);
+        $smt->bindValue(":rut", $rut);
+        $smt->bindValue(":esta", $estado);
+        $smt->bindValue(":qr", $qr);
+        $smt->execute();
+        $conn=null;
+
+    }
 }
 
 

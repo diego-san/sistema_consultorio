@@ -10,6 +10,7 @@ require "bd/consulta.php";
 if($_GET['tipo']==1) {
     $delete = new delete();
     $delete->eliminarreserva($_GET['nro'], $_GET['r']);
+
 }elseif ($_GET['tipo']==2){
 
         $rut = $_GET['nro'];
@@ -78,6 +79,47 @@ if($_GET['tipo']==1) {
     }else{
         echo "<br><div class='alert alert-danger' role='alert'>
                         Persona no Registrada </div>";
+    }
+
+
+}elseif ($_GET['tipo']==5){
+    require_once "phpqrcode/qrlib.php";
+    $directorio ="img/";
+    $rut = $_GET['nro'];
+    $errorCorrectionLevel="H";
+    $matrixPointSize= 7;
+    $filename = $directorio.$rut.md5($rut.'|'.$errorCorrectionLevel.'|'.$matrixPointSize).'.png';
+    $link = $_GET['nro'];
+    QRcode::png($link, $filename, $errorCorrectionLevel, $matrixPointSize, 2);
+    $actu= new update();
+
+    $actu->confreserva($_GET['r'],$rut,basename($filename));
+
+}elseif ($_GET['tipo']==6){
+
+    $ap = $_GET['apellido'];
+    $consulta= new consulta();
+    $consu= $consulta->buscaapellido($ap);
+
+
+    if(!empty($consu)){
+        $can=count($consu);
+        $arr['v']="true";
+
+
+
+
+
+
+
+
+        echo json_encode($arr);
+
+    }else{
+        $arr['v']="false";
+        $arr['m']="<br><div class='alert alert-danger' role='alert'>
+                        Persona no Registrada </div>";
+        echo json_encode($arr);
     }
 
 

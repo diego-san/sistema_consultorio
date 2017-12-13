@@ -29,8 +29,8 @@ if (isset($_REQUEST['rut'])){
     $busca= new consulta();
     if (strtoupper(substr($rut,-1))== $busca->verifica_rut_real($rut)){
     if(empty($busca->compruba(substr($rut, 0, -1)))){
-        $nombre = $_REQUEST['nombre'];
-        $apellido = $_REQUEST['apellido'];
+        $nombre = strtoupper( trim($_REQUEST['nombre']));
+        $apellido = strtoupper( trim($_REQUEST['apellido']));
         $cargo=$_REQUEST['cargo'];
         $fecha=$_REQUEST['fecha_nac'];
         $titulo=$_REQUEST['titulo'];

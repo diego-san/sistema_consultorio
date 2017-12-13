@@ -112,6 +112,16 @@ h1{
     border-right: solid 2px #cccccc;
     border-top: solid 2px #cccccc;
  }
+
+.buscar_fondo{
+    background: #f9f9f9 ;
+    padding: 5px;
+    margin-top: 55px;
+    margin-bottom: 100px;
+    border-left: solid 2px #cccccc;
+    border-right: solid 2px #cccccc;
+    border-top: solid 2px #cccccc;
+}
 /*---------administracion--*/
 
 .admin-fondo{

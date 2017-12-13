@@ -195,9 +195,9 @@ class consulta{
 
     function pacientedia($tipo){
         require "conexion.php";
-        $fechaini = date('Y-m-d');
 
-        $sql="select * from reserva WHERE tipo_reveva= '$tipo' AND fecha BETWEEN '".$fechaini." 08:00:00' AND '".$fechaini." 23:59:00'";
+
+        $sql="select * from espera WHERE tipo_es= '$tipo' ";
         $smt=$conn->prepare($sql);
         $smt->execute();
         $resultado= $smt->fetchall();
@@ -232,13 +232,74 @@ class consulta{
         $mes = strtotime('+1 month',strtotime($fecha));
         $nuevafecha = date ('Y-m-d', $mes);
         $sql="select * from reserva WHERE fecha BETWEEN '".$fecha." 08:00:00' AND '" .$nuevafecha." 23:59:00'";
-        
+
         $smt=$conn->prepare($sql);
         $smt->execute();
         $resultado= $smt->fetchall();
         $conn=null;
         return $resultado;
     }
+    function pendiente(){
+        require "conexion.php";
+        $sql="select * from reserva WHERe estado= 'PENDIENTE'";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
 
+        return $resultado;
+
+    }
+
+    function reservaqr($rut,$id){
+        require "conexion.php";
+        $sql="select * from reserva WHERe rut= $rut and id_reserva= $id";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
+
+    }
+
+    function reservaporid($id){
+        require "conexion.php";
+        $dia=date ('Y-m-d');
+        $sql="select * from reserva WHERe id_reserva=$id AND fecha BETWEEN '".$dia." 08:00:00' AND '".$dia." 23:59:00'";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
+
+    }
+
+    function espera($rut,$tipo){
+        require "conexion.php";
+
+        $sql="select * from espera WHERe rut_es = '$rut' and tipo_es= '$tipo'" ;
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
+
+    }
+
+    function buscaapellido($ap){
+        require "conexion.php";
+        $sql ="select * from persona WHERE apellido_persona= '$ap'";
+        $smt=$conn->prepare($sql);
+        $smt->execute();
+        $resultado= $smt->fetchall();
+        $conn=null;
+
+        return $resultado;
+
+
+    }
 
     }

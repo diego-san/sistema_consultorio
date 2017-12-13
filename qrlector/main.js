@@ -126,6 +126,7 @@ function read(a)
                            
 							
 							setwebcam();
+                            location.reload(true);
 					
 				  
 						} ,error: function(xhr, status, error) {

@@ -76,18 +76,34 @@ $_SESSION['tiempo'] = time();
             <div class="col-md-1"></div>
         </div>
         <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 .col-md-offset-4 pass_fondo">
-
+            <div class="col-md-1"></div>
+            <div class="col-md-4 buscar_fondo">
                 <div class="form-group">
                     <label for="ru">Ingresar Rut: </label>
                     <input type="text" name="rut" required id="ru" minlength="7" maxlength="8" class="form-control" pattern="[0-9]{7,8}">
                     <br>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return buscarpersona()">Cambiar</button>
-                    <div id="mostrar"></div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return buscarpersona()">Buscar</button>
+                    <div id="mostrarrt"></div>
                 </div>
 
             </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4 buscar_fondo">
+                <div class="form-group">
+                    <label for="ap">Ingresar Apellido: </label>
+                    <input type="text" name="rut" required id="ap" minlength="7" maxlength="8" class="form-control" pattern="[0-9]{7,8}">
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return buscarpersonaap()">Buscar</button>
+                    <div id="mostrarap"></div>
+                </div>
+
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row in_historial-espacio">
+            <div class="col-md-10 col-md-offset-1" id="lista"></div>
+            <div class="col-md-1"></div>
         </div>
     </div>
 </main>

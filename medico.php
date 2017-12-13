@@ -126,7 +126,7 @@ $nrop = count($pacientedia);
                         echo "<div class='col-md-8 admin_dato'>";
                        echo " <p class='lead text'> <strong>Nombre: </strong>".$datospacientedia[0]['nombre_persona']." "
                            .$datospacientedia[0]['apellido_persona']."<strong> Rut: </strong>".$datospacientedia[0]['0']."-".$datospacientedia[0]['1']
-                          ."<strong> Fecha: </strong>".$pacientedia[$i]['fecha']."</p>";
+                          ."<strong> Fecha: </strong>".$pacientedia[$i]['fecha_es']."</p>";
 
                         echo "</div>";
 

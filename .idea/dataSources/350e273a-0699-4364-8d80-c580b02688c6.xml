@@ -191,24 +191,24 @@
       <RefTableName>persona</RefTableName>
       <RefColNames>rut_contac</RefColNames>
     </foreign-key>
-    <column id="56" parent="18" name="id_es">
+    <column id="56" parent="18" name="rut_es">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="57" parent="18" name="rut_es">
-      <Position>2</Position>
       <DataType>char(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="58" parent="18" name="tipo_es">
-      <Position>3</Position>
+    <column id="57" parent="18" name="tipo_es">
+      <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="59" parent="18" name="fecha_es">
-      <Position>4</Position>
+    <column id="58" parent="18" name="fecha_es">
+      <Position>3</Position>
       <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="18" name="id_es">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="60" parent="18" name="espera_reserva_rut_fk">
@@ -219,11 +219,11 @@
       <ColNames>id_es</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="62" parent="18" name="espera_reserva_rut_fk">
-      <ColNames>rut_es</ColNames>
+    <foreign-key id="62" parent="18" name="espera_reserva_id_reserva_fk">
+      <ColNames>id_es</ColNames>
       <RefSchemaName>sistema_consultorio</RefSchemaName>
       <RefTableName>reserva</RefTableName>
-      <RefColNames>rut</RefColNames>
+      <RefColNames>id_reserva</RefColNames>
     </foreign-key>
     <column id="63" parent="19" name="rut_histo">
       <Position>1</Position>
@@ -382,46 +382,51 @@
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="95" parent="21" name="id_reserva">
+    <column id="95" parent="21" name="estado">
       <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="21" name="id_reserva">
+      <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="96" parent="21" name="estado">
-      <Position>5</Position>
+    <column id="97" parent="21" name="qr">
+      <Position>6</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <index id="97" parent="21" name="reserva_persona_rut_persona_fk">
+    <index id="98" parent="21" name="reserva_persona_rut_persona_fk">
       <ColNames>rut</ColNames>
     </index>
-    <key id="98" parent="21" name="PRIMARY">
+    <key id="99" parent="21" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_reserva</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="99" parent="21" name="reserva_persona_rut_persona_fk">
+    <foreign-key id="100" parent="21" name="reserva_persona_rut_persona_fk">
       <ColNames>rut</ColNames>
       <RefSchemaName>sistema_consultorio</RefSchemaName>
       <RefTableName>persona</RefTableName>
       <RefColNames>rut_persona</RefColNames>
     </foreign-key>
-    <column id="100" parent="22" name="rut">
+    <column id="101" parent="22" name="rut">
       <Position>1</Position>
       <DataType>char(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="101" parent="22" name="password">
+    <column id="102" parent="22" name="password">
       <Position>2</Position>
       <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="102" parent="22" name="tipo">
+    <column id="103" parent="22" name="tipo">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="103" parent="22" name="PRIMARY">
+    <key id="104" parent="22" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>rut</ColNames>
       <Primary>1</Primary>

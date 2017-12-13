@@ -30,8 +30,8 @@ if(isset($_REQUEST['rut'])){
     $busca= new consulta();
     if (strtoupper(substr($rut,-1))== $busca->verifica_rut_real($rut)) {
         if (empty($busca->comprubanro($rut, $nroficha))) {
-            $nombre = $_REQUEST['nombre'];
-            $apellido = $_REQUEST['apellido'];
+            $nombre = strtoupper( trim($_REQUEST['nombre']));
+            $apellido = strtoupper( trim($_REQUEST['apellido']));
 
             $fecha_nac = $_REQUEST['fecha_nac'];
             $genero = $_REQUEST['genero'];
